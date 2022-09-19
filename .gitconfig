@@ -1,0 +1,30 @@
+[alias]
+	br = branch
+	st = status
+	sts = status -sb
+	ci = commit
+	cim = commit -m
+	co = checkout
+	cob = checkout -b
+	brd = branch -d
+	sw = switch
+	tree = log --graph --decorate --abbrev-commit --all
+	ll = log --oneline
+	last = log -1 HEAD --stat
+	gl = config --global -l
+	oneback = reset HEAD~1
+	swc = switch -c\n
+	wl = worktree list
+	wa = worktree add
+	wr = worktree remove
+	squash = rebase -i
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+[merge]
+	ff = false
+[push]
+	default = current
+[pull]
+	rebase = true
