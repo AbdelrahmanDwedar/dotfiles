@@ -1,3 +1,6 @@
 [submodule ".zsh/plugins/check-deps"]
 	path = .zsh/plugins/check-deps
 	url = git@github.com:zpm-zsh/check-deps.git
+[submodule ".zsh/plugins/wakatime"]
+	path = .zsh/plugins/wakatime
+	url = git@github.com:sobolevn/wakatime-zsh-plugin.git
