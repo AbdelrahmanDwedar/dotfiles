@@ -4,3 +4,6 @@
 [submodule ".zsh/plugins/wakatime"]
 	path = .zsh/plugins/wakatime
 	url = git@github.com:sobolevn/wakatime-zsh-plugin.git
+[submodule ".zsh/plugins/web-search"]
+	path = .zsh/plugins/web-search
+	url = git@github.com:sineto/web-search.git
