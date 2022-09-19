@@ -22,3 +22,6 @@
 [submodule ".zsh/plugins/zsh-dirhistory"]
 	path = .zsh/plugins/zsh-dirhistory
 	url = git@github.com:shaunsauve/zsh-dirhistory.git
+[submodule ".zsh/plugins/zsh-history-substring-search"]
+	path = .zsh/plugins/zsh-history-substring-search
+	url = git@github.com:zsh-users/zsh-history-substring-search.git
