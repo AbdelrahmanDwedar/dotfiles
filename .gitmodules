@@ -1,0 +1,36 @@
+[submodule ".zsh/plugins/check-deps"]
+	path = .zsh/plugins/check-deps
+	url = git@github.com:zpm-zsh/check-deps.git
+[submodule ".zsh/plugins/wakatime"]
+	path = .zsh/plugins/wakatime
+	url = git@github.com:sobolevn/wakatime-zsh-plugin.git
+[submodule ".zsh/plugins/web-search"]
+	path = .zsh/plugins/web-search
+	url = git@github.com:sineto/web-search.git
+[submodule ".zsh/plugins/zsh-auto-notify"]
+	path = .zsh/plugins/zsh-auto-notify
+	url = git@github.com:MichaelAquilina/zsh-auto-notify.git
+[submodule ".zsh/plugins/zsh-autosuggestions"]
+	path = .zsh/plugins/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule ".zsh/plugins/zsh-completions"]
+	path = .zsh/plugins/zsh-completions
+	url = git@github.com:zsh-users/zsh-completions.git
+[submodule ".zsh/plugins/zsh-copybuffer"]
+	path = .zsh/plugins/zsh-copybuffer
+	url = git@github.com:guillaumeboehm/zsh-copybuffer.git
+[submodule ".zsh/plugins/zsh-dirhistory"]
+	path = .zsh/plugins/zsh-dirhistory
+	url = git@github.com:shaunsauve/zsh-dirhistory.git
+[submodule ".zsh/plugins/zsh-history-substring-search"]
+	path = .zsh/plugins/zsh-history-substring-search
+	url = git@github.com:zsh-users/zsh-history-substring-search.git
+[submodule ".zsh/plugins/zsh-plugin-appup"]
+	path = .zsh/plugins/zsh-plugin-appup
+	url = git@github.com:Cloudstek/zsh-plugin-appup.git
+[submodule ".zsh/plugins/zsh-rust"]
+	path = .zsh/plugins/zsh-rust
+	url = git@github.com:cowboyd/zsh-rust.git
+[submodule ".zsh/plugins/zsh-syntax-highlighting"]
+	path = .zsh/plugins/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
