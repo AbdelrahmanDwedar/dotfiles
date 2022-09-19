@@ -31,3 +31,6 @@
 [submodule ".zsh/plugins/zsh-rust"]
 	path = .zsh/plugins/zsh-rust
 	url = git@github.com:cowboyd/zsh-rust.git
+[submodule ".zsh/plugins/zsh-syntax-highlighting"]
+	path = .zsh/plugins/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
