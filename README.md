@@ -12,6 +12,11 @@ This is the configurations for most apps that I use in Linux setup.
 0. vim
 0. tmux
 0. wakatime (bash & zsh)
+0. NeoVim
+0. i3 (Window manager) `requires picom & polybar`
+0. lf (File manager)
+0. neofetch
+0. Ranger (File manager)
 
 ---
 
