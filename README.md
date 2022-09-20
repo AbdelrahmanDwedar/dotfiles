@@ -47,4 +47,18 @@ This is the configurations for most apps that I use in Linux setup.
 
 ---
 
+## NeoVim plugins
+
+- [vim-surround](https://github.com/tpope/vim-surround)
+- [NerdTree](https://github.com/preservim/nerdtree)
+- [vim-wakatime](https://github.com/wakatime/vim-wakatime)
+- [vim-devicons](https://github.com/ryanoasis/vim-devicons)
+- [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) `only for NeoVim`
+- [coc.nvim](https://github.com/neoclide/coc.nvim)
+- [awesome vim colorschemes](https://github.com/rafi/awesome-vim-color-schemes)
+- [Vim CSS color](https://github.com/ap/vim-css-color)
+- [vim-terminal](https://github.com/tc50cal/vim-terminal)
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+- [presence.nvim](https://github.com/andweeb/presence.nvim) `Discord Presence`
+- [Emmet](https://github.com/mattn/emmet-vim)
 
