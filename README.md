@@ -1,6 +1,32 @@
 <h1 align=center>Dot Files</h1>
 
 This is the configurations for most apps that I use in Linux setup.  
+This configurations is simple and straightforward, nothing too crazy or hard to use.  
+**There's some personal taste in this configurations like the keys moving around `(hjkl)` and some other things**
+
+---
+
+## Setup
+
+This configurations can be added step by step to your device **(Recommended to be Linux)**  
+
+You can copy the files using `cp` command like so:  
+```zsh
+# for adding zsh configurations
+cp .zshrc .zprofile .zshenv .zsh 
+```
+
+### Config directory
+
+For the config directory it's different than other files, I recommend not doing the approach that I mentioned for other things as it'll delete all your other configurations in the `.config` directory (that why I named it `config` not `.config` so if you did it it doesn't effect the original one)  
+
+Recommended approach:  
+```zsh
+cp config/* ~/.config
+```
+> Warning
+> And it'll replace the configurations that you had if the configurations were also in the apps in `config` directory.  
+> If you have configurations you want to keep that also were added in `config` you have to go through the `config` directory and pick the you need exactly then use `cp` command to copy them into your `.config` directory.
 
 ---
 
