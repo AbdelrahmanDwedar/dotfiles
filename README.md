@@ -48,17 +48,17 @@ cp config/* ~/.config
 
 ### Bash & zsh aliases
 
-|Command      | Alias                                     | Bash | zsh |
-|:------------|:------------------------------------------|:----:|:---:|
-| `emacs -nw` | `emacs`                                   | [x]  | [x] |
-| `nvim`      | `vi`, `vim`                               | [x]  | [x] |
-| `laravel`   | `lv`                                      | [x]  | [x] |
-| `python3`   | `py`                                      | [x]  | [x] |
-| `pip3`      | `pip`                                     | [x]  | [x] |
-| `flutter`   | `fl`                                      | [x]  | [x] |
-| `bashtop`   | `top`                                     | [x]  | [x] |
-| `ranger`    | `ra`                                      | [x]  | [x] |
-| `lsd`       | `ls`, `la`, `l`, `ll`, `lt`, `lla`, `lta` | [x]  | [x] |
+| Alias                                     |Command      | Bash | zsh |
+|:------------------------------------------|:------------|:----:|:---:|
+| `emacs`                                   | `emacs -nw` | [x]  | [x] |
+| `vi`, `vim`                               | `nvim`      | [x]  | [x] |
+| `lv`                                      | `laravel`   | [x]  | [x] |
+| `py`                                      | `python3`   | [x]  | [x] |
+| `pip`                                     | `pip3`      | [x]  | [x] |
+| `fl`                                      | `flutter`   | [x]  | [x] |
+| `top`                                     | `bashtop`   | [x]  | [x] |
+| `ra`                                      | `ranger`    | [x]  | [x] |
+| `ls`, `la`, `l`, `ll`, `lt`, `lla`, `lta` | `lsd`       | [x]  | [x] |
 
 ---
 
