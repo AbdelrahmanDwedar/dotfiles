@@ -24,7 +24,7 @@ Recommended approach:
 ```zsh
 cp config/* ~/.config
 ```
-> Warning
+> Warning  
 > And it'll replace the configurations that you had if the configurations were also in the apps in `config` directory.  
 > If you have configurations you want to keep that also were added in `config` you have to go through the `config` directory and pick the you need exactly then use `cp` command to copy them into your `.config` directory.
 
