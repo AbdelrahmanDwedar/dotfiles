@@ -82,13 +82,10 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+n layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -210,3 +207,22 @@ exec --no-startup-id $HOME/.config/polybar/launch.sh
 
 # setup picom to make the background trans
 exec --no-startup-id picom -CGb
+
+#######################################################################
+#################### Open apps with keybindings #######################
+#######################################################################
+
+# Google chrome
+bindsym $mod+space exec google-chrome
+
+# Discord
+bindsym $mod+c exec discord
+
+# bashtop on terminal
+bindsym $mod+b exec $term -e bashtop
+
+# emacs in terminal (doom)
+bindsym $mod+e exec $term -e 'emacs -nw'
+
+# ranger file manager
+bindsym $mod+Ctrl+r exec $term -e ranger
