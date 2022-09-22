@@ -1,13 +1,14 @@
 set ratios 1:2:3
-set cleaner ~/.config/lf/cleaner
+# set cleaner ~/.config/lf/cleaner
 # Basic Settings
-set previewer ./preview
-set cleaner ./cleaner
+# set previewer ~/.config/preview
+set previewer w3m
 set preview true
 set hidden true
 set drawbox true
 set icons true
 set ignorecase true
+set previewer /usr/bin/w3m
 
 # Custom Functions
 cmd open ${{
@@ -193,25 +194,7 @@ map U unselect
 map gtr cd ~/.local/share/Trash/files
 map gus cd /run/media/brodie
 
-map gv. cd ~/videos
-map gva cd ~/videos/anime
-
-map gy. cd ~/videos/youtube
-map gyt cd ~/videos/youtube/ToUpload
-map gyu cd ~/videos/youtube/Uploaded
-map gya cd ~/videos/youtube/asset
-map go. cd ~/videos/podcast
-map got cd ~/videos/podcast/ToUpload
-map gou cd ~/videos/podcast/Uploaded
-
 map gp. cd ~/pictures
-map gpm cd ~/pictures/mpvscreenshots
-map gpa cd ~/pictures/Anime
-map gps cd ~/pictures/screenshots
-
-map gw. cd ~/pictures/Wallpapers
-map gww cd ~/pictures/Wallpapers/Wallpapers
-map gwm cd ~/pictures/Wallpapers/MobileWallpapers
 
 map gt. cd ~/documents/Textbooks
 map gt1 cd ~/documents/Textbooks/1stYear
@@ -232,19 +215,6 @@ map gsp cd ~/scripts/polybar
 map gsb cd ~/scripts/bspwm
 map gsu cd ~/scripts/pulse
 map gdt cd ~/scripts/transmission
-
-map gr. cd ~/repos
-map grb cd ~/repos/bookmenu
-map grf cd ~/repos/cleanfullscreen
-map grm cd ~/repos/dmenu
-map grd cd ~/repos/dotfiles
-map gri cd ~/repos/init
-map grk cd ~/repos/kanban-board
-map grl cd ~/repos/lbryurlconvert
-map grP cd ~/repos/PerlProjects
-map grr cd ~/repos/reading-list
-map grs cd ~/repos/st
-map grw cd ~/repos/website
 
 map gc cd ~/.config
 map gC cd ~/.local/share/cell
