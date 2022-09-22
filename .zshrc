@@ -108,3 +108,4 @@ source ~/.zsh/history.zsh
 export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export PATH="$PATH:$HOME/.bun/bin"
+export EDITOR="/snap/bin/nvim"
