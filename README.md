@@ -43,6 +43,7 @@ cp config/* ~/.config
 0. lf (File manager)
 0. neofetch
 0. Ranger (File manager)
+0. Emacs
 
 ---
 
@@ -93,3 +94,22 @@ cp config/* ~/.config
 - [presence.nvim](https://github.com/andweeb/presence.nvim) `Discord Presence`
 - [Emmet](https://github.com/mattn/emmet-vim)
 
+---
+
+## Status of the configurations
+
+```patch
++ zsh
++ bash
++ git
+- vim
++ tmux
++ wakatime (bash)
++ wakatime (zsh)
++ NeoVim
++ i3
+- lf
++ neofetch
++ ranger
+- emacs
+```
