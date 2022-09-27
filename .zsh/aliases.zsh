@@ -54,8 +54,7 @@ if [ -e /bin/lsd ]; then
 fi
 
 # cd shortcuts
-# alias ..='cd ..'
-# alias ...="cd ../.."
-# alias ....="cd ../../.."
-# alias /='cd /'
-# alias ~='cd ~'
+alias ..='cd ..'
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
