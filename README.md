@@ -44,6 +44,7 @@ cp config/* ~/.config
 0. neofetch
 0. Ranger (File manager)
 0. Emacs
+0. Kitty
 
 ---
 
@@ -112,4 +113,5 @@ cp config/* ~/.config
 + neofetch
 + ranger
 - emacs
++ kitty
 ```
