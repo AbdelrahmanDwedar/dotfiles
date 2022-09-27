@@ -1,6 +1,9 @@
 # ~/.zshrc
 # run on open
-neofetch
+if [[ -e $(which neofetch) ]]
+then
+  neofetch
+fi
 
 # If not running interactively, don't do anything
 case $- in
