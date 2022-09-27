@@ -42,6 +42,11 @@ then
   alias ra=ranger
 fi
 
+if [[ -e $(which neofetch) ]]
+then
+  alias nf=neofetch
+fi
+
 # lsd => ls
 if [ -e /bin/lsd ]; then
   alias ls='lsd -F'
