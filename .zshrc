@@ -111,4 +111,18 @@ source ~/.zsh/history.zsh
 export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export PATH="$PATH:$HOME/.bun/bin"
-export EDITOR="/snap/bin/nvim"
+
+# Set neovim or vim or vi as default editor
+if [[ $(which nvim) == "/snap/bin/nvim" ]]
+then
+  export EDITOR="/snap/bin/nvim"
+elif [[ $(which nvim) == "/bin/nvim" ]]
+then
+  export EDITOR="/bin/nvim"
+elif [[ -e $(which vim) ]]
+then
+  export "/bin/vim"
+else
+then
+  export "/bin/vi"
+fi
