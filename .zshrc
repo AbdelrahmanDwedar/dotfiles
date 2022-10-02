@@ -90,9 +90,6 @@ if [ -f /usr/share/powerline/bindings/zsh/powerline.zsh ]; then
   source /usr/share/powerline/bindings/zsh/powerline.zsh
 fi
 
-# all exports
-source ~/.zsh/exports.zsh
-
 # all aliases
 source ~/.zsh/aliases.zsh
 
@@ -123,6 +120,5 @@ elif [[ -e $(which vim) ]]
 then
   export "/bin/vim"
 else
-then
   export "/bin/vi"
 fi
