@@ -7,6 +7,9 @@
 [submodule ".zsh/plugins/web-search"]
 	path = .zsh/plugins/web-search
 	url = git@github.com:sineto/web-search.git
+[submodule ".zsh/plugins/zsh-auto-notify"]
+	path = .zsh/plugins/zsh-auto-notify
+	url = git@github.com:MichaelAquilina/zsh-auto-notify.git
 [submodule ".zsh/plugins/zsh-autosuggestions"]
 	path = .zsh/plugins/zsh-autosuggestions
 	url = git@github.com:zsh-users/zsh-autosuggestions.git
