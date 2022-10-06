@@ -71,3 +71,10 @@ alias ..='cd ..'
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
+# kitty kittens
+if [[ -e $(which kitty) ]]
+then
+  alias icat='kitty +kitten icat'
+  alias unicode='kitty +kitten unicode_input'
+  alias keys='kitty +kitten show_key'
+fi
