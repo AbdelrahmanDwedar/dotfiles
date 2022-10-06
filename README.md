@@ -72,7 +72,7 @@ cp config/* ~/.config
 - [zsh-completions](https://github.com/zsh-users/zsh-completions)
 - [zsh-rust](https://github.com/cowboyd/zsh-rust) `for unabling using rustc in zsh`
 - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
-- [zsh-auto-notify](https://github.com/MichealAquilina/zsh-auto-notify)
+<!-- - [zsh-auto-notify](https://github.com/MichealAquilina/zsh-auto-notify) -->
 - [web-search](https://github.com/sineto/web-search)
 - [zsh-copybuffer](https://github.com/guillaumeboehm/zsh-copybuffer)
 - [zsh-dirhistory](https://github.com/shaunsauve/zsh-dirhistory)
@@ -103,7 +103,7 @@ cp config/* ~/.config
 + zsh
 + bash
 + git
-- vim
++ vim
 + tmux
 + wakatime (bash)
 + wakatime (zsh)
