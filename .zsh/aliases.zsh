@@ -49,6 +49,12 @@ then
   alias nf=neofetch
 fi
 
+# cpufetch
+if [[ -e $(which cpufetch) ]]
+then
+  alias cf=cpufetch
+fi
+
 # lsd => ls
 if [ -e /bin/lsd ]; then
   alias ls='lsd -F'
