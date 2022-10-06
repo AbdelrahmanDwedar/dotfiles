@@ -40,6 +40,7 @@ fi
 if [[ -e $(which ranger) ]]
 then
   alias ra=ranger
+  alias lr=ranger
 fi
 
 # neofetch
