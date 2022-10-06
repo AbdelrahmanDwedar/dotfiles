@@ -4,44 +4,45 @@ if [[ -e ~/.emacs.d ]]; then
 fi
 
 # NeoVim => vim || vi
-if [[ -f $(which nvim) ]]
+if [[ -e $(which nvim) ]]
 then
-  alias vim=nvim
-  alias vi=nvim
+  # alias vim=nvim
+  # alias vi=nvim
 fi
 
 # laravel => lv
-if [[ -f $(which laravel) ]]
+if [[ -e $(which laravel) ]]
 then
   alias lv=laravel
 fi
 
 # Python3 => py
 # pip3 => pip
-if [[ -f $(which python3) ]]
+if [[ -e $(which python3) ]]
 then
   alias py=python3
   alias pip=pip3
 fi
 
 # flutter => fl
-if [[ -f $(which flutter) ]]
+if [[ -e $(which flutter) ]]
 then
   alias fl=flutter
 fi
 
 # bashtop => top
-if [[ -f $(which bashtop) ]]
+if [[ -e $(which bashtop) ]]
 then
   alias top=bashtop
 fi
 
 # ranger => ra
-if [[ -f $(which ranger) ]]
+if [[ -e $(which ranger) ]]
 then
   alias ra=ranger
 fi
 
+# neofetch
 if [[ -e $(which neofetch) ]]
 then
   alias nf=neofetch
