@@ -2,7 +2,7 @@ for dotfiles_file in $(ls -A .)
 do
   if [[ -f $dotfiles_file ]]
   then
-    if [[ $dotfiles_file != ".gitmodules" && $dotfiles_file != "README.md" && $dotfiles_file != "copy-dotfiles.bash" && $dotfiles_file != "update-dotfiles.bash" && $dotfiles_file != ".git" ]] 
+    if [[ $dotfiles_file != ".gitmodules" && $dotfiles_file != "README.md" && $dotfiles_file != "LICENSE" && $dotfiles_file != "copy-dotfiles.bash" && $dotfiles_file != "update-dotfiles.bash" && $dotfiles_file != ".git" ]] 
     then
       cp $dotfiles_file ~
     elif [[ $dotfiles_file == ".gitmodules" ]]
