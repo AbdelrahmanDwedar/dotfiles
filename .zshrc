@@ -62,11 +62,11 @@ alias ls='ls -CF --color=auto'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Powerline configuration
-if [ -f /usr/share/powerline/bindings/zsh/powerline.zsh ]; then
+if [ -f /usr/share/powerline/zsh/powerline.zsh ]; then
   powerline-daemon -q
   POWERLINE_BASH_CONTINUATION=1
   POWERLINE_BASH_SELECT=1
-  source /usr/share/powerline/bindings/zsh/powerline.zsh
+  source /usr/share/powerline/zsh/powerline.zsh
 fi
 
 ########################################################################################
