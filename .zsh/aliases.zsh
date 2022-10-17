@@ -11,7 +11,7 @@ then
 fi
 
 # laravel => lv
-if [[ -e $(which laravel) ]]
+if [[ -f $(which laravel) ]]
 then
   alias lv=laravel
 fi
@@ -25,13 +25,13 @@ then
 fi
 
 # flutter => fl
-if [[ -e $(which flutter) ]]
+if [[ -f $(which flutter) ]]
 then
   alias fl=flutter
 fi
 
 # bashtop => top
-if [[ -e $(which bashtop) ]]
+if [[ -f $(which bashtop) ]]
 then
   alias top=bashtop
 fi
