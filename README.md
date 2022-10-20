@@ -107,18 +107,23 @@ cp config/* ~/.config
 ## Status of the configurations
 
 ```patch
-+ zsh
 + bash
-+ git
-+ vim
 + tmux
-+ wakatime (bash)
-+ wakatime (zsh)
-+ NeoVim
++ vim
++ zsh
++ bashtop
++ cointop
 + i3
++ kitty 
 - lf
 + neofetch
++ neovim 
++ picom
++ polybar
++ powerline
++ qalculate
 + ranger
-- emacs
-+ kitty
+- rofi
++ wakatime (bash)
++ wakatime (bash)
 ```
