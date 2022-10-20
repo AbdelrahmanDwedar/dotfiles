@@ -65,6 +65,9 @@ cp config/* ~/.config
 | `top`                                     | `bashtop`   | [x]  | [x] |
 | `ra`                                      | `ranger`    | [x]  | [x] |
 | `ls`, `la`, `l`, `ll`, `lt`, `lla`, `lta` | `lsd`       | [x]  | [x] |
+| `mkdir`                                   | `mkdir -p`  | [x]  | [x] |
+| `..`, `...`, `....`, `.....`              | `cd {back}` | [x]  | [x] |
+| `.{number}`                               | `cd {back}` | [x]  | [x] |
 
 ---
 
