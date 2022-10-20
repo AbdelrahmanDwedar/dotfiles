@@ -32,19 +32,23 @@ cp config/* ~/.config
 
 ## Used apps
 
-0. bash
-0. zsh
-0. git
-0. vim
-0. tmux
-0. wakatime (bash & zsh)
-0. NeoVim
-0. i3 (Window manager) `requires picom & polybar`
-0. lf (File manager)
-0. neofetch
-0. Ranger (File manager)
-0. Emacs
-0. Kitty
+- bash
+- tmux
+- vim
+- zsh
+- bashtop
+- cointop
+- i3
+- kitty
+- lf
+- neofetch
+- neovim (submodules to [repo]())
+- picom
+- polybar
+- powerline
+- qalculate
+- ranger
+- rofi
 
 ---
 
@@ -80,22 +84,22 @@ cp config/* ~/.config
 
 ---
 
-## NeoVim plugins
-
-- [vim-surround](https://github.com/tpope/vim-surround)
-- [NerdTree](https://github.com/preservim/nerdtree)
-- [vim-wakatime](https://github.com/wakatime/vim-wakatime)
-- [vim-devicons](https://github.com/ryanoasis/vim-devicons)
-- [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) `only for NeoVim`
-- [coc.nvim](https://github.com/neoclide/coc.nvim)
-- [awesome vim colorschemes](https://github.com/rafi/awesome-vim-color-schemes)
-- [Vim CSS color](https://github.com/ap/vim-css-color)
-- [vim-terminal](https://github.com/tc50cal/vim-terminal)
-- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-- [presence.nvim](https://github.com/andweeb/presence.nvim) `Discord Presence`
-- [Emmet](https://github.com/mattn/emmet-vim)
-
----
+<!-- ## NeoVim plugins -->
+<!---->
+<!-- - [vim-surround](https://github.com/tpope/vim-surround) -->
+<!-- - [NerdTree](https://github.com/preservim/nerdtree) -->
+<!-- - [vim-wakatime](https://github.com/wakatime/vim-wakatime) -->
+<!-- - [vim-devicons](https://github.com/ryanoasis/vim-devicons) -->
+<!-- - [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) `only for NeoVim` -->
+<!-- - [coc.nvim](https://github.com/neoclide/coc.nvim) -->
+<!-- - [awesome vim colorschemes](https://github.com/rafi/awesome-vim-color-schemes) -->
+<!-- - [Vim CSS color](https://github.com/ap/vim-css-color) -->
+<!-- - [vim-terminal](https://github.com/tc50cal/vim-terminal) -->
+<!-- - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) -->
+<!-- - [presence.nvim](https://github.com/andweeb/presence.nvim) `Discord Presence` -->
+<!-- - [Emmet](https://github.com/mattn/emmet-vim) -->
+<!---->
+<!-- --- -->
 
 ## Status of the configurations
 
