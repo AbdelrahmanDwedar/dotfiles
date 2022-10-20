@@ -38,8 +38,8 @@ cp config/* ~/.config
 - zsh
 - bashtop
 - cointop
-- i3
-- kitty
+- i3 (requires `polybar` & `picom`)
+- kitty (requires `picom`)
 - lf
 - neofetch
 - neovim (submodules to [repo]())
