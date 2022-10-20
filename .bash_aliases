@@ -83,3 +83,10 @@ alias .5="cd ../../../../.."
 # mkdir to mkdir -p
 alias mkdir="mkdir -p"
 
+# kitty kittens
+if [[ -e $(which kitty) ]]
+then
+  alias icat='kitty +kitten icat'
+  alias unicode='kitty +kitten unicode_input'
+  alias keys='kitty +kitten show_key'
+fi
