@@ -10,15 +10,9 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # config zsh completion
 fpath=(~/.zsh/plugins/zsh-completions/src $fpath)
 
-# zsh rust config extention
-source ~/.zsh/plugins/zsh-rust/zsh-rust.plugin.zsh
-
 # zsh history substring searing
 source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
-
-# zsh auto notify
-source ~/.zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
 
 # zsh web search
 source ~/.zsh/plugins/web-search/web_search.plugin.zsh
