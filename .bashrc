@@ -144,3 +144,5 @@ source ~/bash-wakatime/bash-wakatime.sh
 
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 . "$HOME/.cargo/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
