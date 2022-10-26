@@ -56,27 +56,59 @@ python3 del powerline_setup
 colorscheme rdark-terminal2
 
 " -=# key bindings #=-
-map <C-l> <C-w>l
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-k>k
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 
-map <C-Enter> <Esc>o
-map B ^
-map E $
+nmap <silent> <C-l> <C-w>l
+nmap <silent> <C-h> <C-w>h
+nmap <silent> <C-j> <C-w>j
+nmap <silent> <C-k> <C-k>k
 
-map <C-Left> :vertical resize +3<CR>
-map <C-Right> :vertical resize -3<CR>
-map <C-Up> :resize +3<CR>
-map <C-Down> :resize -3<CR>
+nmap <silent> <C-CR> <Esc>o
+nmap <silent> B ^
+nmap <silent> E $
 
-map rt :tabclose<CR>
-map tf :tabfind 
+nmap <silent> <C-Left> :vertical resize +3<CR>
+nmap <silent> <C-Right> :vertical resize -3<CR>
+nmap <silent> <C-Up> :resize +3<CR>
+nmap <silent> <C-Down> :resize -3<CR>
 
-map <C-z> :NerdTreeToggle<CR>
-map <C-f> :NerdTreeFocus<CR>
+nmap <silent> rt :tabclose<CR>
+nmap <silent> tf :tabfind 
 
-map <C-c> :VMClear<CR>
+nmap <silent> <Leader>e :NERDTreeToggle<CR>
+nmap <silent> <Leader>f :NERDTreeFocus<CR>
+
+nmap <silent> <C-p> :FZF<CR>
+
+nmap <silent> <C-c> :VMClear<CR>
+
+nmap <silent> <A-j> :m .+1<CR>==gi
+nmap <silent> <A-k> :m .-2<CR>==gi
+
+nmap <silent> <Leader>; A;
+
+nmap <silent> <Down> gj
+nmap <silent> <Up> gk
+
+nmap <silent> gV `[v`]
+
+" insert mode
+imap <silent> <C-p> <Esc>:FZF<CR>
+
+imap <C-BS> <C-W>
+imap <C-CR> <Esc>o
+
+" visual mode
+vmap > >gv
+vmap < <gv
+
+vmap <silent> <A-j> :m .+1<CR>=="
+vmap <silent> <A-k> :m .-2<CR>=="
+
+" visual block mode
+xmap <silent> <A-j> :move '>+1<CR>gv-gv
+xmap <silent> <A-k> :move '<-2<CR>gv-gv
 
 " -=# Cursor #=-
 let &t_SI = "\e[5 q"
