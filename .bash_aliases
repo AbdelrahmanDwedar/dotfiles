@@ -18,13 +18,6 @@ if [[ -e ~/.emacs.d ]]; then
   alias emacs="emacs -nw"
 fi
 
-# NeoVim => vim || vi
-if [[ -f $(which nvim) ]]
-then
-  alias vim=nvim
-  alias vi=nvim
-fi
-
 # laravel => lv
 if [[ -f $(which laravel) ]]
 then
