@@ -24,24 +24,26 @@ set wrap
 " -=# Plugins (with vim plug) #=-
 call plug#begin()
 
-  	Plug 'ryanoasis/vim-devicons' 
+	Plug 'ryanoasis/vim-devicons' 
 
-  	Plug 'wakatime/vim-wakatime' 
+	Plug 'wakatime/vim-wakatime' 
    
-  	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-surround'
 
-  	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-commentary'
 
-  	Plug 'rafi/awesome-vim-colorschemes'
+	Plug 'rafi/awesome-vim-colorschemes'
 
-  	Plug 'ap/vim-css-color'
-
-  	Plug 'preservim/nerdtree'
+	Plug 'ap/vim-css-color'
 
 	Plug 'godlygeek/tabular'
 	Plug 'preservim/vim-markdown'
 
 	Plug 'mg979/vim-visual-multi'
+
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+	Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
