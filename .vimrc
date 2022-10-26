@@ -7,14 +7,19 @@
 
 
 " -=# Options #=-
-set number
-set tabstop=4
-set autoindent
-set shiftwidth=4
 set mouse=a
-set smarttab
-set encoding=utf8 
+set clipboard = "unnamedplus"
+set number
 set relativenumber
+set shiftwidth=4
+set tabstop=4
+set smarttab
+set autoindent
+set encoding=utf8 
+set splitbelow splitright
+set nohlsearch
+set hidden
+set wrap
 
 " -=# Plugins (with vim plug) #=-
 call plug#begin()
