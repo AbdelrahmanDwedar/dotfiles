@@ -14,7 +14,6 @@ set relativenumber
 set shiftwidth=4
 set tabstop=4
 set smarttab
-set autoindent
 set encoding=utf8 
 set splitbelow splitright
 set nohlsearch
