@@ -98,14 +98,14 @@ source ~/.zsh/history.zsh
 if [[ $(which nvim) == "/snap/bin/nvim" ]]
 then
   export EDITOR="/snap/bin/nvim"
-elif [[ $(which nvim) == "/bin/nvim" ]]
+elif [[ $(which nvim) == "/usr/bin/nvim" ]]
 then
-  export EDITOR="/bin/nvim"
+  export EDITOR="/usr/bin/nvim"
 elif [[ -e $(which vim) ]]
 then
-  export EDITOR="/bin/vim"
+  export EDITOR="/usr/bin/vim"
 else
-  export EDITOR="/bin/vi"
+  export EDITOR="/usr/bin/vi"
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
