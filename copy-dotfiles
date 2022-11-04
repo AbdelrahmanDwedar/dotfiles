@@ -1,13 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 for dotfiles_file in $(ls -A .)
 do
   if [[ -f $dotfiles_file ]]
   then
-    if [[ $dotfiles_file != ".gitmodules" && $dotfiles_file != "README.md" && $dotfiles_file != "LICENSE" && $dotfiles_file != "copy-dotfiles.bash" && $dotfiles_file != "update-dotfiles.bash" && $dotfiles_file != ".git" ]] 
+    if [[ $dotfiles_file != ".gitconfig" && $dotfiles_file != ".gitmodules" && $dotfiles_file != "README.md" && $dotfiles_file != "LICENSE" && $dotfiles_file != "copy-dotfiles" && $dotfiles_file != "update-dotfiles" && $dotfiles_file != ".git" && $dotfiles_file != ".gitignore" ]] 
     then
       cp $dotfiles_file ~
-    elif [[ $dotfiles_file == ".gitmodules" ]]
+    elif [[ $dotfiles_file == ".gitconfig" ]]
     then
       echo "Please input your git user.name"
       read username
