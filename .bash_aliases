@@ -83,3 +83,8 @@ then
   alias unicode='kitty +kitten unicode_input'
   alias keys='kitty +kitten show_key'
 fi
+
+# confirmation
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
