@@ -3,15 +3,8 @@ if [[ -e ~/.emacs.d ]]; then
   alias emacs="emacs -nw"
 fi
 
-# NeoVim => vim || vi
-if [[ -e $(which nvim) ]]
-then
-  # alias vim=nvim
-  # alias vi=nvim
-fi
-
 # laravel => lv
-if [[ -f $(which laravel) ]]
+if [ -f $(which laravel) ]
 then
   alias lv=laravel
 fi
@@ -25,15 +18,9 @@ then
 fi
 
 # flutter => fl
-if [[ -f $(which flutter) ]]
+if [ -e $(which flutter) ]
 then
   alias fl=flutter
-fi
-
-# bashtop => top
-if [[ -f $(which bashtop) ]]
-then
-  alias top=bashtop
 fi
 
 # ranger => ra
