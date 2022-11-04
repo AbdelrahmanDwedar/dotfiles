@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 for dotfiles_file in $(ls -A .)
 do
   if [[ -f $dotfiles_file ]]
