@@ -17,8 +17,6 @@ case $- in
       *) return;;
 esac
 
-# Add Flutter to the $PATH
-export PATH="$PATH:$HOME/development/flutter/bin"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -136,13 +134,5 @@ if [ -f /usr/share/powerline/bash/powerline.sh ]; then
   source /usr/share/powerline/bash/powerline.sh
 fi
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
-# Wakatime for terminal
-source ~/bash-wakatime/bash-wakatime.sh
-
-export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-. "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

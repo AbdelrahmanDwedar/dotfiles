@@ -35,6 +35,14 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 
-# Added by Toolbox App
-export PATH="$PATH:/home/abdelrahmandwedar/.local/share/JetBrains/Toolbox/scripts"
+# Add Flutter to the $PATH
+export PATH="$PATH:$HOME/flutter/bin"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+# Wakatime for terminal
+source ~/bash-wakatime/bash-wakatime.sh
+
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 . "$HOME/.cargo/env"

@@ -94,10 +94,6 @@ source ~/.zsh/vim.zsh
 # setup the history to ~/.history and setup everything else
 source ~/.zsh/history.zsh
 
-export PATH="$PATH:$HOME/flutter/bin"
-export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-export PATH="$PATH:$HOME/.bun/bin"
-
 # Set neovim or vim or vi as default editor
 if [[ $(which nvim) == "/snap/bin/nvim" ]]
 then
