@@ -48,6 +48,8 @@ call plug#begin()
 
 	Plug 'solvedbiscuit71/vim-autopair' " auto pairs for {([ etc...
 
+	Plug 'kshenoy/vim-signature'
+
 call plug#end()
 
 " -=# powerline #=-
