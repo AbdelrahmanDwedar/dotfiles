@@ -71,7 +71,7 @@ nmap <silent> <C-k> <C-k>k
 
 nmap <silent> <C-CR> <Esc>o
 nmap <silent> B ^
-nmap <silent> E $
+" nmap <silent> E $
 
 nmap <silent> <C-Left> :vertical resize +3<CR>
 nmap <silent> <C-Right> :vertical resize -3<CR>
@@ -85,6 +85,7 @@ nmap <silent> <Leader>e :NERDTreeToggle<CR>
 nmap <silent> <Leader>f :NERDTreeFocus<CR>
 
 nmap <silent> <C-p> :FZF<CR>
+nmap <silent> <Leader><Leader>f :FZF<CR>
 
 nmap <silent> <C-c> :VMClear<CR>
 
@@ -98,6 +99,8 @@ nmap <silent> <Up> gk
 
 nmap <silent> gV `[v`]
 
+nmap <silent> <Leader><Leader>s :w<CR>:source ~/.vimrc<CR>
+
 " insert mode
 imap <silent> <C-p> <Esc>:FZF<CR>
 
@@ -105,8 +108,8 @@ imap <C-BS> <C-W>
 imap <C-CR> <Esc>o
 
 " visual mode
-vmap > >gv
-vmap < <gv
+vmap <silent> > >gv
+vmap <silent> < <gv
 
 vmap <silent> <A-j> :m .+1<CR>=="
 vmap <silent> <A-k> :m .-2<CR>=="
