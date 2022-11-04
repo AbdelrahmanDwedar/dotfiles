@@ -88,3 +88,9 @@ then
   alias unicode='kitty +kitten unicode_input'
   alias keys='kitty +kitten show_key'
 fi
+
+# confirmation for rm mv cp commands
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
