@@ -58,7 +58,7 @@ python3 powerline_setup()
 python3 del powerline_setup
 
 " -=# colorscheme #=-
-colorscheme rdark-terminal2
+colorscheme nord
 
 " -=# key bindings #=-
 nnoremap <SPACE> <Nop>
