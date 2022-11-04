@@ -46,6 +46,8 @@ call plug#begin()
 
 	Plug 'vim-airline/vim-airline' " airline 
 
+	Plug 'solvedbiscuit71/vim-autopair' " auto pairs for {([ etc...
+
 call plug#end()
 
 " -=# powerline #=-
