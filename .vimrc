@@ -23,26 +23,26 @@ set wrap
 " -=# Plugins (with vim plug) #=-
 call plug#begin()
 
-	Plug 'ryanoasis/vim-devicons' 
+	Plug 'ryanoasis/vim-devicons' " devicons for vim
 
-	Plug 'wakatime/vim-wakatime' 
+	Plug 'wakatime/vim-wakatime' " wakatime watcher
    
-	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-surround' " surrounding blocks with {([ etc... with ys(block)(charachter)
 
-	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-commentary' " commenting lines with gcc & gc
 
-	Plug 'rafi/awesome-vim-colorschemes'
+	Plug 'rafi/awesome-vim-colorschemes' " awesome vim colorschemes
 
-	Plug 'ap/vim-css-color'
+	Plug 'ap/vim-css-color' " css simple color highlightings
 
-	Plug 'godlygeek/tabular'
-	Plug 'preservim/vim-markdown'
+	Plug 'godlygeek/tabular' " required for next plugin
+	Plug 'preservim/vim-markdown' " MarkDown previewer 
 
-	Plug 'mg979/vim-visual-multi'
+	Plug 'mg979/vim-visual-multi' " visual multi cursoring with <C-n> and others could be found in 
 
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy finder for finding files easier
 
-	Plug 'scrooloose/nerdtree'
+	Plug 'scrooloose/nerdtree' " NERDTree file explorer
 
 call plug#end()
 
