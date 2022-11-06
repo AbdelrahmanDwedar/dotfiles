@@ -43,7 +43,7 @@ then
 fi
 
 # lsd => ls
-if [ -e /bin/lsd ]; then
+if [ -e $(which lsd) ]; then
   alias ls='lsd -F'
   alias l='lsd -F'
   alias la='lsd -AF'
