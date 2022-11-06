@@ -21,6 +21,8 @@ do
       then
         for dotfiles_config_file in $(ls -A ./config)
           do
+			  for home_config_file in $(ls ~/.config/)
+			  do
             if [[ -d $dotfiles_config_file ]]
             then
               if [[ $dotfiles_config_file == $home_config_file ]]
@@ -33,6 +35,7 @@ do
                 cp -r ~/.config/$home_config_file ./config
               fi
             fi
+		done
         done
       elif [[ $dotfiles_file == ".zsh" ]]
       then
