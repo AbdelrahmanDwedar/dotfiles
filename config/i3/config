@@ -196,7 +196,7 @@ hide_edge_borders none
 bindsym XF86TouchpadToggle exec /**/toggletouchpad.sh
 
 # set the wallpaper with feh
-exec_always feh --bg-scale /usr/share/backgrounds/Mirror_by_Uday_Nakade.jpg
+exec_always feh --bg-scale ~/Wallpapers/demon-slayer/demon_slayer2.jpg
 
 # remove the title bar
 default_border pixel 1
