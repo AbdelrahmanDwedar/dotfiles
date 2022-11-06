@@ -191,4 +191,3 @@
        :config
        ;;literate
        (default +bindings +smartparens))
-; (global-wakatime-mode)
