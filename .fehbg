@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale --randomize '~/Wallpapers/*' 
+feh --no-fehbg --bg-scale '/home/abdelrahmandwedar/Wallpapers/demon-slayer/demon_slayer2.jpg' 
