@@ -69,6 +69,16 @@ if [ -f /usr/share/powerline/zsh/powerline.zsh ]; then
   source /usr/share/powerline/zsh/powerline.zsh
 fi
 
+# Add Flutter to the $PATH
+export PATH="$PATH:$HOME/flutter/bin"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+export PATH=$PATH:$HOME/.emacs.d/doom/bin
+
 ########################################################################################
 ########################################################################################
 #######################                                          #######################
@@ -109,3 +119,7 @@ else
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -d "$HOME/.emacs.d/bin" ] ; then
+    PATH="$HOME/.emacs.d/bin:$PATH"
+fi
+
