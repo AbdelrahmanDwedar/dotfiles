@@ -39,8 +39,13 @@ do
 			done
 			elif [[ $dotfiles_file == ".zsh" ]]
 			then
-				git submodule init 
-				git submodule update
+				for zsh_file in $(ls -A ~/.zsh/); do
+					if [[ -f $zsh_file && $zsh_file != "plugins" ]]; then
+						cp $zsh_file ./.zsh/ 
+					elif [[ $zsh_file == "plugins" ]]; then
+						git submodule update --init 
+					fi 
+				done
 			fi
 		fi
 	done
