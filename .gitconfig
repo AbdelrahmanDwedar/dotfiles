@@ -18,6 +18,7 @@
 	wa = worktree add
 	wr = worktree remove
 	squash = rebase -i
+	sub = submodule
 [init]
 	defaultBranch = main
 [core]
