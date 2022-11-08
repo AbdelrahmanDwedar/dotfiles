@@ -104,20 +104,6 @@ source ~/.zsh/vim.zsh
 # setup the history to ~/.history and setup everything else
 source ~/.zsh/history.zsh
 
-# Set neovim or vim or vi as default editor
-if [[ $(which nvim) == "/snap/bin/nvim" ]]
-then
-  export EDITOR="/snap/bin/nvim"
-elif [[ $(which nvim) == "/usr/bin/nvim" ]]
-then
-  export EDITOR="/usr/bin/nvim"
-elif [[ -e $(which vim) ]]
-then
-  export EDITOR="/usr/bin/vim"
-else
-  export EDITOR="/usr/bin/vi"
-fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if [ -d "$HOME/.emacs.d/bin" ] ; then
     PATH="$HOME/.emacs.d/bin:$PATH"
