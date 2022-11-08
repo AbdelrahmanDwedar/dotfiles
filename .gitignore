@@ -2,3 +2,7 @@
 config/gh/hosts.yml
 __init__.py
 __pycache__/
+
+# vieb
+config/Vieb
+!config/Vieb/viebrc
