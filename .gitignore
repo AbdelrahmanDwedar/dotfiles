@@ -1,2 +1,4 @@
 **/qalc.history
 config/gh/hosts.yml
+__init__.py
+__pycache__/
