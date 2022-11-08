@@ -26,6 +26,3 @@ source ~/.zsh/plugins/zsh-dirhistory/dirhistory.plugin.zsh
 # zsh check deps (get the way of installing dependencies)
 source ~/.zsh/plugins/check-deps/check-deps.plugin.zsh
 
-# history substring search keys
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
