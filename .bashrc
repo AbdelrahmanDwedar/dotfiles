@@ -136,3 +136,13 @@ fi
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Add Flutter to the $PATH
+export PATH="$PATH:$HOME/development/flutter/bin"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+. "$HOME/.cargo/env"
+export PATH=$PATH:$HOME/.emacs.d/doom/bin
