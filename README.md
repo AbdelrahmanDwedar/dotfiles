@@ -51,6 +51,7 @@ cp config/* ~/.config
 - ranger
 - rofi
 - tmux
+- vieb
 - vim
 - zsh
 
@@ -131,6 +132,7 @@ cp config/* ~/.config
 + ranger
 - rofi
 + tmux
++ vieb
 + vim
 + wakatime (bash)
 + wakatime (bash)
