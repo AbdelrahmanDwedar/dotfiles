@@ -53,6 +53,8 @@ cp config/* ~/.config
 - tmux
 - vieb
 - vim
+- xmobar
+- xmonad
 - zsh
 
 ---
@@ -62,12 +64,10 @@ cp config/* ~/.config
 | Alias                                     |Command      | Bash | zsh |
 |:------------------------------------------|:------------|:----:|:---:|
 | `emacs`                                   | `emacs -nw` | [x]  | [x] |
-| `vi`, `vim`                               | `nvim`      | [x]  | [x] |
 | `lv`                                      | `laravel`   | [x]  | [x] |
 | `py`                                      | `python3`   | [x]  | [x] |
 | `pip`                                     | `pip3`      | [x]  | [x] |
 | `fl`                                      | `flutter`   | [x]  | [x] |
-| `top`                                     | `bashtop`   | [x]  | [x] |
 | `ra`                                      | `ranger`    | [x]  | [x] |
 | `ls`, `la`, `l`, `ll`, `lt`, `lla`, `lta` | `lsd`       | [x]  | [x] |
 | `mkdir`                                   | `mkdir -p`  | [x]  | [x] |
@@ -136,7 +136,7 @@ cp config/* ~/.config
 + vim
 + wakatime (bash)
 + wakatime (bash)
-- xmonad
 - xmobar
+- xmonad
 + zsh
 ```
