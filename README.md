@@ -32,12 +32,13 @@ cp config/* ~/.config
 
 ## Used apps
 
+- awesome
 - bash
-- tmux
-- vim
-- zsh
 - bashtop
+- btop 
 - cointop
+- gh
+- htop
 - i3 (requires `polybar` & `picom`)
 - kitty (requires `picom`)
 - lf
@@ -49,6 +50,9 @@ cp config/* ~/.config
 - qalculate
 - ranger
 - rofi
+- tmux
+- vim
+- zsh
 
 ---
 
@@ -73,17 +77,16 @@ cp config/* ~/.config
 
 ## zsh plugins
 
+- [check-deps](https://github.com/zpm-zsh/check-deps)
 - [wakatime](https://github.com/sobolevn/wakatime-zsh-plugin.git)
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [zsh-completions](https://github.com/zsh-users/zsh-completions)
-- [zsh-rust](https://github.com/cowboyd/zsh-rust) `for unabling using rustc in zsh`
-- [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
-<!-- - [zsh-auto-notify](https://github.com/MichealAquilina/zsh-auto-notify) -->
 - [web-search](https://github.com/sineto/web-search)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-completions](https://github.com/zsh-users/zsh-completions)
 - [zsh-copybuffer](https://github.com/guillaumeboehm/zsh-copybuffer)
 - [zsh-dirhistory](https://github.com/shaunsauve/zsh-dirhistory)
-- [checl-deps](https://github.com/zpm-zsh/check-deps)
+- [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
+- [zsh-rust](https://github.com/cowboyd/zsh-rust) `for unabling using rustc in zsh`
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ---
 
@@ -107,12 +110,15 @@ cp config/* ~/.config
 ## Status of the configurations
 
 ```patch
++ awesome
 + bash
-+ tmux
-+ vim
-+ zsh
 + bashtop
++ btop
 + cointop
++ doom emacs
++ gh
++ git
+- htop
 + i3
 + kitty 
 - lf
@@ -124,6 +130,9 @@ cp config/* ~/.config
 + qalculate
 + ranger
 - rofi
++ tmux
++ vim
 + wakatime (bash)
 + wakatime (bash)
++ zsh
 ```
