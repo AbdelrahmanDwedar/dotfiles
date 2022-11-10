@@ -32,6 +32,7 @@ cp config/* ~/.config
 
 ## Used apps
 
+- alacritty
 - awesome
 - bash
 - bashtop
@@ -111,6 +112,7 @@ cp config/* ~/.config
 ## Status of the configurations
 
 ```patch
++ alacritty
 + awesome
 + bash
 + bashtop
