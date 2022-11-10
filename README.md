@@ -136,5 +136,7 @@ cp config/* ~/.config
 + vim
 + wakatime (bash)
 + wakatime (bash)
+- xmonad
+- xmobar
 + zsh
 ```
