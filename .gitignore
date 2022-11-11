@@ -6,3 +6,6 @@ __pycache__/
 # vieb
 config/Vieb
 !config/Vieb/viebrc
+
+# doom
+.doom.d/custom.el
