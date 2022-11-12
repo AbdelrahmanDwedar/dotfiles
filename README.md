@@ -36,6 +36,7 @@ cp config/* ~/.config
 - awesome
 - bash
 - bashtop
+- bspwm
 - btop 
 - cointop
 - gh
@@ -116,6 +117,7 @@ cp config/* ~/.config
 + awesome
 + bash
 + bashtop
+- bspwm
 + btop
 + cointop
 + doom emacs
