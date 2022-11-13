@@ -36,6 +36,7 @@ cp config/* ~/.config
 - awesome
 - bash
 - bashtop
+- bat
 - bspwm
 - btop 
 - cointop
@@ -117,6 +118,7 @@ cp config/* ~/.config
 + awesome
 + bash
 + bashtop
++ bat
 - bspwm
 + btop
 + cointop
