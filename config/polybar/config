@@ -29,15 +29,15 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
+;background = ${xrdb:color0:#225}
+background = #211924
+background-alt = #449
+;foreground = ${xrdb:color7:#225}
 foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+foreground-alt = #445593
+primary = #389
+secondary = #906
+alert = #f02
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -46,12 +46,12 @@ height = 27
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 1
 line-color = #f00
 
 border-size = 4
@@ -68,8 +68,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
-modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-center = mpd date 
+modules-right = xbacklight pulseaudio xkeyboard cpu wlan battery temperature powermenu
 
 tray-position = right
 tray-padding = 2
@@ -80,11 +80,11 @@ tray-padding = 2
 
 ;override-redirect = true
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
 
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -124,8 +124,8 @@ type = internal/bspwm
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+; label-focused-underline= ${colors.primary}
+; label-focused-padding = 2
 
 label-occupied = %index%
 label-occupied-padding = 2
@@ -204,7 +204,7 @@ bar-indicator-foreground = #fff
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = #9f78e1
+bar-fill-foreground = #9a10a1
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
@@ -219,7 +219,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = #f00036
 label = %percentage:2%%
 
 [module/memory]
@@ -272,7 +272,7 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
+date = " %y-%m"
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
@@ -280,7 +280,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+; format-underline = #0a6cf5
 
 label = %date% %time%
 
@@ -346,7 +346,7 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = #0af
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
@@ -378,7 +378,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
+format-underline = #f92a0d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
