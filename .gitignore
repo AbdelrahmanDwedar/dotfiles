@@ -9,5 +9,9 @@ config/Vieb
 
 # doom
 .doom.d/custom.el
+
 # vifm
 config/vifm/vifminfo.json
+
+# lazygit
+config/lazygit/state.yml
