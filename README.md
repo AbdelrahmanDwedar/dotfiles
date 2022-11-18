@@ -51,6 +51,7 @@ cp config/* ~/.config
 - polybar
 - powerline
 - qalculate
+- qtile
 - ranger
 - rofi
 - tmux
@@ -135,6 +136,7 @@ cp config/* ~/.config
 + polybar
 + powerline
 + qalculate
+- qtile
 + ranger
 - rofi
 + tmux
