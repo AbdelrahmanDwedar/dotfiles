@@ -51,11 +51,11 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 source ~/.zsh/prompt.zsh
 
 # Powerline configuration
-if [ -f /usr/share/powerline/zsh/powerline.zsh ]; then
+if [ -f /usr/share/powerline/bindings/zsh/powerline.zsh ]; then
   powerline-daemon -q
   POWERLINE_BASH_CONTINUATION=1
   POWERLINE_BASH_SELECT=1
-  source /usr/share/powerline/zsh/powerline.zsh
+  source /usr/share/powerline/bindings/zsh/powerline.zsh
 fi
 
 # Add Flutter to the $PATH
