@@ -81,3 +81,9 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
+# auto open
+alias -s conf=nvim
+alias -s txt=nvim
+alias -s cfg=nvim
+alias -s bash=nvim
+alias -s zsh=nvim
