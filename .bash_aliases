@@ -38,12 +38,6 @@ then
   alias fl=flutter
 fi
 
-# bashtop => top
-if [[ -f $(which bashtop) ]]
-then
-  alias top=bashtop
-fi
-
 # ranger => ra
 if [[ -f $(which ranger) ]]
 then
