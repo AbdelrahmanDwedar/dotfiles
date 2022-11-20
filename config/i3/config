@@ -211,6 +211,9 @@ exec --no-startup-id $HOME/.config/polybar/launch.sh
 # setup picom to make the background trans
 exec --no-startup-id picom -CGb
 
+# setup dunst for notifications
+exec --no-startup-id dunst 
+
 #######################################################################
 #################### Open apps with keybindings #######################
 #######################################################################
