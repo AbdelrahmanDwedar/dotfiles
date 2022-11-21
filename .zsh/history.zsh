@@ -6,3 +6,7 @@ HISTFILE=~/.history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
+setopt hist_expire_dups_first
+setopt hist_ignore_dups      
+setopt hist_ignore_space     
+setopt hist_verify           
