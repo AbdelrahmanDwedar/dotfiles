@@ -1,0 +1,11 @@
+{
+    "autosave": 1,
+    "autosu": true,
+    "backup": false,
+    "basename": true,
+    "clipboard": "internal",
+    "colorscheme": "material-tc",
+    "indentchar": "\t",
+    "savehistory": false,
+    "statusformatl": "$(filename) $(modified)($(line),$(col)) $(status.paste)| $(opt:filetype) | ft:$(opt:fileformat) | $(opt:encoding)"
+}
