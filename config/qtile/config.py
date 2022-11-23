@@ -124,7 +124,7 @@ layouts = [
     layout.RatioTile(),
     layout.Tile(),
     # layout.TreeTab(),
-    # layout.VerticalTile(),
+    layout.VerticalTile(),
     # layout.Zoomy(),
 ]
 
