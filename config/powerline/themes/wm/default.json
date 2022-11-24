@@ -1,10 +1,12 @@
 {
 	"segments": {
-		"right": [
+		"left": [
 			{
 				"function": "powerline.segments.common.wthr.weather",
 				"priority": 50
-			},
+			}
+		],
+		"right": [
 			{
 				"function": "powerline.segments.common.time.date"
 			},
@@ -14,14 +16,6 @@
 				"args": {
 					"format": "%H:%M",
 					"istime": true
-				}
-			},
-			{
-				"function": "powerline.segments.common.mail.email_imap_alert",
-				"priority": 10,
-				"args": {
-					"username": "",
-					"password": ""
 				}
 			}
 		]
