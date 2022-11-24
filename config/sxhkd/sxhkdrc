@@ -1,15 +1,3 @@
-super + w
-    google
-
-super + Return
-	kitty
-
-super + shift + Return
-	rofi -show run
-
-super + shift + d
-	discord
-
 super + shift + r
 	bspc wm -r
 
@@ -24,8 +12,11 @@ super + i
 super + shift + i
     bspc node -R -90
 
-super + {shift + t,shift + f}
+super + f
 	bspc node -t {tiled,fullscreen}
+
+super + ctrl + space 
+	bspc node -t { floating, tiled }
 
 super + shift + {h,j,k,l}
 	dir={west,south,north,east}; \
@@ -44,11 +35,24 @@ super + ctrl + {h,j,k,l}
 super + ctrl + shift + {h,j,k,l}
 	bspc node -z {right -80 0,top 0 80,bottom 0 -80,left 80 0}
 
-super + ctrl + r
-	kitty -e ranger
-
 super + {1, 2, 3, 4, 5, 6, 7, 8, 9}
 	bspc desktop -f {1, 2, 3, 4, 5, 6, 7, 8, 9}
 
 super + { Tab, shift + Tab }
 	bspc desktop -f { next, prev }
+
+super + ctrl + d 
+	discord
+
+super + ctrl + w
+    $BROWSER
+
+super + Return
+	$TERM
+
+super + shift + Return
+	rofi -show run
+
+super + ctrl + e
+	$TERM -e ranger
+
