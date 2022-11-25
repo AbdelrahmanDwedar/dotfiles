@@ -137,7 +137,7 @@ myStartupHook = do
   -- spawnOnce "~/.fehbg &"  -- set last saved feh wallpaper
   spawnOnce "feh --randomize --bg-fill ~/Wallpapers/**"  -- feh set random wallpaper
   -- spawnOnce "nitrogen --restore &"   -- if you prefer nitrogen to feh
-  setWMName "LG3D"
+  setWMName "xmonad"
 
 myNavigation :: TwoD a (Maybe a)
 myNavigation = makeXEventhandler $ shadowWithKeymap navKeyMap navDefaultHandler
