@@ -594,7 +594,7 @@ myKeys c =
 
   -- Floating windows
   ^++^ subKeys "Floating windows"
-  [ ("M-f", addName "Toggle float layout"        $ sendMessage (T.Toggle "floats"))
+  [ ("M-C-<Space>", addName "Toggle float layout"        $ sendMessage (T.Toggle "floats"))
   , ("M-t", addName "Sink a floating window"     $ withFocused $ windows . W.sink)
   , ("M-S-t", addName "Sink all floated windows" $ sinkAll)]
 
