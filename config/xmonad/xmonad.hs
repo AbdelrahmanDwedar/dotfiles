@@ -127,8 +127,8 @@ myStartupHook = do
   spawnOnce "lxsession"
   spawnOnce "picom"
   spawnOnce "nm-applet"
-  spawnOnce "volumeicon"
-  spawn "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
+  -- spawnOnce "volumeicon"
+  -- spawn "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
 
   spawn ("sleep 2 && conky -c $HOME/.config/conky/xmonad/" ++ colorScheme ++ "-01.conkyrc")
   spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 22")
@@ -658,33 +658,6 @@ myKeys c =
   , ("M-M1-7", addName "Menu of system apps"     $ spawnSelected' gsSystem)
   , ("M-M1-8", addName "Menu of utilities apps"  $ spawnSelected' gsUtilities)]
 
-  -- Emacs (SUPER-e followed by a key)
-  ^++^ subKeys "Emacs"
-  [ ("M-e e", addName "Emacsclient Dashboard"    $ spawn (myEmacs ++ ("--eval '(dashboard-refresh-buffer)'")))
-  , ("M-e a", addName "Emacsclient EMMS (music)" $ spawn (myEmacs ++ ("--eval '(emms)' --eval '(emms-play-directory-tree \"~/Music/\")'")))
-  , ("M-e b", addName "Emacsclient Ibuffer"      $ spawn (myEmacs ++ ("--eval '(ibuffer)'")))
-  , ("M-e d", addName "Emacsclient Dired"        $ spawn (myEmacs ++ ("--eval '(dired nil)'")))
-  , ("M-e i", addName "Emacsclient ERC (IRC)"    $ spawn (myEmacs ++ ("--eval '(erc)'")))
-  , ("M-e n", addName "Emacsclient Elfeed (RSS)" $ spawn (myEmacs ++ ("--eval '(elfeed)'")))
-  , ("M-e s", addName "Emacsclient Eshell"       $ spawn (myEmacs ++ ("--eval '(eshell)'")))
-  , ("M-e v", addName "Emacsclient Vterm"        $ spawn (myEmacs ++ ("--eval '(+vterm/here nil)'")))
-  , ("M-e w", addName "Emacsclient EWW Browser"  $ spawn (myEmacs ++ ("--eval '(doom/window-maximize-buffer(eww \"distro.tube\"))'")))]
-
-  -- Multimedia Keys
-  ^++^ subKeys "Multimedia keys"
-  [ ("<XF86AudioPlay>", addName "mocp play"           $ spawn "mocp --play")
-  , ("<XF86AudioPrev>", addName "mocp next"           $ spawn "mocp --previous")
-  , ("<XF86AudioNext>", addName "mocp prev"           $ spawn "mocp --next")
-  , ("<XF86AudioMute>", addName "Toggle audio mute"   $ spawn "amixer set Master toggle")
-  , ("<XF86AudioLowerVolume>", addName "Lower vol"    $ spawn "amixer set Master 5%- unmute")
-  , ("<XF86AudioRaiseVolume>", addName "Raise vol"    $ spawn "amixer set Master 5%+ unmute")
-  , ("<XF86HomePage>", addName "Open home page"       $ spawn (myBrowser ++ " https://www.youtube.com/c/DistroTube"))
-  , ("<XF86Search>", addName "Web search (dmscripts)" $ spawn "dm-websearch")
-  , ("<XF86Mail>", addName "Email client"             $ runOrRaise "thunderbird" (resource =? "thunderbird"))
-  , ("<XF86Calculator>", addName "Calculator"         $ runOrRaise "qalculate-gtk" (resource =? "qalculate-gtk"))
-  , ("<XF86Eject>", addName "Eject /dev/cdrom"        $ spawn "eject /dev/cdrom")
-  , ("<Print>", addName "Take screenshot (dmscripts)" $ spawn "dm-maim")
-  ]
   -- The following lines are needed for named scratchpads.
     where nonNSP          = WSIs (return (\ws -> W.tag ws /= "NSP"))
           nonEmptyNonNSP  = WSIs (return (\ws -> isJust (W.stack ws) && W.tag ws /= "NSP"))
