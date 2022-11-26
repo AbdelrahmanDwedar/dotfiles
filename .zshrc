@@ -69,33 +69,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # set the prompt if powerline doesn't exist
 source ~/.zsh/prompt.zsh
 
-# Powerline configuration
-if [ -f /usr/share/powerline/bindings/zsh/powerline.zsh ]; then
-  powerline-daemon -q
-  POWERLINE_BASH_CONTINUATION=1
-  POWERLINE_BASH_SELECT=1
-  source /usr/share/powerline/bindings/zsh/powerline.zsh
-fi
-
-# Add Flutter to the $PATH
-export PATH="$PATH:$HOME/flutter/bin"
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
-export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-
-export PATH=$PATH:$HOME/.emacs.d/doom/bin
-
-########################################################################################
-########################################################################################
-#######################                                          #######################
-##################                                                   ###################
-##################                    Plugins                        ###################
-##################                                                   ###################
-######################                                           #######################
-########################################################################################
-########################################################################################
 
 # all aliases
 source ~/.zsh/aliases.zsh

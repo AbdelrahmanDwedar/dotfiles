@@ -35,10 +35,10 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # Add Flutter to the $PATH
-export PATH="$PATH:$HOME/flutter/bin"
+# export PATH="$PATH:$HOME/flutter/bin"
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+# source <(ng completion script)
 
-export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-. "$HOME/.cargo/env"
+# export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+# . "$HOME/.cargo/env"
