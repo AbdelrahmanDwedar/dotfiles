@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/abdelrahmandwedar/Wallpapers/demon-slayer/demon_slayer2.jpg' 
+feh --no-fehbg --bg-fill '$HOME/Wallpapers/demon-slayer/demon_slayer2.jpg' 
