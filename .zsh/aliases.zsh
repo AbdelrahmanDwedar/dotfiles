@@ -51,6 +51,9 @@ if [ -e $(which lsd) ]; then
   alias lt='lsd --tree'
   alias lla='lsd -lFA'
   alias lta='lsd --tree -A'
+  alias li='lsd -Fi'
+  alias lli='lsd -Fli'
+  alias llia='lsd -FAli'
 fi
 
 # cd shortcuts
