@@ -120,7 +120,7 @@ cp config/* ~/.config
 + bash
 + bashtop
 + bat
-- bspwm
++ bspwm
 + btop
 + cointop
 + doom emacs
