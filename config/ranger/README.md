@@ -11,7 +11,7 @@ This is mostly the ranger file manager default configrations but with a little c
 
 ### Screenshots
 
-![Screenshot](./assets/Screenshot.png)
+![Screenshot](./assets/kitty.png)
 
 ---
 
