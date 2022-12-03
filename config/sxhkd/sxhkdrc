@@ -56,3 +56,5 @@ super + shift + Return
 super + ctrl + e
 	$TERM -e ranger
 
+super + p 
+	flameshot gui
