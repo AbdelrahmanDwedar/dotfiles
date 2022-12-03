@@ -216,6 +216,9 @@ exec --no-startup-id picom -CGb
 # setup dunst for notifications
 exec --no-startup-id dunst 
 
+# setup flameshot for screenshots
+exec --no-startup-id flameshot 
+
 #######################################################################
 #################### Open apps with keybindings #######################
 #######################################################################
