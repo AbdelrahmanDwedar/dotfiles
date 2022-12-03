@@ -19,6 +19,8 @@
 	wr = worktree remove
 	squash = rebase -i
 	sub = submodule
+	rms = restore --staged
+	enforce = push --force-with-lease
 [init]
 	defaultBranch = main
 [core]
