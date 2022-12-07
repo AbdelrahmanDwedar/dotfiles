@@ -580,5 +580,5 @@ if autorun then
        awful.util.spawn(autorunApps[app])
    end
 end
-awful.spawn.with_shell("feh --bg-fill ~/Wallpapers/demon-slayer/demon_slayer2.jpg")
+awful.spawn.with_shell("~/.fehbg")
 
