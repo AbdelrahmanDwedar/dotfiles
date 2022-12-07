@@ -18,7 +18,7 @@ bspc config normal_border_color		"#282A36"
 bspc config active_border_color		"#8BE9FD"
 bspc config presel_feedback_color	"#50FA7B"
 
-feh --bg-fill ~/Wallpapers/demon-slayer/demon_slayer2.jpg &
+~/.fehbg &
 sxhkd &
 polybar &
 picom &
