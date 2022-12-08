@@ -1,2 +1,3 @@
-#!/bin/sh
-feh --no-fehbg --bg-fill '$HOME/Wallpapers/demon-slayer/demon_slayer2.jpg' 
+#!/bin/bash
+feh --no-fehbg --bg-fill '$HOME/Wallpapers/anime/demon-slayer/tanjiro_dark.jpg' 
+# feh --no-fehbg --bg-fill --randomize '$HOME/Wallpapers/**/**'
