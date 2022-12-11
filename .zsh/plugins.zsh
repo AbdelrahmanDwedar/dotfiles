@@ -26,3 +26,5 @@ source ~/.zsh/plugins/zsh-dirhistory/dirhistory.plugin.zsh
 # zsh check deps (get the way of installing dependencies)
 source ~/.zsh/plugins/check-deps/check-deps.plugin.zsh
 
+# zsh vi mode
+source ~/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
