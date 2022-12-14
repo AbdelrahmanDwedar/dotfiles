@@ -88,3 +88,4 @@ map gd cd ~/.dotfiles
 map gc cd ~/.config
 map gl cd ~/.local
 map gt cd ~/.local/share/Trash/files
+map gm cd /run/user/1000/gvfs
