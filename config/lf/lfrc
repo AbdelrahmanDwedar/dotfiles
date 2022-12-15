@@ -81,11 +81,24 @@ map C clear
 map dd trash
 map dr restore_trash
 
-# Movement
+# goto keymaps
 map gh cd ~
+map gd cd ~/Downloads 
 map gp cd ~/Programming
-map gd cd ~/.dotfiles
-map gc cd ~/.config
+map gw cd ~/Wallpapers
+map gv cd ~/Videos
+map g- cd ~/Desktop
 map gl cd ~/.local
 map gt cd ~/.local/share/Trash/files
-map gm cd /run/user/1000/gvfs
+map gc cd ~/.config
+map gm cd /run/user/1000/gvfs # go the the connected mobiles
+map gr cd /
+map g/ cd /
+map gE cd /etc
+map gU cd /usr
+map gD cd /dev
+map gM cd /mnt
+map gS cd /srv
+map gP cd /tmp
+map gO cd /opt
+map gV cd /var
