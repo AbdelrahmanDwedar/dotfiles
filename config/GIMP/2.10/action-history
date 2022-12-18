@@ -1,0 +1,7 @@
+# GIMP action-history
+
+(history-item "image-duplicate" 0)
+(history-item "tools-color-picker" 4)
+(history-item "file-open" 1)
+
+# end of action-history
