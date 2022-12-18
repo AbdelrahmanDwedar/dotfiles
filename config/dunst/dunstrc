@@ -442,10 +442,10 @@
 #    summary = *says*
 #    urgency = critical
 #
-#[twitter]
-#    appname = Pidgin
-#    summary = *twitter.com*
-#    urgency = normal
+[twitter]
+    appname = Pidgin
+    summary = *twitter.com*
+    urgency = low
 #
 #[stack-volumes]
 #    appname = "some_volume_notifiers"
