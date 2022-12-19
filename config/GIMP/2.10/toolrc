@@ -24,7 +24,7 @@
             (visible yes))))
 (GimpToolGroup "tool group"
     (visible yes)
-    (active-tool "gimp-free-select-tool")
+    (active-tool "gimp-foreground-select-tool")
     (children
         (GimpToolInfo "gimp-free-select-tool"
             (icon-name "gimp-tool-free-select")
@@ -88,7 +88,7 @@
             (visible yes))))
 (GimpToolGroup "tool group"
     (visible yes)
-    (active-tool "gimp-bucket-fill-tool")
+    (active-tool "gimp-gradient-tool")
     (children
         (GimpToolInfo "gimp-bucket-fill-tool"
             (icon-name "gimp-tool-bucket-fill")
@@ -98,7 +98,7 @@
             (visible yes))))
 (GimpToolGroup "tool group"
     (visible yes)
-    (active-tool "gimp-paintbrush-tool")
+    (active-tool "gimp-ink-tool")
     (children
         (GimpToolInfo "gimp-paintbrush-tool"
             (icon-name "gimp-tool-paintbrush")

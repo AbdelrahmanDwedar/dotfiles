@@ -11,13 +11,13 @@
     (size 640 480))
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
-    (position 9 49)
-    (size 1348 710)
+    (position 0 0)
+    (size 1366 731)
     (open-on-exit)
     (aux-info
         (left-docks-width "184")
-        (right-docks-width "209")
-        (maximized "no"))
+        (right-docks-width "291")
+        (maximized "yes"))
     (gimp-toolbox
         (side left)
         (book
@@ -41,20 +41,16 @@
     (gimp-dock
         (side right)
         (book
-            (current-page 0)
-            (dockable "gimp-brush-grid"
-                (tab-style automatic)
-                (aux-info
-                    (show-button-bar "true")))
+            (current-page 1)
             (dockable "gimp-pattern-grid"
                 (tab-style automatic)
                 (aux-info
                     (show-button-bar "true")))
-            (dockable "gimp-font-list"
+            (dockable "gimp-document-list"
                 (tab-style automatic)
                 (aux-info
                     (show-button-bar "true")))
-            (dockable "gimp-document-list"
+            (dockable "gimp-brush-grid"
                 (tab-style automatic)
                 (aux-info
                     (show-button-bar "true"))))
@@ -78,11 +74,21 @@
                     (show-button-bar "true"))))))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-dialog")
-    (position 209 91)
+    (position 209 84)
     (size 948 647))
 (session-info "toplevel"
     (factory-entry "gimp-toolbox-color-dialog")
-    (position 460 165))
+    (position 460 91))
+(session-info "toplevel"
+    (factory-entry "gimp-image-new-dialog")
+    (position 484 235))
+(session-info "toplevel"
+    (factory-entry "gimp-gradient-tool-dialog")
+    (position 580 199))
+(session-info "toplevel"
+    (factory-entry "gimp-preferences-dialog")
+    (position 209 40)
+    (size 1117 679))
 
 (hide-docks no)
 (single-window-mode yes)
