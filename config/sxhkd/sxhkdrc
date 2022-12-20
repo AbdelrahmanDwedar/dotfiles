@@ -51,7 +51,7 @@ super + Return
 	$TERM
 
 super + shift + Return
-	rofi -show run
+	rofi -show drun
 
 super + ctrl + e
 	$TERM -e ranger
