@@ -1,18 +1,23 @@
-**/qalc.history
-config/gh/hosts.yml
+### Qtile
 __init__.py
 __pycache__/
 
-# vieb
+### qalc
+**/qalc.history
+
+### github cli
+config/gh/hosts.yml
+
+### vieb
 config/Vieb
 !config/Vieb/viebrc
 
-# doom
+### doom
 .doom.d/custom.el
 
-# vifm
+### vifm
 config/vifm/vifminfo.json
 
-# lazygit
+### lazygit
 config/lazygit/state.yml
 config/micro/buffers
