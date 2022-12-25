@@ -32,6 +32,9 @@
 	path = .zsh/plugins/zsh-syntax-highlighting
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
 	branch = master
+[submodule "config/nvim"]
+	path = config/nvim
+	url = git@github.com:AbdelrahmanDwedar/neovim-config.git
 [submodule "config/ranger/plugins/ranger_devicons"]
 	path = config/ranger/plugins/ranger_devicons
 	url = git@github.com:alexanderjeurissen/ranger_devicons.git
