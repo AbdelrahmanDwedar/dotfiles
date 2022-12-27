@@ -114,6 +114,10 @@ return require('packer').startup(function()
 	-- multi cursors visualy
 	use 'mg979/vim-visual-multi'
 
+	-- editor config plugin for the /.editorconfig settings
+	use 'editorconfig/editorconfig-vim'
+
+
 end)
 
 
