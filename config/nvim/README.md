@@ -42,6 +42,7 @@ I don't use ton of plugins with NeoVim, I just use the plugins that I find helpf
 ### Native Vim Plugins
 - [Vim Wakatime](https://github.com/wakatime/vim-wakatime)
 - [Vim visual multi](https://github.com/mg979/vim-visual-multi)
+- [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 
 ---
 
