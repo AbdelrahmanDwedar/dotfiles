@@ -22,6 +22,9 @@ config/vifm/vifminfo.json
 config/lazygit/state.yml
 config/micro/buffers
 
+### dconf (gnome settings)
+config/dconf/user
+
 ### NeoVim
 # Compiled Lua sources
 luac.out
