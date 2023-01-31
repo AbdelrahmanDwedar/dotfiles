@@ -36,6 +36,7 @@ keymap({ 'i', 'c' }, '<C-BS>', '<C-w>', nor)
 
 -- Paste without counting the deleted values
 keymap('n', '"p', '"0p', opts)
+keymap('n', '"P', '"0P', opts)
 
 -- add semicolon in the end
 keymap('n', '<Leader>;', 'A;<Esc>', opts)
