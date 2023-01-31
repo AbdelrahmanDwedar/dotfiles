@@ -29,7 +29,7 @@ keymap({ 'n', 'i' }, '<C-p>', function() require("telescope.builtin").find_files
 keymap({ 'n', 'v' }, '<C-c>', ':VMClear<CR>', opts)
 
 -- new line
-keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o', opts)
+keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o<Esc>', opts)
 
 -- remove a word backwards
 keymap({ 'i', 'c' }, '<C-BS>', '<C-w>', nor)
