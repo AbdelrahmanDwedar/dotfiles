@@ -62,13 +62,18 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ls='ls -CF --color=auto'
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -d "$HOME/.emacs.d/bin" ] ; then
+    PATH="$HOME/.emacs.d/bin:$PATH"
+fi
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # set the prompt if powerline doesn't exist
 source ~/.zsh/prompt.zsh
-
 
 # all aliases
 source ~/.zsh/aliases.zsh
@@ -84,9 +89,4 @@ source ~/.zsh/vim.zsh
 
 # setup the history to ~/.history and setup everything else
 source ~/.zsh/history.zsh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if [ -d "$HOME/.emacs.d/bin" ] ; then
-    PATH="$HOME/.emacs.d/bin:$PATH"
-fi
 

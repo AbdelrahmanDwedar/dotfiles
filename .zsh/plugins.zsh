@@ -4,9 +4,6 @@ source ~/.zsh/plugins/wakatime/wakatime.plugin.zsh
 # Add zsh auto suggestions
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# zsh syntax highlighting
-source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # config zsh completion
 fpath=(~/.zsh/plugins/zsh-completions/src $fpath)
 
@@ -28,3 +25,6 @@ source ~/.zsh/plugins/check-deps/check-deps.plugin.zsh
 
 # zsh vi mode
 source ~/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
+
+# zsh syntax highlighting
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
