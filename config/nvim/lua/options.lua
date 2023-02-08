@@ -17,10 +17,10 @@ vim.opt.autoindent = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- UX 
+-- UX
 vim.opt.spell = true
-vim.opt.mouse = "a"
-vim.o.foldmethod = "syntax"
+vim.opt.mouse = 'a'
+vim.o.foldmethod = 'syntax'
 
 -- styling
 vim.opt.hlsearch = false
@@ -30,4 +30,4 @@ vim.opt.scrolloff = 7
 vim.opt.wildmode = 'full'
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.fileencoding = "utf-8"
+vim.opt.fileencoding = 'utf-8'
