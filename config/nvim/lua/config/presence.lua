@@ -1,7 +1,7 @@
 require('presence'):setup({
 	auto_update = true,
 	neovim_image_text = "NeoVim",
-	main_image = "neovim",
+	main_image = "file",
 	client_id = "793271441293967371", -- Use your own Discord application client id (not recommended)
 	log_level = nil, -- Log messages at or above this level (one of the following: "debug", "info", "warn", "error")
 	debounce_timeout = 10,
