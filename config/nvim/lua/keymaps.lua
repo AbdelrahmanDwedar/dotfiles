@@ -10,8 +10,8 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- nvim tree (lua) fast access shortcuts
-keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', opts)
-keymap('n', '<Leader><Leader>f', ':NvimTreeFocus<CR>', opts)
+keymap('n', '<Leader>e', require('nvim-tree.api').tree.toggle, opts)
+keymap('n', '<Leader><Leader>f', require('nvim-tree.api').tree.focus, opts)
 
 -- Telescope
 keymap('n', '<Leader>tt', ':Telescope ', nor)

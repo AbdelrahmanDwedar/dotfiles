@@ -76,3 +76,9 @@ autocmd('BufWritePost', {
 	command = 'source % | PackerCompile',
 	group = 'packer',
 })
+
+-- nvim-tree
+-- autocmd('VimEnter', {
+-- 	pattern = '*',
+-- 	callback = require('config.nvim-tree').open_nvim_tree,
+-- })
