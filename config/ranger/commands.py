@@ -60,3 +60,26 @@ class my_edit(Command):
         # This is a generic tab-completion function that iterates through the
         # content of the current directory.
         return self._tab_directory_content()
+
+class background(Command):
+    """:bg <filename>
+
+    Used to change the background using the feh tool (for window managers)
+    """
+
+    def execute(self):
+        if self.arg(1):
+            target_filename = self.rest(1)
+        else:
+            target_filename = self.fm.thisfile.path
+
+        # Using bad=True in fm.notify allows you to print error messages:
+        if not os.path.exists(target_filename):
+            self.fm.notify("The given file does not exist!", bad=True)
+            return
+        
+        if os.path.isfile(target_filename) :
+
+            os.system(f"feh --no-fehbg --bg-fill {target_filename}")
+        elif os.path.isdir(target_filename) :
+            os.system(f"feh --no-fehbg --bg-fill --randomize {target_filename}")
