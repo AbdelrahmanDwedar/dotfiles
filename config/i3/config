@@ -212,7 +212,7 @@ default_floating_border pixel 1
 for_window [class="^.*"] border pixel 2
 
 # use polybar
-exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id polybar
 
 # setup picom to make the background trans
 exec --no-startup-id picom -CGb
