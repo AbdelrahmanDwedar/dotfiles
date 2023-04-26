@@ -203,7 +203,8 @@ hide_edge_borders none
 bindsym XF86TouchpadToggle exec /**/toggletouchpad.sh
 
 # set the wallpaper with feh
-exec_always ~/.fehbg
+# exec_always ~/.fehbg
+exec_always feh --no-fehbg --bg-fill --randomize ~/Wallpapers/**/**/**
 
 # remove the title bar
 default_border pixel 1
