@@ -58,3 +58,6 @@ super + ctrl + e
 
 super + p 
 	flameshot gui
+
+super + shift + w
+	feh --no-fehbg --bg-fill --randomize ~/Wallpapers/**/***
