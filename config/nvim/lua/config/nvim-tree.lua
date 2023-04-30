@@ -18,7 +18,7 @@ local function on_attach(bufnr)
 	keymap('n', 'v', nvimTreeApi.node.open.vertical, nvimTreeOps('open in a new vertical split'))
 	keymap('n', 'C', nvimTreeApi.tree.change_root_to_node, nvimTreeOps('cd'))
 	keymap('n', 'l', nvimTreeApi.node.open.edit, nvimTreeOps('open'))
-	keymap('n', 'h', nvimTreeApi.node.navigate.parent, nvimTreeOps('close'))
+	keymap('n', 'h', nvimTreeApi.node.navigate.parent_close, nvimTreeOps('close'))
 end
 
 -- open nvim tree by default
