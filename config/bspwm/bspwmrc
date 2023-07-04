@@ -25,4 +25,5 @@ polybar &
 picom &
 dunst &
 killall flameshot && flameshot &
+xss-lock --transfer-sleep-lock -- i3lock --nofork -e -f -c "#000000"
 setxkbmap -layout us,ar -option grp:win_space_toggle
