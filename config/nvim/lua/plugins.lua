@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- Plugins managing by packer.nvim
 return require('packer').startup(function()
 	use('wbthomason/packer.nvim')
@@ -10,8 +11,23 @@ return require('packer').startup(function()
 		requires = {
 			'williamboman/mason.nvim',
 			'williamboman/mason-lspconfig.nvim',
-			'jose-elias-alvarez/null-ls.nvim',
 		},
+	})
+
+	use({
+		'jose-elias-alvarez/null-ls.nvim',
+		on_attach = function(client, bufnr)
+			if client.supports_method('textDocument/formatting') then
+				vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+				vim.api.nvim_create_autocmd('BufWritePre', {
+					group = augroup,
+					buffer = bufnr,
+					callback = function()
+						vim.lsp.buf.formatting_sync()
+					end,
+				})
+			end
+		end,
 	})
 
 	-- neovim completion
@@ -22,13 +38,18 @@ return require('packer').startup(function()
 			'hrsh7th/cmp-path',
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-nvim-lua',
+			'hrsh7th/cmp-cmdline',
 			'saadparwaiz1/cmp_luasnip',
 		},
 	})
 
+	-- LuaSnip
 	use({
 		'L3MON4D3/LuaSnip',
 		tag = 'vCurrentMajor.*',
+		requires = {
+			'rafamadriz/friendly-snippets',
+		},
 	})
 
 	-- neovim treesitter
@@ -43,10 +64,7 @@ return require('packer').startup(function()
 	-- lua status bar
 	use({
 		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-		config = function()
-			require('lualine').setup({})
-		end,
+		requires = { 'kyazdani42/nvim-web-devicons' },
 	})
 
 	-- auto completion for {([" etc...
@@ -110,8 +128,12 @@ return require('packer').startup(function()
 		requires = 'kyazdani42/nvim-web-devicons',
 	})
 
+	-- web devicons
+	use('kyazdani42/nvim-web-devicons')
+
 	-- best neovim colorschemes in one place
-	use('AbdelrahmanDwedar/awesome-nvim-colorschemes')
+	-- use('AbdelrahmanDwedar/awesome-nvim-colorschemes')
+	use('~/Programming/projects/extentions/awesome-nvim-colorschemes')
 
 	-- === #### Native vim plugins ### === ---
 
