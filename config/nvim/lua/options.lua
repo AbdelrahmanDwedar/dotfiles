@@ -18,13 +18,13 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- UX
-vim.opt.spell = true
+vim.opt.spell = false
 vim.opt.mouse = 'a'
-vim.o.foldmethod = 'syntax'
+vim.opt.foldmethod = 'syntax'
 
 -- styling
 vim.opt.hlsearch = false
-vim.opt.hidden = true
+vim.opt.hidden = false
 vim.opt.wrap = false
 vim.opt.scrolloff = 7
 vim.opt.wildmode = 'full'
