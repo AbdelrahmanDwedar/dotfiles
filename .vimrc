@@ -72,18 +72,18 @@ nmap <silent> <C-Up> :resize +3<CR>
 nmap <silent> <C-Down> :resize -3<CR>
 
 nmap <silent> rt :tabclose<CR>
-nmap <silent> tf :tabfind 
+nmap tf :tabfind 
 
 nmap <silent> <Leader>e :NERDTreeToggle<CR>
-nmap <silent> <Leader>f :NERDTreeFocus<CR>
+nmap <silent> <Leader><Leader>f :NERDTreeFocus<CR>
 
+nmap <silent> <Leader>ff :FZF<CR>
 nmap <silent> <C-p> :FZF<CR>
-nmap <silent> <Leader><Leader>f :FZF<CR>
 
 nmap <silent> <C-c> :VMClear<CR>
 
-nmap <silent> <A-j> :m .+1<CR>==gi
-nmap <silent> <A-k> :m .-2<CR>==gi
+nmap <silent> <A-j> :m .+1<CR>==
+nmap <silent> <A-k> :m .-2<CR>==
 
 nmap <silent> <Leader>; A;
 
