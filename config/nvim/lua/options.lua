@@ -18,6 +18,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- UX
+vim.opt.signcolumn = "auto:5"
 vim.opt.spell = false
 vim.opt.mouse = 'a'
 vim.opt.foldmethod = 'syntax'
