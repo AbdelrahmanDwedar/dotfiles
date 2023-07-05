@@ -2,14 +2,11 @@ local lspconfig = require('lspconfig')
 lspconfig.pyright.setup({})
 lspconfig.tsserver.setup({})
 lspconfig.gopls.setup({})
+lspconfig.clangd.setup({})
 lspconfig.svelte.setup({})
 lspconfig.emmet_ls.setup({})
 lspconfig.ruby_ls.setup({})
-lspconfig.lua_ls.setup({
-	diagnostics = {
-		globals = { 'vim' },
-	},
-})
+lspconfig.lua_ls.setup({ diagnostics = { globals = { 'vim' } } })
 lspconfig.rust_analyzer.setup({})
 
 require('config.lsp.mason')
