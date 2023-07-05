@@ -25,32 +25,23 @@ set laststatus=2
 " -=# Plugins (with vim plug) #=-
 call plug#begin()
 
-	Plug 'ryanoasis/vim-devicons' " devicons for vim
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy finder for finding files easier
 
-	Plug 'wakatime/vim-wakatime' " wakatime watcher
-   
-	Plug 'tpope/vim-surround' " surrounding blocks with {([ etc... with ys(block)(charachter)
-
-	Plug 'tpope/vim-commentary' " commenting lines with gcc & gc
+	Plug 'kshenoy/vim-signature'
 
 	Plug 'rafi/awesome-vim-colorschemes' " awesome vim colorschemes
 
-	Plug 'ap/vim-css-color' " css simple color highlightings
-
-	Plug 'godlygeek/tabular' " required for next plugin
-	Plug 'preservim/vim-markdown' " MarkDown previewer 
-
-	Plug 'mg979/vim-visual-multi' " visual multi cursoring with <C-n> and others could be found in 
-
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy finder for finding files easier
+	Plug 'ryanoasis/vim-devicons' " devicons for vim
 
 	Plug 'scrooloose/nerdtree' " NERDTree file explorer
 
-	" Plug 'vim-airline/vim-airline' " airline 
-
 	Plug 'solvedbiscuit71/vim-autopair' " auto pairs for {([ etc...
 
-	Plug 'kshenoy/vim-signature'
+	Plug 'tpope/vim-commentary' " commenting lines with gcc & gc
+
+	Plug 'tpope/vim-surround' " surrounding blocks with {([ etc... with ys(block)(charachter)
+
+	Plug 'wakatime/vim-wakatime' " wakatime watcher
 
 call plug#end()
 
