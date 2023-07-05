@@ -131,6 +131,8 @@ return require('packer').startup(function()
 	-- web devicons
 	use('kyazdani42/nvim-web-devicons')
 
+	use('chentoast/marks.nvim')
+
 	-- best neovim colorschemes in one place
 	-- use('AbdelrahmanDwedar/awesome-nvim-colorschemes')
 	use('~/Programming/projects/extentions/awesome-nvim-colorschemes')
