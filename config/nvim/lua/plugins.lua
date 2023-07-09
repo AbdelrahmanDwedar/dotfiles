@@ -64,7 +64,6 @@ return require('packer').startup(function()
 	-- lua status bar
 	use({
 		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons' },
 	})
 
 	-- auto completion for {([" etc...
@@ -93,7 +92,6 @@ return require('packer').startup(function()
 	-- NeoVim Tree written in lua
 	use({
 		'kyazdani42/nvim-tree.lua',
-		requires = 'kyazdani42/nvim-web-devicons',
 	})
 
 	-- For Commenting gcc & gc
@@ -125,7 +123,6 @@ return require('packer').startup(function()
 	use({
 		'akinsho/bufferline.nvim',
 		tag = 'v3.*',
-		requires = 'kyazdani42/nvim-web-devicons',
 	})
 
 	-- web devicons
