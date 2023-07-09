@@ -39,9 +39,9 @@ require('bufferline').setup({
 			local s = ' '
 			for e, n in pairs(diagnostics_dict) do
 				local sym = e == 'error' and ' ' or (e == 'warning' and ' ' or ' ')
-				s = s .. n .. sym .. '(' .. count .. ')'
+				s = s .. n .. sym
 			end
-			return s
+			return s .. '(' .. count .. ')'
 		end,
 		-- NOTE: this will be called a lot so don't do any heavy processing here
 		custom_filter = function(buf_number, buf_numbers)
