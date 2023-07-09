@@ -117,7 +117,10 @@
       <eventcontext
          id="rect"
          style="fill:blue;"
-         usecurrent="1" />
+         usecurrent="1"
+         width="563.233970778061"
+         height="894.389312451376"
+         ry="149.466274060001" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -150,9 +153,12 @@
       <eventcontext
          id="arc"
          style="fill:red;"
-         end="0"
+         end="122.000000720031"
          start="0"
-         usecurrent="1" />
+         usecurrent="1"
+         rx="220.031771922674"
+         ry="248.290410079355"
+         arc_type="1" />
       <eventcontext
          id="star"
          magnitude="5"
@@ -311,8 +317,9 @@
        font_sample="AaBbCcIiPpQq12369$€¢?.;/()"
        show_sample_in_list="1"
        use_svg2="1"
-       style="line-height:1.25;font-family:github-octicons;font-size:40px;-inkscape-font-specification:github-octicons"
-       selcue="1" />
+       style="line-height:1.25;font-family:github-octicons;font-size:74.66666667px;-inkscape-font-specification:github-octicons;text-anchor:end;text-align:end"
+       selcue="1"
+       align_mode="2" />
     <eventcontext
        id="nodes"
        selcue="1"
@@ -563,7 +570,8 @@
        state="1" />
     <group
        id="preferences"
-       state="1" />
+       state="1"
+       page="9" />
     <group
        id="gradienteditor" />
     <group
@@ -583,7 +591,7 @@
        default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/home/abdelrahmandwedar/Programming/projects/web/devicons-personal/icons/solidjs"
+       path="/home/abdelrahmandwedar/Programming/projects/web/devicon/icons/dynamodb"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -937,7 +945,7 @@
      org.inkscape.output.png.inkscape.png_antialias="2" />
   <group
      id="desktop"
-     style="fill:#999999;opacity:0.99999999">
+     style="fill:#000000;opacity:0.99999999;stroke-width:9.6;stroke-opacity:0.4361082;paint-order:stroke markers fill;stroke-miterlimit:19.2;stroke-linejoin:bevel;font-size:96px;-inkscape-font-specification:'Amiri Bold';font-family:Amiri;text-anchor:end;text-align:end;font-weight:bold">
     <group
        width="640"
        height="480"
