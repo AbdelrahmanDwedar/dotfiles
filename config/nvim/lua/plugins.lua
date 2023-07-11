@@ -56,6 +56,10 @@ return require('packer').startup(function()
 	use({
 		'nvim-treesitter/nvim-treesitter',
 		run = 'TSUpdate',
+		requires = {
+			'nvim-treesitter/nvim-treesitter-refactor',
+			'nvim-treesitter/nvim-treesitter-context',
+		},
 	})
 
 	-- git signs integration

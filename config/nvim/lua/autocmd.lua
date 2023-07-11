@@ -92,7 +92,7 @@ autocmd('LspAttach', {
 		keymap('n', 'gI', function()
 			vim.lsp.buf.implementation()
 		end, opts)
-		keymap('n', 'gr', function()
+		keymap('n', 'gR', function()
 			vim.lsp.buf.references()
 		end, opts)
 		keymap('n', 'gl', function()
