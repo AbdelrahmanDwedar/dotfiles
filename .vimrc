@@ -19,36 +19,15 @@ set splitbelow splitright
 set nohlsearch
 set hidden
 set wrap
-set statusline="%!py3eval('powerline.new_window()')"
-set laststatus=2
 
 " -=# Plugins (with vim plug) #=-
 call plug#begin()
 
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy finder for finding files easier
-
-	Plug 'kshenoy/vim-signature'
-
 	Plug 'rafi/awesome-vim-colorschemes' " awesome vim colorschemes
-
-	Plug 'ryanoasis/vim-devicons' " devicons for vim
-
-	Plug 'scrooloose/nerdtree' " NERDTree file explorer
-
-	Plug 'solvedbiscuit71/vim-autopair' " auto pairs for {([ etc...
-
-	Plug 'tpope/vim-commentary' " commenting lines with gcc & gc
-
-	Plug 'tpope/vim-surround' " surrounding blocks with {([ etc... with ys(block)(charachter)
 
 	Plug 'wakatime/vim-wakatime' " wakatime watcher
 
 call plug#end()
-
-" -=# powerline #=-
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
 
 " -=# colorscheme #=-
 colorscheme nord
@@ -74,14 +53,6 @@ nmap <silent> <C-Down> :resize -3<CR>
 nmap <silent> rt :tabclose<CR>
 nmap tf :tabfind 
 
-nmap <silent> <Leader>e :NERDTreeToggle<CR>
-nmap <silent> <Leader><Leader>f :NERDTreeFocus<CR>
-
-nmap <silent> <Leader>ff :FZF<CR>
-nmap <silent> <C-p> :FZF<CR>
-
-nmap <silent> <C-c> :VMClear<CR>
-
 nmap <silent> <A-j> :m .+1<CR>==
 nmap <silent> <A-k> :m .-2<CR>==
 
@@ -95,8 +66,6 @@ nmap <silent> gV `[v`]
 nmap <silent> <Leader><Leader>s :w<CR>:source ~/.vimrc<CR>
 
 " insert mode
-imap <silent> <C-p> <Esc>:FZF<CR>
-
 imap <C-BS> <C-W>
 imap <C-CR> <Esc>o
 
