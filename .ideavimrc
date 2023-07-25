@@ -1,0 +1,6 @@
+source ./.vimrc
+
+set NERDTree
+set surround
+set commentary
+set vim-multiple-cursors
