@@ -1,9 +1,9 @@
 local servers = {
-	'tsserver',
 	'bashls',
-	'jsonls',
+	'clangd',
 	'gopls',
 	'grammarly',
+	'pyright',
 }
 
 local settings = {
