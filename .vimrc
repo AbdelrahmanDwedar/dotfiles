@@ -42,26 +42,14 @@ nmap <silent> <C-j> <C-w>j
 nmap <silent> <C-k> <C-k>k
 
 nmap <silent> <C-CR> <Esc>o
-nmap <silent> B ^
-" nmap <silent> E $
 
 nmap <silent> <C-Left> :vertical resize +3<CR>
 nmap <silent> <C-Right> :vertical resize -3<CR>
 nmap <silent> <C-Up> :resize +3<CR>
 nmap <silent> <C-Down> :resize -3<CR>
 
-nmap <silent> rt :tabclose<CR>
-nmap tf :tabfind 
-
 nmap <silent> <A-j> :m .+1<CR>==
 nmap <silent> <A-k> :m .-2<CR>==
-
-nmap <silent> <Leader>; A;
-
-nmap <silent> <Down> gj
-nmap <silent> <Up> gk
-
-nmap <silent> gV `[v`]
 
 nmap <silent> <Leader><Leader>s :w<CR>:source ~/.vimrc<CR>
 
