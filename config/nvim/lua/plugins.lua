@@ -46,7 +46,7 @@ return require('packer').startup(function()
 	-- LuaSnip
 	use({
 		'L3MON4D3/LuaSnip',
-		tag = 'vCurrentMajor.*',
+		run = 'make install_jsregexp',
 		requires = {
 			'rafamadriz/friendly-snippets',
 		},
