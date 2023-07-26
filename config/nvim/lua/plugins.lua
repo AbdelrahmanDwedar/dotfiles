@@ -66,9 +66,7 @@ return require('packer').startup(function()
 	use('lewis6991/gitsigns.nvim')
 
 	-- lua status bar
-	use({
-		'nvim-lualine/lualine.nvim',
-	})
+	use('nvim-lualine/lualine.nvim')
 
 	-- auto completion for {([" etc...
 	use({
@@ -78,6 +76,7 @@ return require('packer').startup(function()
 		end,
 	})
 
+	-- better comments
 	use('Djancyp/better-comments.nvim')
 
 	-- discord presence for neovim
@@ -94,9 +93,7 @@ return require('packer').startup(function()
 	})
 
 	-- NeoVim Tree written in lua
-	use({
-		'kyazdani42/nvim-tree.lua',
-	})
+	use('kyazdani42/nvim-tree.lua')
 
 	-- For Commenting gcc & gc
 	use({
@@ -132,6 +129,7 @@ return require('packer').startup(function()
 	-- web devicons
 	use('kyazdani42/nvim-web-devicons')
 
+	-- marks
 	use('chentoast/marks.nvim')
 
 	-- best neovim colorschemes in one place
