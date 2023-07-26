@@ -72,9 +72,11 @@ local function on_attach(bufnr)
 end
 
 require('nvim-tree').setup({
+	disable_netrw = true,
+	hijack_netrw = true,
+	hijack_cursor = true,
 	on_attach = on_attach,
 	sort_by = 'case_sensitive',
-	hijack_cursor = true,
 	view = {
 		adaptive_size = true,
 		centralize_selection = false,
