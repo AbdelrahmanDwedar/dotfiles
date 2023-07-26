@@ -112,14 +112,6 @@ return require('packer').startup(function()
 		end,
 	})
 
-	-- colorizing for hex and other color formats
-	use({
-		'norcalli/nvim-colorizer.lua',
-		config = function()
-			require('colorizer').setup()
-		end,
-	})
-
 	-- bufferline
 	use({
 		'akinsho/bufferline.nvim',
