@@ -1,5 +1,5 @@
 -- shurtcuts
-local telescope = require("telescope.builtin")
+local telescope = require('telescope.builtin')
 local keymap = vim.keymap.set
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
