@@ -1,4 +1,5 @@
 -- shurtcuts
+local telescope = require("telescope.builtin")
 local keymap = vim.keymap.set
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
@@ -84,16 +85,16 @@ autocmd('LspAttach', {
 			vim.lsp.buf.declaration()
 		end, opts)
 		keymap('n', 'gd', function()
-			vim.lsp.buf.definition()
+			telescope.lsp_definitions()
 		end, opts)
 		keymap('n', 'gh', function()
 			vim.lsp.buf.hover({ buffer = true })
 		end, opts)
 		keymap('n', 'gI', function()
-			vim.lsp.buf.implementation()
+			telescope.lsp_implementations()
 		end, opts)
 		keymap('n', 'gR', function()
-			vim.lsp.buf.references()
+			telescope.lsp_references()
 		end, opts)
 		keymap('n', 'gl', function()
 			vim.diagnostic.open_float()

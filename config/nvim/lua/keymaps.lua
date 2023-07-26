@@ -15,9 +15,6 @@ keymap('n', '<Leader><Leader>f', require('nvim-tree.api').tree.focus, opts)
 
 -- Telescope
 keymap('n', '<Leader>tt', ':Telescope ', nor)
-keymap('n', '<Leader>fr', function()
-	require('telescope.builtin').lsp_references()
-end, opts)
 keymap('n', '<Leader>fb', function()
 	require('telescope.builtin').git_branches()
 end, opts)
