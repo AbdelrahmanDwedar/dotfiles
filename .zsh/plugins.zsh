@@ -1,30 +1,29 @@
-# Wakatime for terminal
-source ~/.zsh/plugins/wakatime/wakatime.plugin.zsh
+source ~/.zsh/antigen.zsh
 
-# Add zsh auto suggestions
-source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-# config zsh completion
-fpath=(~/.zsh/plugins/zsh-completions/src $fpath)
+antigen bundle zpm-zsh/check-deps
 
-# zsh history substring searing
-source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+antigen bundle sobolevn/wakatime-zsh-plugin
 
-# zsh web search
-source ~/.zsh/plugins/web-search/web_search.plugin.zsh
+antigen bundle sineto/web-search
 
-# zsh copy-buffer (use ctrl+o to copy the current command before running it)
-source ~/.zsh/plugins/zsh-copybuffer/zsh-copybuffer.plugin.zsh
+antigen bundle zsh-users/zsh-autosuggestions
 
-# zsh dirhistory (alt+left to go to the last dir, alt+right to go to the new dir, alt+up to go to the root)
-source ~/.zsh/plugins/zsh-dirhistory/dirhistory.plugin.zsh
+antigen bundle zsh-users/zsh-completions
 
-# zsh check deps (get the way of installing dependencies)
-source ~/.zsh/plugins/check-deps/check-deps.plugin.zsh
+antigen bundle guillaumeboehm/zsh-copybuffer
 
-# zsh vi mode
-source ~/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
+antigen bundle shaunsauve/zsh-dirhistory
 
-# zsh syntax highlighting
-source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+antigen bundle zsh-users/zsh-history-substring-search
+
+antigen bundle Cloudstek/zsh-plugin-appup
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen bundle jeffreytse/zsh-vi-mode
+
+# antigen theme catppuccin/zsh-syntax-highlighting
+
+antigen apply
