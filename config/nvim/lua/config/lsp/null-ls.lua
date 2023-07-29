@@ -8,8 +8,9 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
+		diagnostics.actionlint,
 		diagnostics.commitlint,
-		diagnostics.eslint,
+		diagnostics.cspell,
 		diagnostics.markdownlint,
 		diagnostics.mypy,
 		formatting.beautysh,
@@ -19,8 +20,6 @@ null_ls.setup({
 		formatting.jq,
 		formatting.markdownlint,
 		formatting.pint,
-		formatting.phpcsfixer,
-		formatting.prettier,
 		formatting.rubyfmt,
 		formatting.stylua,
 	},
