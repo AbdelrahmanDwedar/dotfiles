@@ -21,7 +21,8 @@ vim.opt.relativenumber = true
 vim.opt.signcolumn = 'auto:3'
 vim.opt.spell = false
 vim.opt.mouse = 'a'
-vim.opt.foldmethod = 'syntax'
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- styling
 vim.opt.hlsearch = false
