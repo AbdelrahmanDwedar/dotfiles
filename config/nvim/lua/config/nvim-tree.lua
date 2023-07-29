@@ -51,8 +51,6 @@ local function on_attach(bufnr)
 	keymap('n', 'q', nvimTreeApi.tree.close, nvimTreeOps('Close'))
 	keymap('n', 'r', nvimTreeApi.fs.rename, nvimTreeOps('Rename'))
 	keymap('n', 'R', nvimTreeApi.tree.reload, nvimTreeOps('Refresh'))
-	keymap('n', 's', nvimTreeApi.node.run.system, nvimTreeOps('Run System'))
-	keymap('n', 'S', nvimTreeApi.tree.search_node, nvimTreeOps('Search'))
 	keymap('n', 'U', nvimTreeApi.tree.toggle_custom_filter, nvimTreeOps('Toggle Hidden'))
 	keymap('n', 'W', nvimTreeApi.tree.collapse_all, nvimTreeOps('Collapse'))
 	keymap('n', 'x', nvimTreeApi.fs.cut, nvimTreeOps('Cut'))
@@ -69,6 +67,7 @@ local function on_attach(bufnr)
 	keymap('n', 'C', nvimTreeApi.tree.change_root_to_node, nvimTreeOps('cd'))
 	keymap('n', 'l', nvimTreeApi.node.open.edit, nvimTreeOps('open'))
 	keymap('n', 'h', nvimTreeApi.node.navigate.parent_close, nvimTreeOps('close'))
+	keymap('n', '/', nvimTreeApi.tree.search_node, nvimTreeOps('Search'))
 end
 
 require('nvim-tree').setup({
