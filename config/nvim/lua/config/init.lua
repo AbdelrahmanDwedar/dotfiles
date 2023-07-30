@@ -1,5 +1,6 @@
 require('config.cmp')
 require('config.gitsigns')
+require('config.null-ls')
 require('config.lsp')
 require('config.nvim-tree')
 require('config.presence')
