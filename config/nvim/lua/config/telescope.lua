@@ -26,7 +26,7 @@ require('telescope').setup({
 	extensions = {
 		project = {
 			base_dirs = {
-				{ '~/Programming/', max_depth = 3 },
+				{ '~/Programming/projects/', max_depth = 3 },
 			},
 			hidden_files = true, -- default: false
 			theme = 'dropdown',
