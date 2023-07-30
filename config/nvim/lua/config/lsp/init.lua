@@ -11,5 +11,6 @@ lspconfig.pyright.setup({})
 lspconfig.ruby_ls.setup({})
 lspconfig.rust_analyzer.setup({})
 
+require('config.lsp.mason')
 require('config.lsp.null-ls')
 require('config.lsp.handlers').setup()
