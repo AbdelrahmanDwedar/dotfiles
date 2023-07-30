@@ -13,29 +13,12 @@
 # ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
 
 
-# Emacs
-if [[ -e ~/.emacs.d ]]; then
-  alias emacs="emacs -nw"
-fi
-
-# laravel => lv
-if [[ -f $(which laravel) ]]
-then
-  alias lv=laravel
-fi
-
 # Python3 => py
 # pip3 => pip
 if [[ -f $(which python3) ]]
 then
   alias py=python3
   alias pip=pip3
-fi
-
-# flutter => fl
-if [[ -f $(which flutter) ]]
-then
-  alias fl=flutter
 fi
 
 # ranger => ra
