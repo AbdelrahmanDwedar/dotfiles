@@ -3,6 +3,7 @@
 -- General
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.termguicolors = true
+vim.opt.shell = '/usr/bin/bash'
 
 -- Tabs
 vim.opt.tabstop = 4
