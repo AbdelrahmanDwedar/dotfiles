@@ -10,7 +10,6 @@ null_ls.setup({
 	sources = {
 		diagnostics.actionlint,
 		diagnostics.commitlint,
-		diagnostics.cspell,
 		diagnostics.markdownlint,
 		diagnostics.mypy,
 		formatting.beautysh,
