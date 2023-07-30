@@ -58,18 +58,10 @@ keymap({ 'i', 'c' }, '<C-BS>', '<C-w>', nor)
 keymap('n', '"p', '"0p', opts)
 keymap('n', '"P', '"0P', opts)
 
--- add semicolon in the end
-keymap('n', '<Leader>;', 'A;<Esc>', opts)
-keymap('x', '<Leader>;', ':norm A;<Esc>', opts)
-
--- arrows for gj & gk (when using warping mode)
-keymap('n', '<Down>', 'gj', opts)
-keymap('n', '<Up>', 'gk', opts)
-
 -- selecting last change
 keymap('n', 'gV', '`[v`]', opts)
 
--- Stay in indent mode
+-- Stay in visual mode
 keymap('v', '<', '<gv', opts)
 keymap('v', '>', '>gv', opts)
 
@@ -77,7 +69,7 @@ keymap('v', '>', '>gv', opts)
 keymap('n', '<Leader><Leader>x', ':w<CR>:source %<CR>', opts)
 
 -- Sorting code blocks
-keymap('x', '<Leader><Leader>s', ':!sort<CR>', opts)
+keymap('x', '<Leader><Leader>s', ':sort<CR>', opts)
 
 -- Edit replace selected text
 keymap({ 'v', 'x' }, '<Leader>sa', ':<CR>:%s//', nor)
