@@ -45,6 +45,20 @@ keymap({ 'n', 'i' }, '<C-p>', function()
 	require('telescope.builtin').find_files()
 end, opts)
 
+-- indent selecting
+keymap({ 'x', 'o' }, 'ai', function()
+	require('treesitter_indent_object.textobj').select_indent_outer()
+end, opts)
+keymap({ 'x', 'o' }, 'aI', function()
+	require('treesitter_indent_object.textobj').select_indent_outer(true)
+end, opts)
+keymap({ 'x', 'o' }, 'ii', function()
+	require('treesitter_indent_object.textobj').select_indent_inner()
+end, opts)
+keymap({ 'x', 'o' }, 'iI', function()
+	require('treesitter_indent_object.textobj').select_indent_inner(true)
+end, opts)
+
 -- vim multi corsur
 keymap({ 'n', 'v' }, '<C-c>', ':VMClear<CR>', opts)
 

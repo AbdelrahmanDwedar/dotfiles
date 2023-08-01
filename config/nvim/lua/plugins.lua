@@ -58,6 +58,7 @@ return require('packer').startup(function()
 		run = 'TSUpdate',
 		requires = {
 			'nvim-treesitter/nvim-treesitter-context',
+			'kiyoon/treesitter-indent-object.nvim',
 		},
 	})
 
