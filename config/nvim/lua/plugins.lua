@@ -14,6 +14,7 @@ return require('packer').startup(function()
 		},
 	})
 
+	-- null-ls formatting
 	use({
 		'jose-elias-alvarez/null-ls.nvim',
 		on_attach = function(client, bufnr)
@@ -76,12 +77,6 @@ return require('packer').startup(function()
 		end,
 	})
 
-	-- better comments
-	use('Djancyp/better-comments.nvim')
-
-	-- discord presence for neovim
-	use('andweeb/presence.nvim')
-
 	-- Telescope for navigation
 	use({
 		'nvim-telescope/telescope.nvim',
@@ -91,6 +86,12 @@ return require('packer').startup(function()
 			'nvim-telescope/telescope-project.nvim',
 		},
 	})
+
+	-- better comments
+	use('Djancyp/better-comments.nvim')
+
+	-- discord presence for neovim
+	use('andweeb/presence.nvim')
 
 	-- NeoVim Tree written in lua
 	use('kyazdani42/nvim-tree.lua')
