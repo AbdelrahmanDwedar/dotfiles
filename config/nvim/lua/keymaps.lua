@@ -4,6 +4,7 @@ local nor = { noremap = true, silent = false }
 local telescope = require('telescope.builtin')
 local multi = require('multicursors')
 local indent = require('treesitter_indent_object.textobj')
+local gitsigns = require('gitsigns.actions')
 
 --Remap space as leader key
 keymap('', '<Space>', '<Nop>', opts)
@@ -47,6 +48,16 @@ keymap({ 'x', 'o' }, 'ii', indent.select_indent_inner, opts)
 keymap({ 'x', 'o' }, 'iI', function()
 	indent.select_indent_inner(true)
 end, opts)
+
+-- Gitsigns
+keymap('n', '<leader>gj', gitsigns.next_hunk, opts)
+keymap('n', '<leader>gk', gitsigns.prev_hunk, opts)
+keymap('n', '<leader>gb', gitsigns.blame_line, opts)
+keymap('n', '<leader>gl', gitsigns.toggle_current_line_blame, opts)
+keymap('n', '<leader>gi', gitsigns.preview_hunk_inline, opts)
+keymap('n', '<leader>gr', gitsigns.reset_hunk, opts)
+keymap('n', '<leader>gw', gitsigns.toggle_word_diff, opts)
+keymap('n', '<leader>gp', gitsigns.preview_hunk, opts)
 
 -- new line
 keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o<Esc>', opts)
