@@ -1,8 +1,7 @@
+local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 local nor = { noremap = true, silent = false }
-
--- Shorten function name
-local keymap = vim.keymap.set
+local multi = require('multicursors')
 
 --Remap space as leader key
 keymap('', '<Space>', '<Nop>', opts)
@@ -45,6 +44,14 @@ keymap({ 'n', 'i' }, '<C-p>', function()
 	require('telescope.builtin').find_files()
 end, opts)
 
+-- multi-cursors
+keymap({ 'n', 'v' }, '<C-n>', multi.start, opts)
+keymap({ 'n', 'v' }, '<leader>mn', multi.start, opts)
+keymap({ 'n', 'v' }, '<leader>mv', multi.search_visual, opts)
+keymap({ 'n', 'v' }, '<leader>mc', multi.new_under_cursor, opts)
+keymap({ 'n', 'v' }, '<leader>mq', multi.exit, opts)
+keymap({ 'n', 'v' }, '<leader>mp', multi.new_pattern, opts)
+
 -- indent selecting
 keymap({ 'x', 'o' }, 'ai', function()
 	require('treesitter_indent_object.textobj').select_indent_outer()
@@ -58,9 +65,6 @@ end, opts)
 keymap({ 'x', 'o' }, 'iI', function()
 	require('treesitter_indent_object.textobj').select_indent_inner(true)
 end, opts)
-
--- vim multi corsur
-keymap({ 'n', 'v' }, '<C-c>', ':VMClear<CR>', opts)
 
 -- new line
 keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o<Esc>', opts)

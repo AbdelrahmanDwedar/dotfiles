@@ -125,6 +125,14 @@ return require('packer').startup(function()
 	-- marks
 	use('chentoast/marks.nvim')
 
+	-- multi-cursors
+	use({
+		'smoka7/multicursors.nvim',
+		requires = {
+			'smoka7/hydra.nvim',
+		},
+	})
+
 	-- best neovim colorschemes in one place
 	-- use('AbdelrahmanDwedar/awesome-nvim-colorschemes')
 	use('~/Programming/projects/extentions/awesome-nvim-colorschemes')
@@ -133,9 +141,6 @@ return require('packer').startup(function()
 
 	-- wakatime watcher
 	use('wakatime/vim-wakatime')
-
-	-- multi cursors visualy
-	use('mg979/vim-visual-multi')
 
 	-- editor config plugin for the /.editorconfig settings
 	use('editorconfig/editorconfig-vim')
