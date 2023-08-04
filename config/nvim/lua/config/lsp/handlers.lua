@@ -16,9 +16,9 @@ M.setup = function()
 
 	local config = {
 		on_attach = M.on_attach,
-		virtual_text = true, -- disable virtual text
+		virtual_text = true,
 		signs = {
-			active = signs, -- show signs
+			active = signs,
 		},
 		update_in_insert = true,
 		underline = true,
