@@ -1,5 +1,4 @@
 -- shurtcuts
-local telescope = require('telescope.builtin')
 local keymap = vim.keymap.set
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
@@ -58,40 +57,5 @@ autocmd('BufWritePost', {
 
 augroup('lsp', { clear = true })
 autocmd('LspAttach', {
-	callback = function(ev)
-		keymap('n', 'gh', function()
-			vim.lsp.buf.hover({ buffer = ev.buf })
-		end, opts)
-		keymap('n', 'gD', function()
-			vim.lsp.buf.declaration()
-		end, opts)
-		keymap('n', 'gd', function()
-			telescope.lsp_definitions()
-		end, opts)
-		keymap('n', 'gi', function()
-			telescope.lsp_implementations()
-		end, opts)
-		keymap('n', 'gr', function()
-			telescope.lsp_references()
-		end, opts)
-		keymap('n', 'gl', function()
-			vim.diagnostic.open_float()
-		end, opts)
-		keymap('n', '<leader>i', function()
-			vim.lsp.buf.format({ async = true, buffer = ev.buf })
-		end, opts)
-		keymap('n', '<leader>la', function()
-			vim.lsp.buf.code_action()
-		end, opts)
-		keymap('n', '<leader>lj', function()
-			vim.diagnostic.goto_next({ buffer = ev.buf })
-		end, opts)
-		keymap('n', '<leader>lk', function()
-			vim.diagnostic.goto_prev({ buffer = ev.buf })
-		end, opts)
-		keymap('n', '<leader>lr', function()
-			vim.lsp.buf.rename()
-		end, opts)
-		keymap('n', '<leader>li', '<cmd>LspInfo<cr>', opts)
-	end,
+	callback = LspKeymaps,
 })
