@@ -97,6 +97,11 @@ keymap('n', '<leader>gr', gitsigns.reset_hunk, opts)
 keymap('n', '<leader>gw', gitsigns.toggle_word_diff, opts)
 keymap('n', '<leader>gp', gitsigns.preview_hunk, opts)
 
+-- plenary.nvim
+keymap('n', '<leader>pt', function()
+	require('plenary.test_harness').test_directory(vim.fn.expand('%:p'))
+end, opts)
+
 -- new line
 keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o<Esc>', opts)
 

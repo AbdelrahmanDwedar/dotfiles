@@ -81,11 +81,13 @@ return require('packer').startup(function()
 	use({
 		'nvim-telescope/telescope.nvim',
 		requires = {
-			'nvim-lua/plenary.nvim',
 			-- extentions
 			'nvim-telescope/telescope-project.nvim',
 		},
 	})
+
+	-- plenary.nvim
+	use('nvim-lua/plenary.nvim')
 
 	-- better comments
 	use('Djancyp/better-comments.nvim')
