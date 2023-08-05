@@ -24,6 +24,8 @@ vim.opt.spell = false
 vim.opt.mouse = 'a'
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.timeout = true
+vim.opt.timeoutlen = 1500
 
 -- styling
 vim.opt.hlsearch = false

@@ -135,6 +135,14 @@ return require('packer').startup(function()
 		},
 	})
 
+	-- which key
+	use({
+		'folke/which-key.nvim',
+		config = function()
+			require('which-key').setup({})
+		end,
+	})
+
 	-- best neovim colorschemes in one place
 	-- use('AbdelrahmanDwedar/awesome-nvim-colorschemes')
 	use('~/Programming/projects/extentions/awesome-nvim-colorschemes')
