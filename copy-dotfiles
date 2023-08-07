@@ -1,26 +1,32 @@
 #!/bin/bash
 
 for dotfiles_file in $(ls -A .); do
-	if [[ -f $dotfiles_file ]]; then
-		if [[ $dotfiles_file != ".gitconfig" && $dotfiles_file != ".gitmodules" && $dotfiles_file != "README.md" && $dotfiles_file != "LICENSE" && $dotfiles_file != "copy-dotfiles" && $dotfiles_file != "update-dotfiles" && $dotfiles_file != ".git" && $dotfiles_file != ".gitignore" ]]; then
-			cp $dotfiles_file ~
-		elif [[ $dotfiles_file == ".gitconfig" ]]; then
-			echo "Please input your git user.name"
-			read username
-			echo "Enter your git user.email"
-			read useremail
+    if [[ -f $dotfiles_file ]]; then
+        if [[ $dotfiles_file != ".gitconfig"
+		    && $dotfiles_file != ".gitmodules"
+			&& $dotfiles_file != "README.md"
+			&& $dotfiles_file != "LICENSE"
+			&& $dotfiles_file != "copy-dotfiles"
+			&& $dotfiles_file != ".git"
+			&& $dotfiles_file != ".gitignore" ]]; then
+                ln -s $dotfiles_file ~
+            elif [[ $dotfiles_file == ".gitconfig" ]]; then
+                echo "Please input your git user.name"
+                read username
+                echo "Enter your git user.email"
+                read useremail
 
-			echo "[user]
+                echo "[user]
 			name = $username
-			email = $useremail" > ~/.gitconfig
+                email = $useremail" > ~/.gitconfig
 
-			cat ./.gitconfig >> ~/.gitconfig
-		fi
-	elif [[ -d $dotfiles_file ]]; then
-		if [[ $dotfiles_file != ".git" && $dotfiles_file != "config" ]]; then
-			cp -r ./$dotfiles_file ~/
-		elif [[ $dotfiles_file == "config" ]]; then
-			cp -r ./config/* ~/.config/
-		fi
-	fi
-done
+                cat ./.gitconfig >> ~/.gitconfig
+            fi
+        elif [[ -d $dotfiles_file ]]; then
+            if [[ $dotfiles_file != ".git" && $dotfiles_file != "config" ]]; then
+                ln -s ./$dotfiles_file ~/
+            elif [[ $dotfiles_file == "config" ]]; then
+                ln -s ./config/* ~/.config/
+            fi
+        fi
+    done
