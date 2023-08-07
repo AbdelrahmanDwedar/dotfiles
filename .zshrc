@@ -10,13 +10,13 @@
 # run on open
 if [[ -e $(which neofetch) ]]
 then
-  neofetch
+    neofetch
 fi
 
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
-      *) return;;
+    *) return ;;
 esac
 
 # setup cool other stuff
