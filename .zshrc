@@ -90,16 +90,7 @@ source ~/.zsh/vim.zsh
 # setup the history to ~/.history and setup everything else
 source ~/.zsh/history.zsh
 
-
 # Setup completion
-
-#This will perform chmod g-w for each file returned by compaudit to remove write access for group
-compaudit | xargs -I % chmod g-w "%"
-#This will perform chown to current user (Windows and Linux) for each file returned by compaudit
-compaudit | xargs -I % chown $USER "%"
-#Regenerate completions file
-compinit
-
 # angular cli
 source <(ng completion script)
 
