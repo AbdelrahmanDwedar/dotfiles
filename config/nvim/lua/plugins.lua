@@ -3,7 +3,7 @@
 return require('packer').startup(function()
 	use('wbthomason/packer.nvim')
 
-	-- === #### NeoVim plugins #### === --
+	-- === #### NeoVim Plugins #### === --
 
 	-- language server protocol
 	use({
@@ -83,11 +83,9 @@ return require('packer').startup(function()
 		requires = {
 			-- extentions
 			'nvim-telescope/telescope-project.nvim',
+			'nvim-lua/plenary.nvim',
 		},
 	})
-
-	-- plenary.nvim
-	use('nvim-lua/plenary.nvim')
 
 	-- better comments
 	use('Djancyp/better-comments.nvim')
@@ -143,11 +141,13 @@ return require('packer').startup(function()
 		end,
 	})
 
+	-- === #### My Plugins ### === ---
+
 	-- best neovim colorschemes in one place
 	-- use('AbdelrahmanDwedar/awesome-nvim-colorschemes')
 	use('~/Programming/projects/extentions/awesome-nvim-colorschemes')
 
-	-- === #### Native vim plugins ### === ---
+	-- === #### Vim Script Plugins ### === ---
 
 	-- wakatime watcher
 	use('wakatime/vim-wakatime')
