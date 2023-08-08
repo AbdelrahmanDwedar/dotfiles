@@ -28,9 +28,8 @@ keymap('n', '<Leader>fg', telescope.registers, opts('Find Register'))
 keymap('n', '<Leader>fs', telescope.spell_suggest, opts('Find Spelling'))
 keymap('n', '<Leader>fc', telescope.colorscheme, opts('Find colorscheme'))
 keymap('n', '<Leader>fm', telescope.marks, opts('Find Mark'))
-keymap('n', '<Leader>fp', function()
-	require('telescope').extensions.project.project()
-end, opts('Find Project'))
+keymap('n', '<Leader>fp', require('telescope').extensions.project.project, opts('Find Project'))
+keymap('n', '<Leader>fw', require('telescope').extensions.git_worktree.git_worktrees, opts('Find Worktree'))
 keymap({ 'n', 'i' }, '<C-p>', telescope.find_files, opts('Find Files'))
 
 -- lsp

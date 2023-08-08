@@ -81,9 +81,10 @@ return require('packer').startup(function()
 	use({
 		'nvim-telescope/telescope.nvim',
 		requires = {
+			'nvim-lua/plenary.nvim',
 			-- extentions
 			'nvim-telescope/telescope-project.nvim',
-			'nvim-lua/plenary.nvim',
+			'ThePrimeagen/git-worktree.nvim',
 		},
 	})
 
