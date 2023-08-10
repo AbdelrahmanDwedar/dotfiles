@@ -10,58 +10,54 @@ autocmd('BufWinEnter', {
 	end,
 })
 
-augroup('_general_settings', { clear = true })
+local general_group = augroup('_general_settings', { clear = true })
 autocmd('FileType', {
 	pattern = { 'qf', 'help', 'man', 'lspinfo' },
 	callback = function()
 		keymap('n', 'q', ':close<CR>', opts)
 	end,
-	group = '_general_settings',
+	group = general_group,
 })
 autocmd('TextYankPost', {
 	pattern = '*',
 	callback = function()
 		vim.highlight.on_yank({ higroup = 'Visual', timeout = 200 })
 	end,
-	group = '_general_settings',
+	group = general_group,
 })
 autocmd('BufWinEnter', {
 	pattern = '*',
 	command = 'set formatoptions-=cro',
-	group = '_general_settings',
+	group = general_group,
 })
 autocmd('FileType', {
 	pattern = 'qf',
 	command = 'set nobuflisted',
-	group = '_general_settings',
+	group = general_group,
 })
 
-augroup('_fast', { clear = true })
+local fast_group = augroup('_fast', { clear = true })
 autocmd('FileType', {
 	pattern = { 'gitcommit', 'markdown' },
 	command = 'setlocal wrap',
-	group = '_fast',
-})
-autocmd('FileType', {
-	pattern = { 'gitcommit', 'markdown' },
-	command = 'setlocal spell',
-	group = '_fast',
+	group = fast_group,
 })
 
 -- packer
-augroup('packer', { clear = true })
+local packer_group = augroup('packer', { clear = true })
 autocmd('VimLeavePre', {
 	pattern = '*',
 	command = 'PackerSync',
-	group = 'packer',
+	group = packer_group,
 })
 autocmd('BufWritePost', {
 	pattern = 'plugins.lua',
 	command = 'w | source % | PackerCompile',
-	group = 'packer',
+	group = packer_group,
 })
 
-augroup('lsp', { clear = true })
+local lsp_group = augroup('lsp', { clear = true })
 autocmd('LspAttach', {
 	callback = LspKeymaps,
+	group = lsp_group,
 })
