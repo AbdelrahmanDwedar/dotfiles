@@ -91,8 +91,17 @@ return require('packer').startup(function()
 	-- discord presence for neovim
 	use('andweeb/presence.nvim')
 
-	-- NeoVim Tree written in lua
-	use('kyazdani42/nvim-tree.lua')
+	-- neo-tree
+	use({
+		'nvim-neo-tree/neo-tree.nvim',
+		branch = 'v3.x',
+		requires = {
+			'nvim-lua/plenary.nvim',
+			'MunifTanjim/nui.nvim',
+			'nvim-tree/nvim-web-devicons',
+		},
+	})
+
 
 	-- For Commenting gcc & gc
 	use({

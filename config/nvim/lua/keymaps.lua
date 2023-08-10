@@ -13,9 +13,9 @@ keymap('', '<Space>', '<Nop>', opts('Leader Key'))
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- nvim tree (lua) fast access shortcuts
-keymap('n', '<Leader>e', require('nvim-tree.api').tree.toggle, opts('Open Nvim-Tree'))
-keymap('n', '<Leader><Leader>f', require('nvim-tree.api').tree.focus, opts('Focus Nvim-Tree'))
+-- NeoTree
+keymap('n', '<Leader>e', ':Neotree toggle left<CR>', opts('Open NeoTree'))
+keymap('n', '<Leader><Leader>f', ':Neotree focus left<CR>', opts('Focus NeoTree'))
 
 -- Telescope
 keymap('n', '<Leader>ft', telescope.builtin, opts('Find Telescope Mode'))

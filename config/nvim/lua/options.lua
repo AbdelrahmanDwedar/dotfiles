@@ -26,6 +26,8 @@ vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.timeout = true
 vim.opt.timeoutlen = 1500
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
 
 -- styling
 vim.opt.hlsearch = false

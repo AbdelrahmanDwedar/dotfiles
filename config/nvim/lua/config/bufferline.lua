@@ -70,6 +70,12 @@ require('bufferline').setup({
 				text_align = 'center',
 				separator = true,
 			},
+			{
+				filetype = 'neo-tree',
+				text = 'File Explorer',
+				text_align = 'center',
+				separator = true,
+			},
 		},
 		color_icons = true,
 		get_element_icon = function(element)
