@@ -4,6 +4,12 @@ local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 local opts = { noremap = true, silent = true }
 
+autocmd('BufWinEnter', {
+	callback = function()
+		vim.cmd([[highlight Todo none]])
+	end,
+})
+
 augroup('_general_settings', { clear = true })
 autocmd('FileType', {
 	pattern = { 'qf', 'help', 'man', 'lspinfo' },
