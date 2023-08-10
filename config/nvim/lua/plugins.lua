@@ -63,20 +63,6 @@ return require('packer').startup(function()
 		},
 	})
 
-	-- git signs integration
-	use('lewis6991/gitsigns.nvim')
-
-	-- lua status bar
-	use('nvim-lualine/lualine.nvim')
-
-	-- auto completion for {([" etc...
-	use({
-		'windwp/nvim-autopairs',
-		config = function()
-			require('nvim-autopairs').setup({})
-		end,
-	})
-
 	-- Telescope for navigation
 	use({
 		'nvim-telescope/telescope.nvim',
@@ -87,9 +73,6 @@ return require('packer').startup(function()
 			'ThePrimeagen/git-worktree.nvim',
 		},
 	})
-
-	-- discord presence for neovim
-	use('andweeb/presence.nvim')
 
 	-- neo-tree
 	use({
@@ -102,12 +85,28 @@ return require('packer').startup(function()
 		},
 	})
 
-
-	-- For Commenting gcc & gc
+	-- lua status bar
 	use({
-		'numToStr/Comment.nvim',
+		'nvim-lualine/lualine.nvim',
+		requires = {
+			'nvim-tree/nvim-web-devicons',
+		},
+	})
+
+	-- bufferline
+	use({
+		'akinsho/bufferline.nvim',
+		tag = 'v3.*',
+		requires = {
+			'kyazdani42/nvim-web-devicons',
+		},
+	})
+
+	-- auto completion for {([" etc...
+	use({
+		'windwp/nvim-autopairs',
 		config = function()
-			require('Comment').setup()
+			require('nvim-autopairs').setup({})
 		end,
 	})
 
@@ -120,17 +119,13 @@ return require('packer').startup(function()
 		end,
 	})
 
-	-- bufferline
+	-- For Commenting gcc & gc
 	use({
-		'akinsho/bufferline.nvim',
-		tag = 'v3.*',
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end,
 	})
-
-	-- web devicons
-	use('kyazdani42/nvim-web-devicons')
-
-	-- marks
-	use('chentoast/marks.nvim')
 
 	-- multi-cursors
 	use({
@@ -147,6 +142,15 @@ return require('packer').startup(function()
 			require('which-key').setup({})
 		end,
 	})
+
+	-- git signs integration
+	use('lewis6991/gitsigns.nvim')
+
+	-- discord presence for neovim
+	use('andweeb/presence.nvim')
+
+	-- marks
+	use('chentoast/marks.nvim')
 
 	-- === #### My Plugins ### === ---
 
