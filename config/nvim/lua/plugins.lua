@@ -88,9 +88,6 @@ return require('packer').startup(function()
 		},
 	})
 
-	-- better comments
-	use('Djancyp/better-comments.nvim')
-
 	-- discord presence for neovim
 	use('andweeb/presence.nvim')
 
@@ -146,7 +143,10 @@ return require('packer').startup(function()
 
 	-- best neovim colorschemes in one place
 	-- use('AbdelrahmanDwedar/awesome-nvim-colorschemes')
-	use('~/Programming/projects/extentions/awesome-nvim-colorschemes')
+	use('~/Programming/projects/extensions/awesome-nvim-colorschemes')
+
+	-- better comments
+	use('~/Programming/projects/extensions/better-comments.nvim')
 
 	-- === #### Vim Script Plugins ### === ---
 
