@@ -244,4 +244,4 @@ bindsym $mod+Ctrl+s exec spotify
 
 bindsym $mod+p exec flameshot gui
 
-bindsym $mid+Shift+w exec feh ~/Wallpapers/***
+bindsym $mod+Ctrl+w exec feh --no-fehbg --bg-fill --randomize ~/Wallpapers/**/***
