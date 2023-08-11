@@ -7,6 +7,7 @@ local telescope = require('telescope.builtin')
 local multi = require('multicursors')
 local indent = require('treesitter_indent_object.textobj')
 local gitsigns = require('gitsigns.actions')
+local neotree = require("neo-tree.command")
 
 --Remap space as leader key
 keymap('', '<Space>', '<Nop>', opts('Leader Key'))
@@ -15,49 +16,49 @@ vim.g.maplocalleader = ' '
 
 -- NeoTree
 keymap('n', '<Leader>e', function()
-	require('neo-tree.command').execute({
+	neotree.execute({
 		toggle = true,
 		source = 'filesystem',
 		position = 'left',
 	})
 end, opts('Open NeoTree'))
 keymap('n', '<Leader><Leader>f', function()
-	require('neo-tree.command').execute({
+	neotree.execute({
 		toggle = false,
 		source = 'filesystem',
 		position = 'left',
 	})
 end, opts('Focus NeoTree'))
 keymap('n', '<Leader><Leader>b', function()
-	require('neo-tree.command').execute({
+	neotree.execute({
 		toggle = true,
 		source = 'buffers',
 		position = 'left',
 	})
 end, opts('Toggle Buffers Tree'))
 keymap('n', '<Leader><Leader>g', function()
-	require('neo-tree.command').execute({
+	neotree.execute({
 		toggle = true,
 		source = 'git_status',
 		position = 'left',
 	})
 end, opts('Open NeoTree Git Status'))
 keymap('n', '<Leader>tf', function()
-	require('neo-tree.command').execute({
+	neotree.execute({
 		toggle = true,
 		source = 'filesystem',
 		position = 'float',
 	})
 end, opts('Toggle Float File Tree'))
 keymap('n', '<Leader>tb', function()
-	require('neo-tree.command').execute({
+	neotree.execute({
 		toggle = true,
 		source = 'buffers',
 		position = 'float',
 	})
 end, opts('Toggle Buffers Tree'))
 keymap('n', '<Leader>tg', function()
-	require('neo-tree.command').execute({
+	neotree.execute({
 		toggle = true,
 		source = 'git_status',
 		position = 'float',
