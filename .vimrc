@@ -8,7 +8,7 @@
 
 " -=# Options #=-
 set mouse=a
-set clipboard = "unnamedplus"
+set clipboard='unnamedplus'
 set number
 set relativenumber
 set shiftwidth=4
