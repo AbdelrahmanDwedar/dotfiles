@@ -20,10 +20,6 @@ antigen bundle zsh-users/zsh-history-substring-search
 
 antigen bundle Cloudstek/zsh-plugin-appup
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-
 antigen bundle jeffreytse/zsh-vi-mode
-
-# antigen theme catppuccin/zsh-syntax-highlighting
 
 antigen apply
