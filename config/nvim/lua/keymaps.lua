@@ -14,8 +14,55 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- NeoTree
-keymap('n', '<Leader>e', ':Neotree toggle left<CR>', opts('Open NeoTree'))
-keymap('n', '<Leader><Leader>f', ':Neotree focus left<CR>', opts('Focus NeoTree'))
+keymap('n', '<Leader>e', function()
+	require('neo-tree.command').execute({
+		toggle = true,
+		source = 'filesystem',
+		position = 'left',
+	})
+end, opts('Open NeoTree'))
+keymap('n', '<Leader><Leader>f', function()
+	require('neo-tree.command').execute({
+		toggle = false,
+		source = 'filesystem',
+		position = 'left',
+	})
+end, opts('Focus NeoTree'))
+keymap('n', '<Leader><Leader>b', function()
+	require('neo-tree.command').execute({
+		toggle = true,
+		source = 'buffers',
+		position = 'left',
+	})
+end, opts('Toggle Buffers Tree'))
+keymap('n', '<Leader><Leader>g', function()
+	require('neo-tree.command').execute({
+		toggle = true,
+		source = 'git_status',
+		position = 'left',
+	})
+end, opts('Open NeoTree Git Status'))
+keymap('n', '<Leader>tf', function()
+	require('neo-tree.command').execute({
+		toggle = true,
+		source = 'filesystem',
+		position = 'float',
+	})
+end, opts('Toggle Float File Tree'))
+keymap('n', '<Leader>tb', function()
+	require('neo-tree.command').execute({
+		toggle = true,
+		source = 'buffers',
+		position = 'float',
+	})
+end, opts('Toggle Buffers Tree'))
+keymap('n', '<Leader>tg', function()
+	require('neo-tree.command').execute({
+		toggle = true,
+		source = 'git_status',
+		position = 'float',
+	})
+end, opts('Open NeoTree Git Status'))
 
 -- Telescope
 keymap('n', '<Leader>ft', telescope.builtin, opts('Find Telescope Mode'))
@@ -139,11 +186,6 @@ keymap('n', '<A-j>', ':m .+1<CR>==', opts())
 keymap('n', '<A-k>', ':m .-2<CR>==', opts())
 keymap('i', '<A-j>', '<Esc>:m .+1<CR>==gi', opts())
 keymap('i', '<A-k>', '<Esc>:m .-2<CR>==gi', opts())
-
--- Tabs shortcuts
-keymap('n', '<Leader>tf', ':tabfind ', nor)
-keymap('n', '<Leader>td', ':tabclose<CR>', opts())
-keymap('n', '<Leader>tn', ':tabnew<CR>', opts())
 
 -- Splits --
 -- Splits moving with ctrl + hjkl shortcuts
