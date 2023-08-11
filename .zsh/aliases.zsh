@@ -12,12 +12,6 @@ then
     alias pip=pip3
 fi
 
-# flutter => fl
-if [ -e $(which flutter) ]
-then
-    alias fl=flutter
-fi
-
 # ranger => ra
 if [[ -e $(which ranger) ]]
 then
