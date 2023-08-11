@@ -184,3 +184,6 @@ nvim_lsp['gopls'].setup({
 		usePlaceholders = true,
 	},
 })
+
+
+require("cmp_git").setup()

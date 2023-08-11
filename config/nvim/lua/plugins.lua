@@ -35,12 +35,15 @@ return require('packer').startup(function()
 	use({
 		'hrsh7th/nvim-cmp',
 		requires = {
+			'nvim-lua/plenary.nvim',
+			-- sources
 			'hrsh7th/cmp-buffer',
 			'hrsh7th/cmp-path',
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-nvim-lua',
 			'hrsh7th/cmp-cmdline',
 			'saadparwaiz1/cmp_luasnip',
+			'petertriho/cmp-git',
 		},
 	})
 
