@@ -151,7 +151,6 @@ keymap('n', '<leader>gp', gitsigns.preview_hunk, opts('Git Preview'))
 keymap('n', '<leader>pt', function()
 	require('plenary.test_harness').test_directory(vim.fn.expand('%:p'))
 end, opts('Run Current File Tests'))
--- keymap('n', '<leader>pd', require("plenary.test_harness").test_directory(), opts('Potato'))
 
 -- new line
 keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o<Esc>', opts())
