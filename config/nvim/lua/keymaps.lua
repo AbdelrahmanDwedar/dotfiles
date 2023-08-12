@@ -66,7 +66,8 @@ keymap('n', '<Leader>tg', function()
 end, opts('Open NeoTree Git Status'))
 
 -- Telescope
-keymap('n', '<Leader>ft', telescope.builtin, opts('Find Telescope Mode'))
+-- keymap('n', '<Leader>ft', telescope.builtin, opts('Find Telescope Mode'))
+keymap('n', '<Leader>ft', telescope.live_grep, opts('Find Text'))
 keymap('n', '<Leader>fb', telescope.git_branches, opts('Gind Branch'))
 keymap('n', '<Leader>ff', function()
 	telescope.find_files(require('telescope.themes').get_dropdown({ previewer = false }))
