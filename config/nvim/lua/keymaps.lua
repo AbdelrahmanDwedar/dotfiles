@@ -7,7 +7,7 @@ local telescope = require('telescope.builtin')
 local multi = require('multicursors')
 local indent = require('treesitter_indent_object.textobj')
 local gitsigns = require('gitsigns.actions')
-local neotree = require("neo-tree.command")
+local neotree = require('neo-tree.command')
 
 --Remap space as leader key
 keymap('', '<Space>', '<Nop>', opts('Leader Key'))
@@ -170,7 +170,7 @@ keymap('v', '<', '<gv', opts())
 keymap('v', '>', '>gv', opts())
 
 -- save and source
-keymap('n', '<Leader><Leader>x', ':w<CR>:source %<CR>', opts('Source Current File'))
+keymap('n', '<Leader><Leader>s', ':w<CR>:source %<CR>', opts('Source Current File'))
 keymap('n', '<Leader><Leader>x', ':source ~/.config/nvim/init.lua<CR>', opts('Source Current File'))
 
 -- Sorting code blocks
@@ -196,7 +196,7 @@ keymap({ 'n', 'i', 't' }, '<C-k>', '<Esc><C-w>k', opts())
 keymap({ 'n', 'i', 't' }, '<C-l>', '<Esc><C-w>l', opts())
 keymap({ 'n', 'i', 't' }, '<C-=>', '<Esc><C-w>=', opts())
 -- Split resizing
-keymap({ 'n', 't' }, '<C-Left>', '<Esc>:vertical resize +3<CR>', opts())
-keymap({ 'n', 't' }, '<C-Right>', '<Esc>:vertical resize -3<CR>', opts())
+keymap({ 'n', 't' }, '<C-Left>', '<Esc>:vertical resize -3<CR>', opts())
+keymap({ 'n', 't' }, '<C-Right>', '<Esc>:vertical resize +3<CR>', opts())
 keymap({ 'n', 't' }, '<C-Up>', '<Esc>:resize +3<CR>', opts())
 keymap({ 'n', 't' }, '<C-Down>', '<Esc>:resize -3<CR>', opts())
