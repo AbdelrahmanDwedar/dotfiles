@@ -1,4 +1,14 @@
 require('neo-tree').setup({
+	source_selector = {
+		winbar = true,
+		statusline = false,
+	},
+	sources = {
+		'filesystem',
+		'buffers',
+		'git_status',
+		'document_symbols',
+	},
 	close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
 	popup_border_style = 'rounded',
 	enable_git_status = true,
@@ -38,7 +48,7 @@ require('neo-tree').setup({
 			folder_empty = '󰜌',
 			-- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
 			-- then these will never be used.
-			default = '*',
+			default = '👍',
 			highlight = 'NeoTreeFileIcon',
 		},
 		modified = {
