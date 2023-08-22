@@ -61,3 +61,10 @@ autocmd('LspAttach', {
 	callback = LspKeymaps,
 	group = lsp_group,
 })
+
+autocmd({ 'BufWritePost', 'BufWinEnter' }, {
+	callback = function()
+		---@diagnostic disable-next-line: different-requires
+		require('lint').try_lint()
+	end,
+})

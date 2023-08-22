@@ -14,22 +14,11 @@ return require('packer').startup(function()
 		},
 	})
 
-	-- null-ls formatting
-	use({
-		'jose-elias-alvarez/null-ls.nvim',
-		on_attach = function(client, bufnr)
-			if client.supports_method('textDocument/formatting') then
-				vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-				vim.api.nvim_create_autocmd('BufWritePre', {
-					group = augroup,
-					buffer = bufnr,
-					callback = function()
-						vim.lsp.buf.formatting_sync()
-					end,
-				})
-			end
-		end,
-	})
+	-- linting & diagnostics
+	use('mfussenegger/nvim-lint')
+
+	-- formatting
+	use('mhartington/formatter.nvim')
 
 	-- neovim completion
 	use({

@@ -102,7 +102,11 @@ function LspKeymaps(ev)
 		vim.diagnostic.open_float()
 	end, opts('See Diagnostics'))
 	keymap('n', '<leader>i', function()
-		vim.lsp.buf.format({ async = true, buffer = ev.buf })
+		if require("config.formatter").filetypes[vim.bo.filetype] ~= nil then
+			vim.cmd([[Format]])
+		else
+			vim.lsp.buf.format()
+		end
 	end, opts('Format'))
 	keymap('n', '<leader>la', function()
 		vim.lsp.buf.code_action()
