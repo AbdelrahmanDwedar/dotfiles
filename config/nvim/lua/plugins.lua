@@ -126,6 +126,8 @@ return require('packer').startup(function()
 	-- shortcut to surround code with {([])} or tags etc...
 	use({
 		'kylechui/nvim-surround',
+		opt = true,
+		keys = 'ys',
 		tag = '*', -- Use for stability; omit to use `main` branch for the latest features
 		config = function()
 			require('nvim-surround').setup()
@@ -135,6 +137,8 @@ return require('packer').startup(function()
 	-- For Commenting gcc & gc
 	use({
 		'numToStr/Comment.nvim',
+		opt = true,
+		keys = 'gc',
 		config = function()
 			require('Comment').setup()
 		end,
