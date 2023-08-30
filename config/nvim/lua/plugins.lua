@@ -25,13 +25,13 @@ return require('packer').startup(function(use)
 		requires = {
 			'nvim-lua/plenary.nvim',
 			-- sources
-			'hrsh7th/cmp-buffer',
-			'hrsh7th/cmp-path',
 			'hrsh7th/cmp-nvim-lsp',
-			'hrsh7th/cmp-nvim-lua',
-			'hrsh7th/cmp-cmdline',
-			'saadparwaiz1/cmp_luasnip',
-			'petertriho/cmp-git',
+			{ 'hrsh7th/cmp-buffer', event = 'InsertEnter' },
+			{ 'hrsh7th/cmp-path', event = 'InsertEnter' },
+			{ 'hrsh7th/cmp-nvim-lua', ft = 'lua' },
+			{ 'saadparwaiz1/cmp_luasnip', event = 'InsertEnter' },
+			{ 'petertriho/cmp-git', ft = 'gitcommit', config = require('config.cmp.git_config') },
+			{ 'hrsh7th/cmp-cmdline', event = 'CmdlineEnter' },
 		},
 	})
 
@@ -48,7 +48,9 @@ return require('packer').startup(function(use)
 	use({
 		'nvim-treesitter/nvim-treesitter',
 		run = 'TSUpdate',
+		config = require('config.treesitter'),
 		requires = {
+			{ 'nvim-treesitter/playground', as = 'treesitter-playground' , cmd='TSPlaygroundToggle'},
 			'nvim-treesitter/nvim-treesitter-context',
 			'kiyoon/treesitter-indent-object.nvim',
 		},
@@ -117,15 +119,22 @@ return require('packer').startup(function(use)
 	-- auto completion for {([" etc...
 	use({
 		'windwp/nvim-autopairs',
+		keys = {
+			{ 'i', '{' },
+			{ 'i', '(' },
+			{ 'i', '[' },
+			{ 'i', '"' },
+			{ 'i', "'" },
+			{ 'i', '`' },
+		},
 		config = function()
-			require('nvim-autopairs').setup({})
+			require('nvim-autopairs').setup()
 		end,
 	})
 
 	-- shortcut to surround code with {([])} or tags etc...
 	use({
 		'kylechui/nvim-surround',
-		opt = true,
 		keys = 'ys',
 		tag = '*', -- Use for stability; omit to use `main` branch for the latest features
 		config = function()
@@ -136,7 +145,6 @@ return require('packer').startup(function(use)
 	-- For Commenting gcc & gc
 	use({
 		'numToStr/Comment.nvim',
-		opt = true,
 		keys = 'gc',
 		config = function()
 			require('Comment').setup()
@@ -146,6 +154,21 @@ return require('packer').startup(function(use)
 	-- multi-cursors
 	use({
 		'smoka7/multicursors.nvim',
+		keys = {
+			{ 'n', '<C-n>' },
+			{ 'v', '<C-n>' },
+			{ 'n', '<leader>mn' },
+			{ 'v', '<leader>mn' },
+			{ 'n', '<leader>mv' },
+			{ 'v', '<leader>mv' },
+			{ 'n', '<leader>mc' },
+			{ 'v', '<leader>mc' },
+			{ 'n', '<leader>mq' },
+			{ 'v', '<leader>mq' },
+			{ 'n', '<leader>mp' },
+			{ 'v', '<leader>mp' },
+		},
+		config = require('config.multicursor'),
 		requires = {
 			'smoka7/hydra.nvim',
 		},
@@ -154,6 +177,7 @@ return require('packer').startup(function(use)
 	-- which key
 	use({
 		'folke/which-key.nvim',
+		opt = true,
 		config = function()
 			require('which-key').setup({})
 		end,
@@ -166,7 +190,7 @@ return require('packer').startup(function(use)
 	use('andweeb/presence.nvim')
 
 	-- marks
-	use('chentoast/marks.nvim')
+	use({ 'chentoast/marks.nvim', config = require('config.marks'), keys = 'm' })
 
 	-- === #### My Plugins ### === ---
 
