@@ -169,6 +169,7 @@ keymap('n', '<leader>gi', gitsigns.preview_hunk_inline, opts('Preview Inline'))
 keymap('n', '<leader>gr', gitsigns.reset_hunk, opts('Git Reset'))
 keymap('n', '<leader>gw', gitsigns.toggle_word_diff, opts('Word Diff'))
 keymap('n', '<leader>gp', gitsigns.preview_hunk, opts('Git Preview'))
+keymap('n', '<leader>gs', gitsigns.stage_hunk, opts('Git Stage Hunk'))
 
 -- plenary.nvim
 keymap('n', '<leader>pt', function()
