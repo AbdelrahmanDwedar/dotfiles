@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
 		run = 'TSUpdate',
 		config = require('config.treesitter'),
 		requires = {
-			{ 'nvim-treesitter/playground', as = 'treesitter-playground' , cmd='TSPlaygroundToggle'},
+			{ 'nvim-treesitter/playground', as = 'treesitter-playground', cmd = 'TSPlaygroundToggle' },
 			'nvim-treesitter/nvim-treesitter-context',
 			'kiyoon/treesitter-indent-object.nvim',
 		},

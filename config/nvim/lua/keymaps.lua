@@ -140,7 +140,7 @@ function LspKeymaps(ev)
 		vim.diagnostic.open_float()
 	end, opts('See Diagnostics'))
 	keymap('n', '<leader>i', function()
-		if require("config.formatter").filetypes[vim.bo.filetype] ~= nil then
+		if require('config.formatter').filetypes[vim.bo.filetype] ~= nil then
 			vim.cmd([[Format]])
 		else
 			vim.lsp.buf.format()
@@ -235,11 +235,11 @@ keymap('i', '<A-k>', '<Esc>:m .-2<CR>==gi', opts())
 
 -- Splits --
 -- Splits moving with ctrl + hjkl shortcuts
-keymap({ 'n', 'i', 't' }, '<C-h>', '<Esc><C-w>h', opts())
-keymap({ 'n', 'i', 't' }, '<C-j>', '<Esc><C-w>j', opts())
-keymap({ 'n', 'i', 't' }, '<C-k>', '<Esc><C-w>k', opts())
-keymap({ 'n', 'i', 't' }, '<C-l>', '<Esc><C-w>l', opts())
-keymap({ 'n', 'i', 't' }, '<C-=>', '<Esc><C-w>=', opts())
+keymap({ 'n', 't' }, '<C-h>', '<Esc><C-w>h', opts())
+keymap({ 'n', 't' }, '<C-j>', '<Esc><C-w>j', opts())
+keymap({ 'n', 't' }, '<C-k>', '<Esc><C-w>k', opts())
+keymap({ 'n', 't' }, '<C-l>', '<Esc><C-w>l', opts())
+keymap({ 'n', 't' }, '<C-=>', '<Esc><C-w>=', opts())
 -- Split resizing
 keymap({ 'n', 't' }, '<C-Left>', '<Esc>:vertical resize -3<CR>', opts())
 keymap({ 'n', 't' }, '<C-Right>', '<Esc>:vertical resize +3<CR>', opts())
