@@ -42,6 +42,10 @@ local kind_icons = {
 }
 
 cmp.setup({
+	enabled = function()
+		return vim.api.nvim_buf_get_option(0, 'buftype') ~= 'prompt' or require('cmp_dap').is_dap_buffer()
+	end,
+
 	snippet = {
 		expand = function(args)
 			require('luasnip').lsp_expand(args.body)
@@ -120,3 +124,4 @@ cmp.setup({
 require('config.cmp.git')
 require('config.cmp.lsp')
 require('config.cmp.cmdline')
+require('config.cmp.dap')

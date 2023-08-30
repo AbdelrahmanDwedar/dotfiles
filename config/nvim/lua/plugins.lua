@@ -56,6 +56,16 @@ return require('packer').startup(function(use)
 		},
 	})
 
+	use({
+		'mfussenegger/nvim-dap',
+		-- keys = '<leader>ds',
+		requires = {
+			'jay-babu/mason-nvim-dap.nvim',
+			'rcarriga/nvim-dap-ui',
+			'rcarriga/cmp-dap',
+		},
+	})
+
 	-- Telescope for navigation
 	use({
 		'nvim-telescope/telescope.nvim',
@@ -63,6 +73,7 @@ return require('packer').startup(function(use)
 			'nvim-lua/plenary.nvim',
 			-- extentions
 			'nvim-telescope/telescope-project.nvim',
+			'nvim-telescope/telescope-dap.nvim',
 			'nvim-telescope/telescope-symbols.nvim',
 			'ThePrimeagen/git-worktree.nvim',
 		},
