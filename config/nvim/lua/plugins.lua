@@ -63,6 +63,7 @@ return require('packer').startup(function(use)
 			'nvim-lua/plenary.nvim',
 			-- extentions
 			'nvim-telescope/telescope-project.nvim',
+			'nvim-telescope/telescope-symbols.nvim',
 			'ThePrimeagen/git-worktree.nvim',
 		},
 	})
