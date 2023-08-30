@@ -45,10 +45,10 @@ require('neo-tree').setup({
 		icon = {
 			folder_closed = '',
 			folder_open = '',
-			folder_empty = '󰜌',
+			folder_empty = '',
 			-- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
 			-- then these will never be used.
-			default = '👍',
+			default = '',
 			highlight = 'NeoTreeFileIcon',
 		},
 		modified = {
@@ -88,10 +88,7 @@ require('neo-tree').setup({
 			nowait = true,
 		},
 		mappings = {
-			['<space>'] = {
-				'toggle_node',
-				nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
-			},
+			['<space>'] = { 'toggle_node', nowait = false },
 			['<2-LeftMouse>'] = 'open',
 			['<cr>'] = 'open',
 			['<esc>'] = 'cancel', -- close preview or floating neo-tree window
@@ -102,30 +99,17 @@ require('neo-tree').setup({
 			['v'] = 'open_vsplit',
 			['t'] = 'open_tabnew',
 			['w'] = 'open_with_window_picker',
-			--["P"] = "toggle_preview", -- enter preview mode, which shows the current node without focusing
 			['z'] = 'close_all_nodes',
 			['Z'] = 'expand_all_nodes',
-			['a'] = {
-				'add',
-				-- this command supports BASH style brace expansion ("x{a,b,c}" -> xa,xb,xc). see `:h neo-tree-file-actions` for details
-				-- some commands may take optional config options, see `:h neo-tree-mappings` for details
-				config = {
-					show_path = 'none', -- "none", "relative", "absolute"
-				},
-			},
-			['A'] = 'add_directory', -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
+			['a'] = { 'add', config = { show_path = 'relative' } },
+			['A'] = { 'add_directory', config = { show_path = 'relative' } }, -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
 			['d'] = 'delete',
-			['r'] = 'rename',
+			['r'] = { 'rename', config = { show_path = 'relative' } },
 			['y'] = 'copy_to_clipboard',
 			['x'] = 'cut_to_clipboard',
 			['p'] = 'paste_from_clipboard',
-			['c'] = {
-				'copy',
-				config = {
-					show_path = 'relative', -- "none", "relative", "absolute"
-				},
-			},
-			['m'] = 'move', -- takes text input for destination, also accepts the optional config.show_path option like "add".
+			['c'] = { 'copy', config = { show_path = 'relative' } },
+			['m'] = { 'move', config = { show_path = 'relative' } }, -- takes text input for destination, also accepts the optional config.show_path option like "add".
 			['q'] = 'close_window',
 			['R'] = 'refresh',
 			['?'] = 'show_help',
@@ -159,11 +143,11 @@ require('neo-tree').setup({
 			},
 		},
 		follow_current_file = {
-			enabled = false,              -- This will find and focus the file in the active buffer every time
+			enabled = false, -- This will find and focus the file in the active buffer every time
 			--               -- the current file is changed while the tree is open.
-			leave_dirs_open = false,      -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
+			leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
 		},
-		group_empty_dirs = true,          -- when true, empty folders will be grouped together
+		group_empty_dirs = true, -- when true, empty folders will be grouped together
 		hijack_netrw_behavior = 'open_current', -- netrw disabled, opening a directory opens neo-tree
 		-- in whatever position is specified in window.position
 		-- "open_current",  -- netrw disabled, opening a directory opens within the
