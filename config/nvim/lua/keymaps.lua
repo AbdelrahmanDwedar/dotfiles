@@ -191,9 +191,11 @@ keymap('n', '<leader>gp', gitsigns.preview_hunk, opts('Git Preview'))
 keymap('n', '<leader>gs', gitsigns.stage_hunk, opts('Git Stage Hunk'))
 
 -- plenary.nvim
-keymap('n', '<leader>pt', function()
-	require('plenary.test_harness').test_directory(vim.fn.expand('%:p'))
-end, opts('Run Current File Tests'))
+function TestKeymaps()
+	keymap('n', '<leader>pt', function()
+		require('plenary.test_harness').test_directory(vim.fn.expand('%:p'))
+	end, opts('Run Current File Tests'))
+end
 
 -- new line
 keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o<Esc>', opts())

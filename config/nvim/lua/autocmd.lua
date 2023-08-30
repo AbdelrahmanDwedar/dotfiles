@@ -68,3 +68,8 @@ autocmd({ 'BufWritePost', 'BufWinEnter' }, {
 		require('lint').try_lint()
 	end,
 })
+
+autocmd('BufEnter', {
+	pattern = '*_spec.lua',
+	callback = TestKeymaps,
+})
