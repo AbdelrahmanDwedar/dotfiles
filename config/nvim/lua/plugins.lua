@@ -53,6 +53,7 @@ return require('packer').startup(function(use)
 			{ 'nvim-treesitter/playground', as = 'treesitter-playground', cmd = 'TSPlaygroundToggle' },
 			'nvim-treesitter/nvim-treesitter-context',
 			'kiyoon/treesitter-indent-object.nvim',
+			'nvim-treesitter/nvim-treesitter-textobjects',
 		},
 	})
 
