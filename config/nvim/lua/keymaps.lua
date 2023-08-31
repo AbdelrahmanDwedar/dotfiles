@@ -234,13 +234,13 @@ keymap('i', '<A-k>', '<Esc>:m .-2<CR>==gi', opts())
 
 -- Splits --
 -- Splits moving with ctrl + hjkl shortcuts
-keymap({ 'n', 't' }, '<C-h>', '<Esc><C-w>h', opts())
-keymap({ 'n', 't' }, '<C-j>', '<Esc><C-w>j', opts())
-keymap({ 'n', 't' }, '<C-k>', '<Esc><C-w>k', opts())
-keymap({ 'n', 't' }, '<C-l>', '<Esc><C-w>l', opts())
-keymap({ 'n', 't' }, '<C-=>', '<Esc><C-w>=', opts())
+keymap('n', '<C-h>', '<Esc><C-w>h', opts())
+keymap('n', '<C-j>', '<Esc><C-w>j', opts())
+keymap('n', '<C-k>', '<Esc><C-w>k', opts())
+keymap('n', '<C-l>', '<Esc><C-w>l', opts())
+keymap('n', '<C-=>', '<Esc><C-w>=', opts())
 -- Split resizing
-keymap({ 'n', 't' }, '<C-Left>', '<Esc>:vertical resize -3<CR>', opts())
-keymap({ 'n', 't' }, '<C-Right>', '<Esc>:vertical resize +3<CR>', opts())
-keymap({ 'n', 't' }, '<C-Up>', '<Esc>:resize +3<CR>', opts())
-keymap({ 'n', 't' }, '<C-Down>', '<Esc>:resize -3<CR>', opts())
+keymap('n', '<C-Left>', '<Esc>:vertical resize -3<CR>', opts())
+keymap('n', '<C-Right>', '<Esc>:vertical resize +3<CR>', opts())
+keymap('n', '<C-Up>', '<Esc>:resize +3<CR>', opts())
+keymap('n', '<C-Down>', '<Esc>:resize -3<CR>', opts())
