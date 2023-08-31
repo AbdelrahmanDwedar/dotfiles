@@ -4,7 +4,6 @@ local opts = function(desc)
 end
 local nor = { noremap = true, silent = false }
 local telescope = require('telescope.builtin')
-local multi = require('multicursors')
 local indent = require('treesitter_indent_object.textobj')
 local gitsigns = require('gitsigns.actions')
 local neotree = require('neo-tree.command')
@@ -161,12 +160,12 @@ function LspKeymaps(ev)
 end
 
 -- multi-cursors
-keymap({ 'n', 'v' }, '<C-n>', multi.start, opts('Start Multicursors'))
-keymap({ 'n', 'v' }, '<leader>mn', multi.start, opts('Start Multicursors'))
-keymap({ 'n', 'v' }, '<leader>mv', multi.search_visual, opts('Search Visual Multicursors'))
-keymap({ 'n', 'v' }, '<leader>mc', multi.new_under_cursor, opts('Multi Under Cursor'))
-keymap({ 'n', 'v' }, '<leader>mq', multi.exit, opts('Exit Multicursors'))
-keymap({ 'n', 'v' }, '<leader>mp', multi.new_pattern, opts('Multicursors Pattern'))
+keymap({ 'n', 'v' }, '<C-n>', ':MCstart<CR>', opts('Start Multicursors'))
+keymap({ 'n', 'v' }, '<leader>mn', ':MCstart<CR>', opts('Start Multicursors'))
+keymap({ 'n', 'v' }, '<leader>mv', ':MCvisual<CR>', opts('Search Visual Multicursors'))
+keymap({ 'n', 'v' }, '<leader>mc', ':MCunderCursor<CR>', opts('Multi Under Cursor'))
+keymap({ 'n', 'v' }, '<leader>mq', ':MCexit<CR>', opts('Exit Multicursors'))
+keymap({ 'n', 'v' }, '<leader>mp', ':MCpattern<C>', opts('Multicursors Pattern'))
 
 -- indent selecting
 keymap({ 'x', 'o' }, 'ai', indent.select_indent_outer, opts())
