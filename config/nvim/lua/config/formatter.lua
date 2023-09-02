@@ -1,6 +1,6 @@
 local M = {}
 
-local util = require('formatter.util')
+--local util = require('formatter.util')
 
 M.filetypes = {
 	lua = {

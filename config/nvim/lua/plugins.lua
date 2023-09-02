@@ -16,6 +16,8 @@ require('lazy').setup({
 	-- LSP
 	{
 		'neovim/nvim-lspconfig',
+		config = require('config.lsp'),
+		event = 'VimEnter',
 		dependencies = {
 			'williamboman/mason.nvim',
 			'williamboman/mason-lspconfig.nvim',
@@ -23,14 +25,23 @@ require('lazy').setup({
 	},
 
 	-- Linting
-	{ 'mfussenegger/nvim-lint' },
+	{
+		'mfussenegger/nvim-lint',
+		event = 'LspAttach',
+		config = require('config.lint'),
+	},
 
 	-- Formatter
-	{ 'mhartington/formatter.nvim' },
+	{
+		'mhartington/formatter.nvim',
+		event = 'LspAttach',
+	},
 
 	-- Completion
 	{
 		'hrsh7th/nvim-cmp',
+		event = 'InsertEnter',
+		config = require('config.cmp'),
 		dependencies = {
 			'nvim-lua/plenary.nvim',
 			-- sources
@@ -48,6 +59,8 @@ require('lazy').setup({
 	-- Snippets
 	{
 		'L3MON4D3/LuaSnip',
+		event = 'InsertEnter',
+		config = require('config.luasnip'),
 		build = 'make install_jsregexp',
 		dependencies = {
 			'rafamadriz/friendly-snippets',
@@ -57,6 +70,7 @@ require('lazy').setup({
 	-- Treesitter
 	{
 		'nvim-treesitter/nvim-treesitter',
+		event = 'VimEnter',
 		build = 'TSUpdate',
 		config = require('config.treesitter'),
 		dependencies = {
@@ -71,13 +85,10 @@ require('lazy').setup({
 	{
 		'mfussenegger/nvim-dap',
 		keys = {
-			{ mode = 'n', '<leader>db' },
-			{ mode = 'n', '<leader>ds' },
-			{ mode = 'n', '<leader>dj' },
-			{ mode = 'n', '<leader>dl' },
+			{ mode = 'n', '<leader>d' },
 		},
 		dependencies = {
-			'jay-babu/mason-nvim-dap.nvim',
+			{ 'jay-babu/mason-nvim-dap.nvim', config = require('config.dap.mason') },
 			'rcarriga/nvim-dap-ui',
 		},
 		config = function()
@@ -89,6 +100,8 @@ require('lazy').setup({
 	-- Telescope
 	{
 		'nvim-telescope/telescope.nvim',
+		keys = '<leader>f',
+		config = require('config.telescope'),
 		dependencies = {
 			'nvim-lua/plenary.nvim',
 			-- extentions
@@ -97,13 +110,9 @@ require('lazy').setup({
 			'ThePrimeagen/git-worktree.nvim',
 			{
 				'nvim-telescope/telescope-dap.nvim',
-				keys = {
-					{ mode = 'n', '<leader>db' },
-					{ mode = 'n', '<leader>ds' },
-					{ mode = 'n', '<leader>dj' },
-					{ mode = 'n', '<leader>dl' },
-				},
-				-- config = require('telescope').load_extension('dap'),
+				config = function()
+					require('telescope').load_extension('dap')
+				end,
 			},
 		},
 	},
@@ -111,6 +120,8 @@ require('lazy').setup({
 	-- NeoTree file tree
 	{
 		'nvim-neo-tree/neo-tree.nvim',
+		event = 'VimEnter',
+		config = require('config.neotree'),
 		dependencies = {
 			'nvim-lua/plenary.nvim',
 			'MunifTanjim/nui.nvim',
@@ -142,6 +153,8 @@ require('lazy').setup({
 	-- lualine status line
 	{
 		'nvim-lualine/lualine.nvim',
+		event = 'VimEnter',
+		config = require('config.lualine'),
 		dependencies = {
 			'nvim-tree/nvim-web-devicons',
 		},
@@ -150,9 +163,11 @@ require('lazy').setup({
 	-- Bufferline (topline)
 	{
 		'akinsho/bufferline.nvim',
+		event = 'VimEnter',
+		config = require('config.bufferline'),
 		version = 'v3.*',
-		requires = {
-			'kyazdani42/nvim-web-devicons',
+		dependencies = {
+			'nvim-tree/nvim-web-devicons',
 		},
 	},
 
@@ -196,16 +211,8 @@ require('lazy').setup({
 		keys = {
 			{ mode = 'n', '<C-n>' },
 			{ mode = 'v', '<C-n>' },
-			{ mode = 'n', '<leader>mn' },
-			{ mode = 'v', '<leader>mn' },
-			{ mode = 'n', '<leader>mv' },
-			{ mode = 'v', '<leader>mv' },
-			{ mode = 'n', '<leader>mc' },
-			{ mode = 'v', '<leader>mc' },
-			{ mode = 'n', '<leader>mq' },
-			{ mode = 'v', '<leader>mq' },
-			{ mode = 'n', '<leader>mp' },
-			{ mode = 'v', '<leader>mp' },
+			{ mode = 'n', '<leader>m' },
+			{ mode = 'v', '<leader>m' },
 		},
 		config = require('config.multicursor'),
 		dependencies = {
@@ -223,25 +230,50 @@ require('lazy').setup({
 	},
 
 	-- Gitsigns
-	{ 'lewis6991/gitsigns.nvim' },
+	{
+		'lewis6991/gitsigns.nvim',
+		event = 'VimEnter',
+		config = require('config.gitsigns'),
+	},
 
 	-- Discord Presence
-	{ 'andweeb/presence.nvim' },
+	{
+		'andweeb/presence.nvim',
+		event = 'VimEnter',
+		config = require('config.presence'),
+	},
 
 	-- Marks hightling
-	{ 'chentoast/marks.nvim', config = require('config.marks'), keys = 'm' },
+	{
+		'chentoast/marks.nvim',
+		config = require('config.marks'),
+		keys = 'm',
+	},
 
 	-- My awesome colorschemes plugin
-	{ dir = '~/Programming/projects/extensions/awesome-nvim-colorschemes' },
+	{
+		'AbdelrahmanDwedar/awesome-nvim-colorschemes',
+	},
 
 	-- My better comments plugin
-	{ dir = '~/Programming/projects/extensions/better-comments.nvim' },
+	{
+		'AbdelrahmanDwedar/better-comments.nvim',
+		config = function()
+			require('better-comments').setup()
+		end,
+	},
 
 	-- wakatime time tracker
-	{ 'wakatime/vim-wakatime' },
+	{
+		'wakatime/vim-wakatime',
+		event = 'VimEnter',
+	},
 
 	-- editorconfig
-	{ 'editorconfig/editorconfig-vim' },
+	{
+		'editorconfig/editorconfig-vim',
+		event = 'VimEnter',
+	},
 }, {
 	root = vim.fn.stdpath('data') .. '/lazy', -- directory where plugins will be installed
 	defaults = {
@@ -263,7 +295,7 @@ require('lazy').setup({
 	dev = {
 		-- directory where you store your local plugin projects
 		path = '~/Programming/projects/extensions',
-		patterns = {"AbdelrahmanDwedar"}, -- For example {"folke"}
+		patterns = { 'AbdelrahmanDwedar' }, -- For example {"folke"}
 		fallback = true, -- Fallback to git when local plugin doesn't exist
 	},
 	install = {
