@@ -1,28 +1,29 @@
--- Plugins managing by packer.nvim
-return require('packer').startup(function(use)
-	use('wbthomason/packer.nvim')
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		'git',
+		'clone',
+		'--filter=blob:none',
+		'https://github.com/folke/lazy.nvim.git',
+		'--branch=stable', -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
-	-- === #### NeoVim Plugins #### === --
-
-	-- language server protocol
-	use({
+require('lazy').setup({
+	{
 		'neovim/nvim-lspconfig',
-		requires = {
+		dependencies = {
 			'williamboman/mason.nvim',
 			'williamboman/mason-lspconfig.nvim',
 		},
-	})
-
-	-- linting & diagnostics
-	use('mfussenegger/nvim-lint')
-
-	-- formatting
-	use('mhartington/formatter.nvim')
-
-	-- neovim completion
-	use({
+	},
+	{ 'mfussenegger/nvim-lint' },
+	{ 'mhartington/formatter.nvim' },
+	{
 		'hrsh7th/nvim-cmp',
-		requires = {
+		dependencies = {
 			'nvim-lua/plenary.nvim',
 			-- sources
 			'hrsh7th/cmp-nvim-lsp',
@@ -32,65 +33,74 @@ return require('packer').startup(function(use)
 			{ 'saadparwaiz1/cmp_luasnip', event = 'InsertEnter' },
 			{ 'petertriho/cmp-git', ft = 'gitcommit', config = require('config.cmp.git_config') },
 			{ 'hrsh7th/cmp-cmdline', event = 'CmdlineEnter' },
+			{ 'rcarriga/cmp-dap', ft = { 'dap-repl', 'dapui_watches', 'dapui_hover' } },
 		},
-	})
-
-	-- LuaSnip
-	use({
+	},
+	{
 		'L3MON4D3/LuaSnip',
-		run = 'make install_jsregexp',
-		requires = {
+		build = 'make install_jsregexp',
+		dependencies = {
 			'rafamadriz/friendly-snippets',
 		},
-	})
-
-	-- neovim treesitter
-	use({
+	},
+	{
 		'nvim-treesitter/nvim-treesitter',
-		run = 'TSUpdate',
+		build = 'TSUpdate',
 		config = require('config.treesitter'),
-		requires = {
-			{ 'nvim-treesitter/playground', as = 'treesitter-playground', cmd = 'TSPlaygroundToggle' },
+		dependencies = {
+			{ 'nvim-treesitter/playground', name = 'treesitter-playground', cmd = 'TSPlaygroundToggle' },
 			'nvim-treesitter/nvim-treesitter-context',
 			'kiyoon/treesitter-indent-object.nvim',
 			'nvim-treesitter/nvim-treesitter-textobjects',
 		},
-	})
-
-	use({
+	},
+	{
 		'mfussenegger/nvim-dap',
-		-- keys = '<leader>ds',
-		requires = {
+		keys = {
+			{ mode = 'n', '<leader>db' },
+			{ mode = 'n', '<leader>ds' },
+			{ mode = 'n', '<leader>dj' },
+			{ mode = 'n', '<leader>dl' },
+		},
+		dependencies = {
 			'jay-babu/mason-nvim-dap.nvim',
 			'rcarriga/nvim-dap-ui',
-			'rcarriga/cmp-dap',
 		},
-	})
-
-	-- Telescope for navigation
-	use({
+		config = function()
+			require('config.dap')
+			-- DapKeymaps()
+		end,
+	},
+	{
 		'nvim-telescope/telescope.nvim',
-		requires = {
+		dependencies = {
 			'nvim-lua/plenary.nvim',
 			-- extentions
 			'nvim-telescope/telescope-project.nvim',
-			'nvim-telescope/telescope-dap.nvim',
 			'nvim-telescope/telescope-symbols.nvim',
 			'ThePrimeagen/git-worktree.nvim',
+			{
+				'nvim-telescope/telescope-dap.nvim',
+				keys = {
+					{ mode = 'n', '<leader>db' },
+					{ mode = 'n', '<leader>ds' },
+					{ mode = 'n', '<leader>dj' },
+					{ mode = 'n', '<leader>dl' },
+				},
+				-- config = require('telescope').load_extension('dap'),
+			},
 		},
-	})
-
-	-- neo-tree
-	use({
+	},
+	{
 		'nvim-neo-tree/neo-tree.nvim',
-		requires = {
+		dependencies = {
 			'nvim-lua/plenary.nvim',
 			'MunifTanjim/nui.nvim',
 			'nvim-tree/nvim-web-devicons',
 			{
 				-- only needed if you want to use the commands with "_with_window_picker" suffix
 				's1n7ax/nvim-window-picker',
-				tag = 'v1.*',
+				version = 'v1.*',
 				config = function()
 					require('window-picker').setup({
 						autoselect_one = true,
@@ -100,7 +110,6 @@ return require('packer').startup(function(use)
 							bo = {
 								-- if the file type is one of following, the window will be ignored
 								filetype = { 'neo-tree', 'neo-tree-popup', 'notify' },
-
 								-- if the buffer type is one of following, the window will be ignored
 								buftype = { 'terminal', 'quickfix' },
 							},
@@ -110,115 +119,82 @@ return require('packer').startup(function(use)
 				end,
 			},
 		},
-	})
-
-	-- lua status bar
-	use({
+	},
+	{
 		'nvim-lualine/lualine.nvim',
-		requires = {
+		dependencies = {
 			'nvim-tree/nvim-web-devicons',
 		},
-	})
-
-	-- bufferline
-	use({
+	},
+	{
 		'akinsho/bufferline.nvim',
-		tag = 'v3.*',
+		version = 'v3.*',
 		requires = {
 			'kyazdani42/nvim-web-devicons',
 		},
-	})
-
-	-- auto completion for {([" etc...
-	use({
+	},
+	{
 		'windwp/nvim-autopairs',
 		keys = {
-			{ 'i', '{' },
-			{ 'i', '(' },
-			{ 'i', '[' },
-			{ 'i', '"' },
-			{ 'i', "'" },
-			{ 'i', '`' },
+			{ mode = 'i', '(' },
+			{ mode = 'i', '[' },
+			{ mode = 'i', '"' },
+			{ mode = 'i', "'" },
+			{ mode = 'i', '`' },
 		},
 		config = function()
 			require('nvim-autopairs').setup()
 		end,
-	})
-
-	-- shortcut to surround code with {([])} or tags etc...
-	use({
+	},
+	{
 		'kylechui/nvim-surround',
 		keys = 'ys',
-		tag = '*', -- Use for stability; omit to use `main` branch for the latest features
+		version = '*', -- Use for stability; omit to use `main` branch for the latest features
 		config = function()
 			require('nvim-surround').setup()
 		end,
-	})
-
-	-- For Commenting gcc & gc
-	use({
+	},
+	{
 		'numToStr/Comment.nvim',
 		keys = 'gc',
 		config = function()
 			require('Comment').setup()
 		end,
-	})
-
-	-- multi-cursors
-	use({
+	},
+	{
 		'smoka7/multicursors.nvim',
 		keys = {
-			{ 'n', '<C-n>' },
-			{ 'v', '<C-n>' },
-			{ 'n', '<leader>mn' },
-			{ 'v', '<leader>mn' },
-			{ 'n', '<leader>mv' },
-			{ 'v', '<leader>mv' },
-			{ 'n', '<leader>mc' },
-			{ 'v', '<leader>mc' },
-			{ 'n', '<leader>mq' },
-			{ 'v', '<leader>mq' },
-			{ 'n', '<leader>mp' },
-			{ 'v', '<leader>mp' },
+			{ mode = 'n', '<C-n>' },
+			{ mode = 'v', '<C-n>' },
+			{ mode = 'n', '<leader>mn' },
+			{ mode = 'v', '<leader>mn' },
+			{ mode = 'n', '<leader>mv' },
+			{ mode = 'v', '<leader>mv' },
+			{ mode = 'n', '<leader>mc' },
+			{ mode = 'v', '<leader>mc' },
+			{ mode = 'n', '<leader>mq' },
+			{ mode = 'v', '<leader>mq' },
+			{ mode = 'n', '<leader>mp' },
+			{ mode = 'v', '<leader>mp' },
 		},
 		config = require('config.multicursor'),
-		requires = {
+		dependencies = {
 			'smoka7/hydra.nvim',
 		},
-	})
-
-	-- which key
-	use({
+	},
+	{
 		'folke/which-key.nvim',
 		opt = true,
 		config = function()
 			require('which-key').setup({})
 		end,
-	})
+	},
+	{ 'lewis6991/gitsigns.nvim' },
+	{ 'andweeb/presence.nvim' },
+	{ 'chentoast/marks.nvim', config = require('config.marks'), keys = 'm' },
 
-	-- git signs integration
-	use('lewis6991/gitsigns.nvim')
-
-	-- discord presence for neovim
-	use('andweeb/presence.nvim')
-
-	-- marks
-	use({ 'chentoast/marks.nvim', config = require('config.marks'), keys = 'm' })
-
-	-- === #### My Plugins ### === ---
-
-	-- best neovim colorschemes in one place
-	-- use('AbdelrahmanDwedar/awesome-nvim-colorschemes')
-	use('~/Programming/projects/extensions/awesome-nvim-colorschemes')
-
-	-- better comments
-	use('~/Programming/projects/extensions/better-comments.nvim')
-
-	-- === #### Vim Script Plugins ### === ---
-
-	-- wakatime watcher
-	use('wakatime/vim-wakatime')
-
-	-- editor config plugin for the /.editorconfig settings
-	use('editorconfig/editorconfig-vim')
-end)
+	{ dir = '~/Programming/projects/extensions/awesome-nvim-colorschemes' },
+	{ dir = '~/Programming/projects/extensions/better-comments.nvim' },
+	{ 'wakatime/vim-wakatime' },
+	{ 'editorconfig/editorconfig-vim' },
+})
