@@ -113,8 +113,8 @@ end, opts('Find DAP Frame'))
 
 -- dap
 keymap('n', '<Leader>db', require('dap').toggle_breakpoint, opts())
-keymap('n', '<Leader>dj', require('dap').continue, opts())
-keymap('n', '<Leader>dn', require('dap').step_over, opts())
+keymap('n', '<Leader>ds', require('dap').continue, opts())
+keymap('n', '<Leader>dj', require('dap').step_over, opts())
 keymap('n', '<Leader>dl', require('dap').step_into, opts())
 
 -- lsp
