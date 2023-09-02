@@ -1,14 +1,14 @@
 -- Settings (numbers, tab, etc...)
 require('options')
 
--- shortcuts
-require('keymaps')
-
 -- plugins
 require('plugins')
 
 -- config
 require('config')
+
+-- shortcuts
+require('keymaps')
 
 -- Colorscheme
 require('colorscheme')
