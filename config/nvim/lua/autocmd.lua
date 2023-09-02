@@ -43,19 +43,6 @@ autocmd('FileType', {
 	group = fast_group,
 })
 
--- packer
-local packer_group = augroup('packer', { clear = true })
-autocmd('VimLeavePre', {
-	pattern = '*',
-	command = 'PackerSync',
-	group = packer_group,
-})
-autocmd('BufWritePost', {
-	pattern = 'plugins.lua',
-	command = 'w | source % | PackerCompile',
-	group = packer_group,
-})
-
 local lsp_group = augroup('lsp', { clear = true })
 autocmd('LspAttach', {
 	callback = LspKeymaps,
