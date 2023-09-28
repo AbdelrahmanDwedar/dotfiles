@@ -4,6 +4,7 @@ configuration {
   drun-display-format: "{name}";
   font: "Hack Nerd Font";
   icon-theme: "Papirus";
+  show-icons: true;
   // modi: "window,run,drun,emoji,calc";
 }
 
@@ -26,6 +27,8 @@ configuration {
 
 window {
   width: 30%;
+
+  border-radius: 1em;
 }
 
 element {
