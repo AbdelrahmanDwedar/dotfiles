@@ -123,7 +123,5 @@ return function()
 	})
 
 	require('config.cmp.git')
-	require('config.cmp.lsp')
 	require('config.cmp.cmdline')
-	require('config.cmp.lsp')
 end
