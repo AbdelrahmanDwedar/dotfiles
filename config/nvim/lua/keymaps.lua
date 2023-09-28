@@ -137,13 +137,6 @@ function LspKeymaps(ev)
 	keymap('n', 'gl', function()
 		vim.diagnostic.open_float()
 	end, opts('See Diagnostics'))
-	keymap('n', '<leader>i', function()
-		if require('config.formatter').filetypes[vim.bo.filetype] ~= nil then
-			vim.cmd([[Format]])
-		else
-			vim.lsp.buf.format()
-		end
-	end, opts('Format'))
 	keymap('n', '<leader>la', function()
 		vim.lsp.buf.code_action()
 	end, opts('Code Actions'))
@@ -158,6 +151,9 @@ function LspKeymaps(ev)
 	end, opts('Rename'))
 	keymap('n', '<leader>li', ':LspInfo<CR>', opts('LSP Info'))
 end
+keymap('n', '<Leader>i', function()
+	vim.cmd([[Format]])
+end, opts('Format'))
 
 -- multi-cursors
 keymap({ 'n', 'v' }, '<C-n>', ':MCstart<CR>', opts('Start Multicursors'))
