@@ -11,6 +11,7 @@ return function()
 	lspconfig.pyright.setup({})
 	lspconfig.ruby_ls.setup({})
 	lspconfig.rust_analyzer.setup({})
+	lspconfig.elixirls.setup({})
 
 	require('config.lsp.mason')
 	require('config.lsp.handlers').setup()
