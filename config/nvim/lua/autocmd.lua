@@ -60,3 +60,11 @@ autocmd('BufEnter', {
 	pattern = '*_spec.lua',
 	callback = TestKeymaps,
 })
+
+augroup('inlay_hint', { clear = true })
+autocmd('LspAttach', {
+	group = 'inlay_hint',
+	callback = function()
+		vim.lsp.inlay_hint(0, true)
+	end,
+})
