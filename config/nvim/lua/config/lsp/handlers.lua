@@ -23,6 +23,7 @@ M.setup = function()
 		update_in_insert = true,
 		underline = true,
 		severity_sort = true,
+		inlay_hints = true,
 		float = {
 			focusable = true,
 			style = 'minimal',
@@ -50,6 +51,10 @@ M.on_attach = function(client, bufnr)
 	end
 
 	illuminate.on_attach(client)
+
+	if client.server_capabilities.inlayHintProvider then
+		vim.lsp.inlay_hint(bufnr, true)
+	end
 end
 
 return M
