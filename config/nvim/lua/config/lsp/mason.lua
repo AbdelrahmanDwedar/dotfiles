@@ -4,6 +4,7 @@ local servers = {
 	'gopls',
 	'grammarly',
 	'pyright',
+	'elixirls',
 }
 
 require('mason').setup({
