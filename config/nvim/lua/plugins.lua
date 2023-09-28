@@ -250,6 +250,12 @@ require('lazy').setup({
 		keys = 'm',
 	},
 
+	-- editorconfig
+	{
+		'gpanders/editorconfig.nvim',
+		event = 'VimEnter',
+	},
+
 	-- My awesome colorschemes plugin
 	{
 		'AbdelrahmanDwedar/awesome-nvim-colorschemes',
@@ -266,12 +272,6 @@ require('lazy').setup({
 	-- wakatime time tracker
 	{
 		'wakatime/vim-wakatime',
-		event = 'VimEnter',
-	},
-
-	-- editorconfig
-	{
-		'editorconfig/editorconfig-vim',
 		event = 'VimEnter',
 	},
 }, {
