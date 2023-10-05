@@ -48,16 +48,16 @@ super + ctrl + w
     $BROWSER
 
 super + Return
-	$TERM
+	kitty
 
 super + shift + Return
 	rofi -show drun
 
 super + ctrl + e
-	$TERM -e ranger
+	kitty -e ranger
 
 super + p 
 	flameshot gui
 
 super + shift + w
-	feh --no-fehbg --bg-fill --randomize ~/Wallpapers/**/***
+	feh --no-fehbg --bg-fill --randomize ~/Wallpapers/**
