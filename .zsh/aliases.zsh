@@ -31,6 +31,12 @@ then
     alias cf=cpufetch
 fi
 
+# zathura
+if [[ -e $(which zathura) ]]
+then
+	alias za=zathura
+fi
+
 # lsd => ls
 if [ -e $(which lsd) ]; then
     alias ls='lsd -F'
