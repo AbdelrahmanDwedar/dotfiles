@@ -20,15 +20,6 @@ set nohlsearch
 set hidden
 set wrap
 
-" -=# Plugins (with vim plug) #=-
-call plug#begin()
-
-	Plug 'rafi/awesome-vim-colorschemes' " awesome vim colorschemes
-
-	Plug 'wakatime/vim-wakatime' " wakatime watcher
-
-call plug#end()
-
 " -=# colorscheme #=-
 colorscheme nord
 
