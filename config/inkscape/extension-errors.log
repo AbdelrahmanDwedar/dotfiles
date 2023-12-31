@@ -4,6 +4,12 @@ Dependency:
 	location: path
 	string: fig2dev
 
+Extension "Plot" failed to load because a dependency was not met.
+Dependency:
+	type: file
+	location: inx
+	string: hpgl_decoder.py
+
 Extension "Optimized PNG" failed to load because a dependency was not met.
 Dependency:
 	type: executable
