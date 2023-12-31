@@ -53,6 +53,9 @@ super + Return
 super + shift + Return
 	rofi -show drun
 
+super + shift + ctrl + Return
+	rofi -show run
+
 super + ctrl + e
 	kitty -e ranger
 
