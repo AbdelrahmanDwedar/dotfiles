@@ -3,7 +3,7 @@ configuration {
   display-window: "Windows:";
   drun-display-format: "{name}";
   font: "Hack Nerd Font";
-  icon-theme: "Papirus";
+  icon-theme: "candy-icons-master";
   show-icons: true;
   // modi: "window,run,drun,emoji,calc";
 }
