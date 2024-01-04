@@ -133,7 +133,7 @@ cp config/* ~/.config
 + neofetch
 + neovim 
 + picom
-+ polybar
+- polybar
 + powerline
 + qalculate
 - qtile
