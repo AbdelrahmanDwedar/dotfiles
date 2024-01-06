@@ -262,6 +262,13 @@ require('lazy').setup({
 		event = 'VimEnter',
 	},
 
+	{
+		'norcalli/nvim-colorizer.lua',
+		config = function()
+			require('colorizer').setup()
+		end,
+	},
+
 	-- My awesome colorschemes plugin
 	{
 		'AbdelrahmanDwedar/awesome-nvim-colorschemes',
