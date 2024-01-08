@@ -113,6 +113,7 @@ return function()
 		sources = cmp.config.sources({
 			{ name = 'nvim_lsp' },
 			{ name = 'nvim_lua' },
+			{ name = 'emmet_vim' },
 			{ name = 'buffer' },
 			{ name = 'path' },
 			{ name = 'luasnip', option = { sow_autosnippets = true, use_show_condition = true } },

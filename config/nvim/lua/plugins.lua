@@ -24,6 +24,10 @@ require('lazy').setup({
 		},
 	},
 
+	{
+		'aca/emmet-ls',
+	},
+
 	-- Linting
 	{
 		'mfussenegger/nvim-lint',
@@ -49,6 +53,7 @@ require('lazy').setup({
 			{ 'hrsh7th/cmp-buffer', event = 'InsertEnter' },
 			{ 'hrsh7th/cmp-path', event = 'InsertEnter' },
 			{ 'hrsh7th/cmp-nvim-lua', ft = 'lua' },
+			{ 'dcampos/cmp-emmet-vim', ft = { 'html', 'javascriptreact', 'typescriptreact', 'vue', 'svelte' } },
 			{ 'saadparwaiz1/cmp_luasnip', event = 'InsertEnter' },
 			{ 'petertriho/cmp-git', ft = 'gitcommit', config = require('config.cmp.git_config') },
 			{ 'hrsh7th/cmp-cmdline', event = 'CmdlineEnter' },
@@ -60,6 +65,7 @@ require('lazy').setup({
 	{
 		'L3MON4D3/LuaSnip',
 		event = 'InsertEnter',
+		version = 'v2.*',
 		config = require('config.luasnip'),
 		build = 'make install_jsregexp',
 		dependencies = {
