@@ -5,4 +5,6 @@ return function()
 		python = { 'mypy', 'pylint' },
 		ruby = { 'ruby' },
 	}
+
+	require("config.lint.mason")
 end

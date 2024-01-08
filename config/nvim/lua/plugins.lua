@@ -13,13 +13,17 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
 
+	-- mason
+	{
+		'williamboman/mason.nvim',
+	},
+
 	-- LSP
 	{
 		'neovim/nvim-lspconfig',
 		config = require('config.lsp'),
 		event = 'VimEnter',
 		dependencies = {
-			'williamboman/mason.nvim',
 			'williamboman/mason-lspconfig.nvim',
 		},
 	},
@@ -33,6 +37,9 @@ require('lazy').setup({
 		'mfussenegger/nvim-lint',
 		event = 'LspAttach',
 		config = require('config.lint'),
+		dependencies = {
+			'rshkarin/mason-nvim-lint',
+		},
 	},
 
 	-- Formatter
