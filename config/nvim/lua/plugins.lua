@@ -177,6 +177,15 @@ require('lazy').setup({
 		},
 	},
 
+	-- https://github.com/Bekaboo/dropbar.nvim
+	{
+		'Bekaboo/dropbar.nvim',
+		dependencies = {
+			'nvim-telescope/telescope-fzf-native.nvim',
+			'nvim-tree/nvim-web-devicons',
+		},
+	},
+
 	-- Auto-pairs
 	{
 		'windwp/nvim-autopairs',
