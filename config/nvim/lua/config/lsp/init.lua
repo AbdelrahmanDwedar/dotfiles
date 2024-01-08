@@ -1,5 +1,6 @@
 return function()
 	local lspconfig = require('lspconfig')
+	require('config.lsp.mason')
 
 	lspconfig.bashls.setup({})
 	lspconfig.clangd.setup({})
@@ -10,6 +11,8 @@ return function()
 	lspconfig.phpactor.setup({})
 	lspconfig.pyright.setup({})
 	lspconfig.ruby_ls.setup({})
+	lspconfig.tsserver.setup({})
+	lspconfig.emmet_language_server.setup({})
 
 	require('config.lsp.mason')
 	require('config.lsp.handlers').setup()
