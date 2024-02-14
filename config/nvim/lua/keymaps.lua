@@ -111,6 +111,37 @@ end, opts('Find DAP Variales'))
 keymap('n', '<leader>fdf', function()
 	require('telescope').extensions.dap.frames({})
 end, opts('Find DAP Frame'))
+keymap({ 'n', 'x' }, '<leader>rr', function()
+	require('telescope').extensions.refactoring.refactors()
+end)
+
+-- refactor
+-- Extract function supports only visual mode
+keymap('x', '<leader>re', function()
+	require('refactoring').refactor('Extract Function')
+end)
+keymap('x', '<leader>rf', function()
+	require('refactoring').refactor('Extract Function To File')
+end)
+-- Extract variable supports only visual mode
+keymap('x', '<leader>rv', function()
+	require('refactoring').refactor('Extract Variable')
+end)
+-- Inline func supports only normal
+keymap('n', '<leader>rI', function()
+	require('refactoring').refactor('Inline Function')
+end)
+-- Inline var supports both normal and visual mode
+keymap({ 'n', 'x' }, '<leader>ri', function()
+	require('refactoring').refactor('Inline Variable')
+end)
+-- Extract block supports only normal mode
+keymap('n', '<leader>rb', function()
+	require('refactoring').refactor('Extract Block')
+end)
+keymap('n', '<leader>rbf', function()
+	require('refactoring').refactor('Extract Block To File')
+end)
 
 -- dap
 keymap('n', '<Leader>db', require('dap').toggle_breakpoint, opts())

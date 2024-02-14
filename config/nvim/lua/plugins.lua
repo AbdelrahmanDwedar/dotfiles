@@ -68,6 +68,18 @@ require('lazy').setup({
 		},
 	},
 
+	-- refactor.nvim
+	{
+		'ThePrimeagen/refactoring.nvim',
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+			'nvim-treesitter/nvim-treesitter',
+		},
+		config = function()
+			require('refactoring').setup()
+		end,
+	},
+
 	-- Snippets
 	{
 		'L3MON4D3/LuaSnip',
