@@ -6,30 +6,39 @@ M.filetypes = {
 	lua = {
 		require('formatter.filetypes.lua').stylua,
 	},
+
 	c = {
 		require('formatter.filetypes.c').clangformat,
 	},
+
 	cpp = {
 		require('formatter.filetypes.cpp').clangformat,
 	},
+
 	elixir = {
 		require('formatter.filetypes.elixir').mixformat,
 	},
+
 	go = {
 		require('formatter.filetypes.go').goimports,
 	},
+
 	rust = {
 		require('formatter.filetypes.rust').rustfmt,
 	},
+
 	sql = {
 		require('formatter.filetypes.sql').pgformat,
 	},
+
 	zig = {
 		require('formatter.filetypes.zig').zigfmt,
 	},
+
 	python = {
 		require('formatter.filetypes.python').black,
 	},
+
 	php = {
 		require('formatter.util').copyf(function()
 			return {
@@ -39,6 +48,7 @@ M.filetypes = {
 			}
 		end),
 	},
+
 	ruby = {
 		require('formatter.util').copyf(function()
 			return {
