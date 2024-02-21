@@ -18,28 +18,28 @@ keymap('n', '<Leader>e', function()
 	neotree.execute({
 		toggle = true,
 		source = 'filesystem',
-		position = 'left',
+		position = 'right',
 	})
 end, opts('Open NeoTree'))
 keymap('n', '<Leader><Leader>f', function()
 	neotree.execute({
 		toggle = false,
 		source = 'filesystem',
-		position = 'left',
+		position = 'right',
 	})
 end, opts('Focus NeoTree'))
 keymap('n', '<Leader><Leader>b', function()
 	neotree.execute({
 		toggle = true,
 		source = 'buffers',
-		position = 'left',
+		position = 'right',
 	})
 end, opts('Toggle Buffers Tree'))
 keymap('n', '<Leader><Leader>g', function()
 	neotree.execute({
 		toggle = true,
 		source = 'git_status',
-		position = 'left',
+		position = 'right',
 	})
 end, opts('Open NeoTree Git Status'))
 keymap('n', '<Leader>tf', function()
