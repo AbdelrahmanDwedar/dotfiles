@@ -58,14 +58,29 @@ M.filetypes = {
 			}
 		end),
 	},
+
 	sh = {
-		require('formatter.util').copyf(function()
-			return {
-				exe = 'beautysh',
-				stdin = false,
-				ignore_exitcode = true,
-			}
-		end),
+		require('formatter.util').prettier,
+	},
+
+	typescript = {
+		require('formatter.util').prettier,
+	},
+
+	typescriptreact = {
+		require('formatter.util').prettier,
+	},
+
+	html = {
+		require('formatter.util').prettier,
+	},
+
+	css = {
+		require('formatter.util').prettier,
+	},
+
+	vue = {
+		require('formatter.util').prettier,
 	},
 
 	-- Use the special "*" filetype for defining formatter configurations on
