@@ -92,6 +92,22 @@ require('lazy').setup({
 		},
 	},
 
+	{
+		'nvim-neotest/neotest',
+		dependencies = {
+			'nvim-neotest/nvim-nio',
+			'nvim-lua/plenary.nvim',
+			'antoinemadec/FixCursorHold.nvim',
+			'nvim-treesitter/nvim-treesitter',
+
+			-- sources
+			'nvim-neotest/neotest-python',
+			'nvim-neotest/neotest-go',
+			'marilari88/neotest-vitest',
+			'V13Axel/neotest-pest',
+		},
+	},
+
 	-- Treesitter
 	{
 		'nvim-treesitter/nvim-treesitter',
