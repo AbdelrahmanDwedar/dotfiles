@@ -13,6 +13,8 @@ return function()
 	lspconfig.ruby_ls.setup({})
 	lspconfig.tsserver.setup({})
 	lspconfig.emmet_language_server.setup({})
+	lspconfig.astro.setup({})
+	lspconfig.intelephense.setup({})
 
 	require('config.lsp.mason')
 	require('config.lsp.handlers').setup()
