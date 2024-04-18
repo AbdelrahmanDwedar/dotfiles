@@ -2,7 +2,7 @@
 
 (aspect-denominator 1200)
 (aspect-numerator 1920)
-(foreground (color-rgb 0.36999961733818054 0.40034034848213196 0.40798348188400269))
+(foreground (color-rgb 0.81521739130434789 0.81521739130434789 0.81521739130434789))
 (pattern "Clipboard Image")
 
 # end of gimp-crop-tool options

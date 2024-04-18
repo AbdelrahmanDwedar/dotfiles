@@ -1180,7 +1180,7 @@
   <resource identifier="${gimp_data_dir}/gradients/Yellow_Orange.ggr" checksum="428584726006e23e260baa2a7d79f295">
   </resource>
 
-  <resource identifier="gimp-palette-color-history" checksum="e1943d0aae012a37bfed34cf8aebd8e2">
+  <resource identifier="gimp-palette-color-history" checksum="18a0e93f9c59f3a7d74af3aa0e54d376">
   </resource>
 
   <resource identifier="${gimp_data_dir}/palettes/Bears.gpl" checksum="e82e818c20ac12bdd21049924ea2d1e7">
@@ -1315,6 +1315,18 @@
   <resource identifier="Amiri Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Bitstream Charter" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitstream Charter Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitstream Charter Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Bitstream Charter Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="C059" checksum="(null)">
   </resource>
 
@@ -1391,6 +1403,27 @@
   </resource>
 
   <resource identifier="Comfortaa Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Comfortaa Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Comfortaa Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Courier 10 Pitch" checksum="(null)">
+  </resource>
+
+  <resource identifier="Courier 10 Pitch Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Courier 10 Pitch Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Courier 10 Pitch Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Cursor Medium" checksum="(null)">
   </resource>
 
   <resource identifier="D050000L" checksum="(null)">
@@ -3143,6 +3176,18 @@
   </resource>
 
   <resource identifier="URW Gothic Semi-Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Utopia" checksum="(null)">
+  </resource>
+
+  <resource identifier="Utopia Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Utopia Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Utopia Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Vazirmatn" checksum="(null)">

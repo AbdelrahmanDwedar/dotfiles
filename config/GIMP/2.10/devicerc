@@ -3,10 +3,11 @@
 (GimpDeviceInfo "Core Pointer"
     (icon-name "gimp-cursor")
     (name "Core Pointer")
-    (tool-options "GimpForegroundSelectOptions"
-        (tool "gimp-foreground-select-tool")
-        (foreground (color-rgb 0.36999961733818054 0.40034034848213196 0.40798348188400269))
-        (feather yes))
+    (tool-options "GimpTextOptions"
+        (tool "gimp-text-tool")
+        (foreground (color-rgb 0.81521739130434789 0.81521739130434789 0.81521739130434789))
+        (palette "Color History")
+        (font "Sans-serif"))
     (use-fg-bg yes)
     (use-opacity-paint-mode no)
     (use-brush no)
@@ -14,8 +15,8 @@
     (use-mypaint-brush no)
     (use-gradient no)
     (use-pattern no)
-    (use-palette no)
-    (use-font no)
+    (use-palette yes)
+    (use-font yes)
     (mode screen)
     (axes 2 x y)
     (keys 0)

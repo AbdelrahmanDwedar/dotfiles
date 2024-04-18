@@ -12,6 +12,7 @@
 (toolbox-image-area yes)
 (toolbox-wilber no)
 (toolbox-group-menu-mode click)
+(theme "System")
 (layer-new-name "test")
 (fill-options
     (style solid)
