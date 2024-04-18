@@ -69,6 +69,9 @@ then
     alias keys='kitty +kitten show_key'
 fi
 
+# Laravel
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
 # confirmation for rm mv cp commands
 alias rm='rm -i'
 alias cp='cp -i'
