@@ -152,7 +152,9 @@
          style="fill:red;"
          end="0"
          start="0"
-         usecurrent="1" />
+         usecurrent="1"
+         rx="356.836744894192"
+         ry="356.836744894187" />
       <eventcontext
          id="star"
          magnitude="5"
@@ -537,6 +539,8 @@
     <group
        id="CMS"
        visible="1" />
+    <group
+       id="OKHSL" />
   </group>
   <group
      id="embedded">
@@ -564,7 +568,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="1" />
+       page="2" />
     <group
        id="filtereffects" />
     <group
@@ -590,7 +594,8 @@
        state="1" />
     <group
        id="preferences"
-       state="1" />
+       state="1"
+       page="0" />
     <group
        id="gradienteditor" />
     <group
@@ -828,7 +833,7 @@
        value="2" />
     <group
        id="transform"
-       stroke="1"
+       stroke="0"
        rectcorners="1"
        pattern="1"
        gradient="1" />
@@ -951,6 +956,9 @@
        id="threading" />
     <group
        id="ruler" />
+    <group
+       id="snapping"
+       snap-global-toggle="0" />
   </group>
   <group
      id="extensions"
@@ -959,7 +967,7 @@
      org.inkscape.output.png.inkscape.png_antialias="2" />
   <group
      id="desktop"
-     style="fill:#000000">
+     style="fill:none;stroke-width:151.18110236;stroke:#000000">
     <group
        width="640"
        height="480"
@@ -1081,7 +1089,7 @@
      id="theme"
      defaultPreferDarkTheme="0"
      defaultIconTheme="candy-icons-master"
-     defaultGtkTheme="Sweet-Dark"
+     defaultGtkTheme="Sweet-Dark-v40"
      narrowSpinButton="1"
      preferDarkTheme="1"
      darkTheme="1"
