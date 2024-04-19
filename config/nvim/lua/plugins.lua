@@ -146,12 +146,14 @@ require('lazy').setup({
 			{ mode = 'n', '<leader>d' },
 		},
 		dependencies = {
-			{ 'jay-babu/mason-nvim-dap.nvim', config = require('config.dap.mason') },
 			'rcarriga/nvim-dap-ui',
+
+			-- sources
+			'leoluz/nvim-dap-go',
+			'mfussenegger/nvim-dap-python',
 		},
 		config = function()
 			require('config.dap')
-			-- DapKeymaps()
 		end,
 	},
 
