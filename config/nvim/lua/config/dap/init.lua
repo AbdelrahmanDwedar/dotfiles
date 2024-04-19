@@ -17,4 +17,5 @@ return function()
 	require('config.dap.elixir')
 	require('config.dap.python')
 	require('config.dap.php')
+	require('config.dap.lua')
 end
