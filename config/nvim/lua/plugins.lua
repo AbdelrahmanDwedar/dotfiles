@@ -105,6 +105,7 @@ require('lazy').setup({
 			'nvim-neotest/neotest-go',
 			'marilari88/neotest-vitest',
 			'V13Axel/neotest-pest',
+			'olimorris/neotest-phpunit',
 		},
 	},
 
