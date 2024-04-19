@@ -107,6 +107,7 @@ require('lazy').setup({
 			'V13Axel/neotest-pest',
 			'olimorris/neotest-phpunit',
 		},
+		config = require('config.neotest'),
 	},
 
 	-- Treesitter

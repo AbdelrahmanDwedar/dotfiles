@@ -195,6 +195,26 @@ keymap({ 'n', 'v' }, '<leader>mc', ':MCunderCursor<CR>', opts('Multi Under Curso
 keymap({ 'n', 'v' }, '<leader>mq', ':MCexit<CR>', opts('Exit Multicursors'))
 keymap({ 'n', 'v' }, '<leader>mp', ':MCpattern<C>', opts('Multicursors Pattern'))
 
+-- Neotest
+keymap('n', '<leader>ur', function()
+	require('neotest').run.run()
+end, opts('Neotest: run current test'))
+keymap('n', '<leader>uf', function()
+	require('neotest').run.run({ vim.fn.expand('%') })
+end, opts('Neotest: run tests in current file'))
+keymap('n', '<leader>us', function()
+	require('neotest').summary.toggle()
+end)
+keymap('n', '<leader>uw', function()
+	require('neotest').watch.toggle()
+end)
+keymap('n', ']u', function()
+	require('neotest').jump.next()
+end)
+keymap('n', '[u', function()
+	require('neotest').jump.prev()
+end)
+
 -- indent selecting
 keymap({ 'x', 'o' }, 'ai', indent.select_indent_outer, opts())
 keymap({ 'x', 'o' }, 'aI', function()
@@ -214,7 +234,15 @@ keymap('n', '<leader>gi', gitsigns.preview_hunk_inline, opts('Preview Inline'))
 keymap('n', '<leader>gr', gitsigns.reset_hunk, opts('Git Reset'))
 keymap('n', '<leader>gw', gitsigns.toggle_word_diff, opts('Word Diff'))
 keymap('n', '<leader>gp', gitsigns.preview_hunk, opts('Git Preview'))
-keymap('n', '<leader>gs', gitsigns.stage_hunk, opts('Git Stage Hunk'))
+keymap('n', '<leader>ga', gitsigns.stage_hunk, opts('Git Stage Hunk'))
+
+-- Neogit
+keymap('n', '<leader>go', function()
+	require('neogit').open({ kind = 'floating' })
+end, opts('NeoGit: Open'))
+keymap('n', '<leader>gc', function()
+	require('neogit').open({ 'commit' })
+end, opts('NeoGit: Make commit'))
 
 -- plenary.nvim
 function TestKeymaps()
