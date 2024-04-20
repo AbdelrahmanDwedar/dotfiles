@@ -12,12 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-
-	-- mason
-	{
-		'williamboman/mason.nvim',
-	},
-
 	-- LSP
 	{
 		'neovim/nvim-lspconfig',
@@ -25,6 +19,7 @@ require('lazy').setup({
 		event = 'VimEnter',
 		dependencies = {
 			'williamboman/mason-lspconfig.nvim',
+			'williamboman/mason.nvim',
 		},
 	},
 
@@ -344,6 +339,13 @@ require('lazy').setup({
 		'norcalli/nvim-colorizer.lua',
 		config = function()
 			require('colorizer').setup()
+		end,
+	},
+
+	{
+		'folke/neodev.nvim',
+		config = function()
+			require('neodev').setup()
 		end,
 	},
 
