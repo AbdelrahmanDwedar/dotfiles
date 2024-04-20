@@ -26,7 +26,7 @@ for dotfiles_file in $(ls -A .); do
             if [[ $dotfiles_file != ".git" && $dotfiles_file != "config" ]]; then
                 ln -s ./$dotfiles_file ~/
             elif [[ $dotfiles_file == "config" ]]; then
-                ln -s ./config/* ~/.config/
+                ln -s $dotfiles_file/* ~/.config/
             fi
         fi
     done
