@@ -151,6 +151,7 @@ require('lazy').setup({
 			-- sources
 			'leoluz/nvim-dap-go',
 			'mfussenegger/nvim-dap-python',
+			'jbyuki/one-small-step-for-vimkind',
 		},
 		config = function()
 			require('config.dap')

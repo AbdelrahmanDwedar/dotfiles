@@ -8,10 +8,7 @@ local indent = require('treesitter_indent_object.textobj')
 local gitsigns = require('gitsigns.actions')
 local neotree = require('neo-tree.command')
 
---Remap space as leader key
 keymap('', '<Space>', '<Nop>', opts('Leader Key'))
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 
 -- NeoTree
 keymap('n', '<Leader>e', function()

@@ -1,15 +1,11 @@
 local servers = {
-	'bashls',
 	'clangd',
-	'elixirls',
-	'grammarly',
-	'jsonls',
+	'lexical',
 	'lua_ls',
-	'phpactor',
 	'pyright',
-	'ruby_ls',
 	'gopls',
 	'rust_analyzer',
+	'intelephense',
 }
 
 require('mason').setup({
