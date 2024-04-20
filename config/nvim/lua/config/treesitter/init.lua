@@ -12,14 +12,6 @@ return function()
 			enable = true,
 		},
 		indent = { enable = true }, --disable = { 'python', 'css' } },
-		textobjects = {
-			enable = true,
-			keymaps = {
-				['af'] = '@function.outer',
-				['if'] = '@function.inner',
-				['ac'] = '@class.outer',
-				['ic'] = '@class.inner',
-			},
-		},
+		textobjects = require('config.treesitter.textobjects'),
 	})
 end
