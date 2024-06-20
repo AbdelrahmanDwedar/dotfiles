@@ -14,4 +14,6 @@ return function()
 		indent = { enable = true }, --disable = { 'python', 'css' } },
 		textobjects = require('config.treesitter.textobjects'),
 	})
+
+	-- require('config.treesitter.blade')
 end

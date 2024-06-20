@@ -4,6 +4,7 @@ return function()
 		yaml = { 'actionlint' },
 		python = { 'mypy', 'pylint' },
 		ruby = { 'ruby' },
+		php = { 'phpstan' },
 	}
 
 	require("config.lint.mason")

@@ -5,7 +5,7 @@ vim.g.maplocalleader = ' '
 -- General
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.termguicolors = true
-vim.opt.shell = '/usr/bin/bash'
+vim.opt.shell = '/usr/bin/zsh'
 
 -- Tabs
 vim.opt.tabstop = 4

@@ -2,8 +2,8 @@ local dap = require('dap')
 
 dap.adapters.php = {
 	type = 'executable',
-	command = 'node',
-	args = { '/path/to/vscode-php-debug/out/phpDebug.js' },
+  command = '~/.local/share/nvim/mason/bin/php-debug-adapter',
+	args = {},
 }
 
 dap.configurations.php = {

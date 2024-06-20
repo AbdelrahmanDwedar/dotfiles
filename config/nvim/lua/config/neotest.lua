@@ -16,7 +16,7 @@ return function()
 			}),
 			require('neotest-pest')({
 				ignore_dirs = { 'vendor', 'node_modules' },
-				root_ignore_files = { 'phpunit-only.tests' },
+				-- root_ignore_files = { 'phpunit-only.tests' },
 				test_file_suffixes = { 'Test.php', '_test.php', 'PestTest.php' },
 				sail_enabled = true,
 				sail_executable = 'vendor/bin/sail',
