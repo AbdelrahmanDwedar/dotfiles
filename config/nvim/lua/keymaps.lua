@@ -299,3 +299,5 @@ keymap('n', '<C-Down>', '<Esc>:resize -3<CR>', opts())
 
 -- action on entire page
 keymap({ 'v', 'o' }, 'ae', ':<C-u>normal! gg0vG$<CR>', nor)
+
+-- AI

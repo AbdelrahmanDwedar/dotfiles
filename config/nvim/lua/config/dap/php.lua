@@ -2,7 +2,7 @@ local dap = require('dap')
 
 dap.adapters.php = {
 	type = 'executable',
-  command = '~/.local/share/nvim/mason/bin/php-debug-adapter',
+	command = '~/.local/share/nvim/mason/bin/php-debug-adapter',
 	args = {},
 }
 

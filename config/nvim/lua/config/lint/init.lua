@@ -3,7 +3,7 @@ return function()
 		markdown = { 'markdownlint' },
 		yaml = { 'actionlint' },
 		python = { 'mypy', 'pylint' },
-		ruby = { 'ruby' },
+		-- ruby = { 'ruby' },
 		php = { 'phpstan' },
 	}
 

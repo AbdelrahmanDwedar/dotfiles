@@ -12,10 +12,4 @@ return function()
 	dap.listeners.before.event_exited['dapui_config'] = function()
 		dapui.close()
 	end
-
-	require('config.dap.go')
-	require('config.dap.elixir')
-	require('config.dap.python')
-	require('config.dap.php')
-	require('config.dap.lua')
 end

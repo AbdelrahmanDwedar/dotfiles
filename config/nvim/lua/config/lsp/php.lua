@@ -30,4 +30,5 @@ if not configs.intelephense then
   }
 end
 
+lspconfig.phpactor.setup({})
 lspconfig.intelephense.setup { capabilities = capabilities }

@@ -40,11 +40,15 @@ M.filetypes = {
 	},
 
 	php = {
-		require('formatter.util').pist,
+		require('formatter.filetypes.php').pint
 	},
 
 	blade = {
-		require('formatter.util').pist,
+		require('formatter.filetypes.php').pint,
+	},
+
+	csharp = {
+		require('formatter.filetypes.cs').csharpier,
 	},
 
 	ruby = {

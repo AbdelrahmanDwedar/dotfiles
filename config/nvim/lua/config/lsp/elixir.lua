@@ -21,4 +21,5 @@ if not configs.lexical then
 	}
 end
 
+lspconfig.elixirls.setup({})
 lspconfig.lexical.setup({})
