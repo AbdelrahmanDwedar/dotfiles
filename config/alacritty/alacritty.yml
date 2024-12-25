@@ -21,7 +21,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: alacritty
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -119,7 +119,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) Hack Nerd Font Mono
     #   - (Windows) Consolas
-    family: Hack Nerd Font Mono 
+    family: Hack Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -130,7 +130,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack Nerd Font Mono 
+    family: Hack Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold
