@@ -475,6 +475,16 @@ require('lazy').setup({
 	-- 	end,
 	-- },
 
+	-- rsync
+	{
+		'OscarCreator/rsync.nvim',
+		build = 'make',
+		dependencies = 'nvim-lua/plenary.nvim',
+		config = function()
+			require('rsync').setup()
+		end,
+	},
+
 	{ 'mfussenegger/nvim-jdtls' },
 
 	-- My awesome colorschemes plugin
