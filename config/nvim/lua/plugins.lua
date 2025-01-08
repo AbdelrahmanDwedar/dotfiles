@@ -113,34 +113,17 @@ require('lazy').setup({
 		config = require('config.neotest'),
 	},
 
-	-- {
-	-- 	'jackMort/ChatGPT.nvim',
-	-- 	event = 'VeryLazy',
-	-- 	config = function()
-	-- 		require('chatgpt').setup()
-	-- 	end,
-	-- 	dependencies = {
-	-- 		'MunifTanjim/nui.nvim',
-	-- 		'nvim-lua/plenary.nvim',
-	-- 		'folke/trouble.nvim',
-	-- 		'nvim-telescope/telescope.nvim',
-	-- 	},
-	-- },
+	-- AI
+	{
+		"sourcegraph/sg.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", --[[ "nvim-telescope/telescope.nvim ]] },
 
-	-- {
-	-- 	'mistweaverco/kulala.nvim',
-	-- 	config = function()
-	-- 		require('kulala').setup({
-	-- 			-- default_view, body or headers
-	-- 			default_view = 'body',
-	-- 			-- dev, test, prod, can be anything
-	-- 			-- see: https://learn.microsoft.com/en-us/aspnet/core/test/http-files?view=aspnetcore-8.0#environment-files
-	-- 			default_env = 'dev',
-	-- 			-- enable/disable debug mode
-	-- 			debug = false,
-	-- 		})
-	-- 	end,
-	-- },
+		-- If you have a recent version of lazy.nvim, you don't need to add this!
+		build = "nvim -l build/init.lua",
+		config = function ()
+			require("sg").setup ()
+		end
+	},
 
 	{
 		'NeogitOrg/neogit',
