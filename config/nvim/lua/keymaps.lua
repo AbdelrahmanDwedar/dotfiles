@@ -111,6 +111,11 @@ end, opts('Find DAP Frame'))
 keymap({ 'n', 'x' }, '<leader>rr', function()
 	require('telescope').extensions.refactoring.refactors()
 end)
+keymap('n' ,'<leader>fT','<cmd>TodoTelescope<CR>')
+
+-- Trouble
+keymap('n' ,'<leader>tt', '<cmd>Trouble todo<CR>', opts('Trouble: show todo list'))
+keymap('n' ,'<leader>td', '<cmd>Trouble diagnostics<CR>', opts('Trouble: show todo list'))
 
 -- refactor
 -- Extract function supports only visual mode
@@ -211,6 +216,10 @@ end)
 keymap('n', '[u', function()
 	require('neotest').jump.prev()
 end)
+
+-- TODO tree
+keymap('n', ']t' , require("todo-comments").jump_next, opts('Todo jump next'))
+keymap('n', '[t' , require("todo-comments").jump_prev, opts('Todo jump previous'))
 
 -- indent selecting
 keymap({ 'x', 'o' }, 'ai', indent.select_indent_outer, opts())
