@@ -257,6 +257,10 @@ function TestKeymaps()
 	end, opts('Run Current File Tests'))
 end
 
+-- buffers
+keymap('n', 'gb', '<cmd>bnext<CR>', opts('Go to next buffer'))
+keymap('n', 'gB', '<cmd>bNext<CR>', opts('Go to previous buffer'))
+
 -- new line
 keymap({ 'n', 'i' }, '<C-Enter>', '<Esc>o<Esc>', opts())
 
