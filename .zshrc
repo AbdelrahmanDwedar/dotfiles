@@ -8,8 +8,7 @@
 
 # ~/.zshrc
 # run on open
-if [[ -e $(which neofetch) ]]
-then
+if command -v neofetch >/dev/null 2>&1; then
     neofetch
 fi
 
@@ -92,7 +91,9 @@ source ~/.zsh/history.zsh
 
 # Setup completion
 # angular cli
-source <(ng completion script)
+if command -v ng >/dev/null 2>&1; then
+    source <(ng completion script)
+fi
 
 # kubernetes
 source <(kubectl completion zsh)
