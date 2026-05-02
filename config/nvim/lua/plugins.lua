@@ -113,18 +113,6 @@ require('lazy').setup({
 		config = require('config.neotest'),
 	},
 
-	-- AI
-	{
-		"sourcegraph/sg.nvim",
-		dependencies = { "nvim-lua/plenary.nvim", --[[ "nvim-telescope/telescope.nvim ]] },
-
-		-- If you have a recent version of lazy.nvim, you don't need to add this!
-		build = "nvim -l build/init.lua",
-		config = function ()
-			require("sg").setup ()
-		end
-	},
-
 	{
 		'NeogitOrg/neogit',
 		dependencies = {
@@ -176,7 +164,7 @@ require('lazy').setup({
 	-- Telescope
 	{
 		'nvim-telescope/telescope.nvim',
-		keys = '<leader>f',
+		branch = '0.1.x',
 		config = require('config.telescope'),
 		dependencies = {
 			'nvim-lua/plenary.nvim',
@@ -457,16 +445,6 @@ require('lazy').setup({
 	-- 		require('neodev').setup()
 	-- 	end,
 	-- },
-
-	-- rsync
-	{
-		'OscarCreator/rsync.nvim',
-		build = 'make',
-		dependencies = 'nvim-lua/plenary.nvim',
-		config = function()
-			require('rsync').setup()
-		end,
-	},
 
 	{ 'mfussenegger/nvim-jdtls' },
 

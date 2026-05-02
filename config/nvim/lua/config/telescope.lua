@@ -4,6 +4,9 @@ return function()
 
 	require('telescope').setup({
 		defaults = {
+			prompt_prefix = '🔍 ',
+			selection_caret = '  ',
+			path_display = { 'smart' },
 			mappings = {
 				i = {
 					['<C-h>'] = 'which_key',
@@ -11,17 +14,6 @@ return function()
 					['<C-j>'] = actions.move_selection_next,
 					['<C-k>'] = actions.move_selection_previous,
 				},
-			},
-		},
-		pickers = {
-			find_files = {
-				prompt_prefix = '🔍 ',
-			},
-			git_branches = {
-				prompt_prefix = '🔍 ',
-			},
-			marks = {
-				prompt_prefix = '🔍 ',
 			},
 		},
 		extensions = {
@@ -39,5 +31,6 @@ return function()
 
 	require('telescope').load_extension('project')
 	require('telescope').load_extension('git_worktree')
-	require('telescope').load_extension('refactoring')
+	-- require('telescope').load_extension('refactoring')
+	require('telescope').load_extension('symbols')
 end

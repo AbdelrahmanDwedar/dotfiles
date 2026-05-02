@@ -1,9 +1,9 @@
 # Powerline configuration
-if [ -f /usr/share/powerline/bindings/zsh/powerline.zsh ]; then
+if [ -f /usr/share/powerline/zsh/powerline.zsh ]; then
   powerline-daemon -q
-  POWERLINE_BASH_CONTINUATION=1
-  POWERLINE_BASH_SELECT=1
-  source /usr/share/powerline/bindings/zsh/powerline.zsh
+  POWERLINE_ZSH_CONTINUATION=1
+  POWERLINE_ZSH_SELECT=1
+  . /usr/share/powerline/zsh/powerline.zsh
 else
 	force_color_prompt=yes
 

@@ -42,3 +42,7 @@ fi
 
 # export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 # . "$HOME/.cargo/env"
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"

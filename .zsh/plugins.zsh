@@ -22,4 +22,18 @@ antigen bundle Cloudstek/zsh-plugin-appup
 
 antigen bundle jeffreytse/zsh-vi-mode
 
+antigen bundle ubuntu/microk8s
+antigen bundle medyagh/minikube-oh-my-zsh
+
+
+antigen bundle ohmyzsh/ohmyzsh@master plugins/docker
+antigen bundle ohmyzsh/ohmyzsh@master plugins/docker-compose
+antigen bundle ohmyzsh/ohmyzsh@master plugins/docker-machine
+antigen bundle ohmyzsh/ohmyzsh@master plugins/colored-man-pages
+antigen bundle ohmyzsh/ohmyzsh@master plugins/colorize
+antigen bundle ohmyzsh/ohmyzsh@master plugins/dirhistory
+antigen bundle ohmyzsh/ohmyzsh@master plugins/kubectl
+antigen bundle ohmyzsh/ohmyzsh@master plugins/screen
+
+
 antigen apply
