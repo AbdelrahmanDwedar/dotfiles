@@ -19,6 +19,9 @@ case $- in
 esac
 
 # setup cool other stuff
+export ZSH_CACHE_DIR="$HOME/.cache/zsh"
+[[ -d "$ZSH_CACHE_DIR" ]] || mkdir -p "$ZSH_CACHE_DIR"
+
 setopt autocd
 setopt correct
 setopt interactivecomments
