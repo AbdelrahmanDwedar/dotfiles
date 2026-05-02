@@ -23,7 +23,6 @@ antigen bundle Cloudstek/zsh-plugin-appup
 antigen bundle jeffreytse/zsh-vi-mode
 
 antigen bundle ubuntu/microk8s
-antigen bundle medyagh/minikube-oh-my-zsh
 
 
 antigen bundle ohmyzsh/ohmyzsh@master plugins/docker

@@ -20,14 +20,12 @@ then
 fi
 
 # neofetch
-if [[ -e $(which neofetch) ]]
-then
+if command -v neofetch >/dev/null 2>&1; then
     alias nf=neofetch
 fi
 
 # cpufetch
-if [[ -e $(which cpufetch) ]]
-then
+if command -v cpufetch >/dev/null 2>&1; then
     alias cf=cpufetch
 fi
 
