@@ -77,6 +77,7 @@ require('lazy').setup({
 		dependencies = {
 			'nvim-lua/plenary.nvim',
 			'nvim-treesitter/nvim-treesitter',
+			'nvim-lua/async.nvim',
 		},
 		config = function()
 			require('refactoring').setup({})
