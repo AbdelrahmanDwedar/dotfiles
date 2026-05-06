@@ -71,18 +71,6 @@ require('lazy').setup({
 		},
 	},
 
-	-- refactor.nvim
-	{
-		'ThePrimeagen/refactoring.nvim',
-		dependencies = {
-			'nvim-lua/plenary.nvim',
-			'nvim-treesitter/nvim-treesitter',
-			'nvim-lua/async.nvim',
-		},
-		config = function()
-			require('refactoring').setup({})
-		end,
-	},
 
 	-- Snippets
 	{
