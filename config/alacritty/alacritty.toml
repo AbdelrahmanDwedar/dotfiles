@@ -49,7 +49,7 @@ mods = "Shift|Control"
 
 [[keyboard.bindings]]
 action = "DecreaseFontSize"
-key = "Underline"
+key = "-"
 mode = "~Alt"
 mods = "Shift|Control"
 
@@ -455,7 +455,9 @@ TERM = "xterm-256color"
 
 [font]
 size = 10.0
-transparent_background_colors = true
+
+[colors]
+transparent_background_colors = false
 
 [font.bold]
 family = "Hack Nerd Font Mono"
@@ -477,7 +479,7 @@ style = "Regular"
 x = 0
 y = 0
 
-[font.vi_mode_cursor]
+[colors.vi_mode_cursor]
 cursor = "CellForeground"
 text = "CellBackground"
 
