@@ -48,7 +48,7 @@ super + ctrl + w
     $BROWSER
 
 super + Return
-	kitty
+	alacritty
 
 super + shift + Return
 	rofi -show drun
