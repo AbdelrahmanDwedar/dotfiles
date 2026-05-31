@@ -39,7 +39,7 @@ super + {1, 2, 3, 4, 5, 6, 7, 8, 9}
 	bspc desktop -f {1, 2, 3, 4, 5, 6, 7, 8, 9}
 
 super + { Tab, shift + Tab }
-	bspc desktop -f { next, prev }
+	bspc desktop -f { prev, next }
 
 super + ctrl + d 
 	discord
