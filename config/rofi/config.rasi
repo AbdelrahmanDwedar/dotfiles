@@ -1,23 +1,28 @@
 configuration {
-  display-drun: "Applications:";
-  display-window: "Windows:";
+  modi: "drun,run,window";
+  display-drun: "󰀻 ";
+  display-run: "󰁔 ";
+  display-window: "󱂬 ";
   drun-display-format: "{name}";
-  font: "Hack Nerd Font";
-  icon-theme: "candy-icons-master";
+  font: "Hack Nerd Font 11";
+  icon-theme: "breeze-dark";
   show-icons: true;
-  // modi: "window,run,drun,emoji,calc";
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #11121D;
-  bg-alt: #444b6a;
+  bg: #221922;
+  bg-alt: #312531;
 
-  fg: #FFFFFF;
-  fg-alt: #787c99;
+  fg: #dfdfdf;
+  fg-alt: #445593;
 
-  background-color: @bg;
+  primary: #389;
+  alert: #f02;
+
+  background-color: transparent;
+  text-color: @fg;
   
   border: 0;
   margin: 0;
@@ -26,57 +31,63 @@ configuration {
 }
 
 window {
-  width: 30%;
-
-  border-radius: 1em;
+  width: 35%;
+  background-color: @bg;
+  border-radius: 12px;
+  border: 2px;
+  border-color: @primary;
 }
 
-element {
-  padding: 8 0;
-  text-color: @fg-alt;
-}
-
-element selected {
-  text-color: @fg;
-}
-
-element-text {
-  text-color: inherit;
-  vertical-align: 0.5;
-}
-
-element-icon {
-  size: 14;
-  padding: 0 10 0 0;
-}
-
-entry {
-  background-color: @bg-alt;
-  padding: 12;
-  text-color: @fg;
+mainbox {
+  children: [inputbar, listview];
 }
 
 inputbar {
   children: [prompt, entry];
-}
-
-listview {
-  padding: 8 12;
-  background-color: @bg;
-  columns: 1;
-  lines: 8;
-}
-
-mainbox {
-  background-color: @bg;
-  children: [inputbar, listview];
+  background-color: @bg-alt;
+  margin: 12px;
+  border-radius: 6px;
 }
 
 prompt {
-  background-color: @bg-alt;
   enabled: true;
-  padding: 12 0 0 12;
-  text-color: @fg;
+  padding: 12px;
+  background-color: inherit;
+  text-color: @primary;
+}
+
+entry {
+  padding: 12px;
+  background-color: inherit;
+  placeholder: "Search apps...";
+  placeholder-color: @fg-alt;
+}
+
+listview {
+  columns: 1;
+  lines: 8;
+  padding: 8px 12px 12px 12px;
+  fixed-height: true;
+}
+
+element {
+  padding: 8px;
+  spacing: 12px;
+  border-radius: 6px;
+}
+
+element selected {
+  background-color: @primary;
+  text-color: @bg;
+}
+
+element-text {
+  vertical-align: 0.5;
+  text-color: inherit;
+}
+
+element-icon {
+  size: 32px;
 }
 
 /* vim: ft=sass
