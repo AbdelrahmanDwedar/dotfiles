@@ -10,13 +10,24 @@ This configurations is simple and straightforward, nothing too crazy or hard to 
 
 This configurations can be added step by step to your device **(Recommended to be Linux)**  
 
+### Script Setup (Recommended)
+
+You can use the `copy-dotfiles` script to automate the setup process. This script will create symbolic links for the dotfiles and handle your `.gitconfig` setup.
+
+```zsh
+chmod +x copy-dotfiles
+./copy-dotfiles
+```
+
+### Manual Setup
+
 You can copy the files using `cp` command like so:  
 ```zsh
 # for adding zsh configurations
-cp .zshrc .zprofile .zshenv .zsh 
+cp .zshrc .zprofile .zshenv .zsh ~
 ```
 
-### Config directory
+#### Config directory
 
 For the config directory it's different than other files, I recommend not doing the approach that I mentioned for other things as it'll delete all your other configurations in the `.config` directory (that why I named it `config` not `.config` so if you did it it doesn't effect the original one)  
 
@@ -30,6 +41,24 @@ cp config/* ~/.config
 
 ---
 
+## Fonts
+
+This repository includes several fonts that are used across different configurations. You can find them in the `.fonts/` directory.
+
+To install them, you can copy them to your local fonts directory:
+```zsh
+cp .fonts/* ~/.local/share/fonts/
+fc-cache -fv
+```
+
+Included fonts:
+- Amiri
+- Hack Nerd Font
+- Noto Naskh Arabic
+- Open Sans
+
+---
+
 ## Used apps
 
 - alacritty
@@ -40,7 +69,9 @@ cp config/* ~/.config
 - bspwm
 - btop 
 - cointop
+- doom emacs
 - gh
+- git
 - htop
 - i3 (requires `polybar` & `picom`)
 - kitty (requires `picom`)
@@ -126,14 +157,14 @@ cp config/* ~/.config
 + doom emacs
 + gh
 + git
-- htop
++ htop
 + i3
 + kitty 
-- lf
++ lf
 + neofetch
 + neovim 
 + picom
-- polybar
++ polybar
 + powerline
 + qalculate
 - qtile
@@ -142,7 +173,6 @@ cp config/* ~/.config
 + tmux
 + vieb
 + vim
-+ wakatime (bash)
 + wakatime (bash)
 - xmobar
 - xmonad
