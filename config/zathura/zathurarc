@@ -1,7 +1,20 @@
 set window-title-basename "true"
 set selection-clipboard "clipboard"
 
-### Dracula color theme
+# --- Functional Improvements ---
+set incremental-search      "true"
+set statusbar-home-tilde    "true"
+set scroll-step             50
+set scroll-page-aware       "true"
+
+# Bridge to Evince for persistent highlighting/annotations
+# Press 'a' to open the current page in Evince
+map a exec "evince -p $PAGE $FILE"
+
+# Toggle recoloring (dark mode) with 'r'
+map r recolor
+
+# --- Dracula color theme ---
 set notification-error-bg       "#ff5555" # Red
 set notification-error-fg       "#f8f8f2" # Foreground
 set notification-warning-bg     "#ffb86c" # Orange
