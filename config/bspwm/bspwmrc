@@ -25,6 +25,7 @@ sxhkd &
 ~/.config/polybar/launch.sh &
 picom &
 dunst &
+xsettingsd &
 
 # Input configuration
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 0
