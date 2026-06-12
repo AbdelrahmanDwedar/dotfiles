@@ -61,3 +61,11 @@ super + shift + w
 
 super + space
 	/usr/bin/bash -c "current=$(setxkbmap -query | grep layout | awk '{print $2}'); if [[ $current == 'us' ]]; then setxkbmap -layout ara; else setxkbmap -layout us; fi"
+
+# Brightness Controls
+super + {plus,minus}
+	brightnessctl set {5%+,5%-}
+
+# Media Controls (Volume)
+super + {Up,Down}
+	pactl set-sink-volume @DEFAULT_SINK@ {+5%,-5%}
