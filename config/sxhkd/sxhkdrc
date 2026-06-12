@@ -15,7 +15,7 @@ super + shift + i
 super + f
 	bspc node -t {tiled,fullscreen}
 
-super + ctrl + space 
+super + ctrl + space
 	bspc node -t { floating, tiled }
 
 super + shift + {h,j,k,l}
@@ -39,10 +39,7 @@ super + {1, 2, 3, 4, 5, 6, 7, 8, 9}
 	bspc desktop -f {1, 2, 3, 4, 5, 6, 7, 8, 9}
 
 super + { Tab, shift + Tab }
-	bspc desktop -f { prev, next }
-
-super + ctrl + d 
-	discord
+	bspc desktop -f { next, prev }
 
 super + ctrl + w
     $BROWSER
@@ -56,10 +53,7 @@ super + shift + Return
 super + shift + ctrl + Return
 	rofi -show run
 
-super + ctrl + e
-	kitty -e ranger
-
-super + p 
+super + p
 	flameshot gui
 
 super + shift + w
