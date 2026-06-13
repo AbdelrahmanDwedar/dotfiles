@@ -60,7 +60,7 @@ super + shift + w
 	feh --no-fehbg --bg-fill --randomize ~/Wallpapers/**
 
 super + space
-	/usr/bin/bash -c "current=$(setxkbmap -query | grep layout | awk '{print $2}'); if [[ $current == 'us' ]]; then setxkbmap -layout ara; else setxkbmap -layout us; fi"
+	toggle_kb
 
 # Brightness Controls
 super + {plus,minus}

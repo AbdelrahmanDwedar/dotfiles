@@ -81,3 +81,13 @@ alias -s txt=nvim
 alias -s cfg=nvim
 alias -s bash=nvim
 alias -s zsh=nvim
+
+
+toggle_kb() {
+	current=$(setxkbmap -query | grep layout | awk '{print $2}' | sed 's/,.*//')
+	if [[ "$current" == "us" ]]; then
+		setxkbmap ara
+	else
+		setxkbmap us
+	fi
+}

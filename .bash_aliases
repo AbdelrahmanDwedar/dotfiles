@@ -65,3 +65,12 @@ fi
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+toggle_kb() {
+	current=$(setxkbmap -query | grep layout | awk '{print $2}' | sed 's/,.*//')
+	if [[ "$current" == "us" ]]; then
+		setxkbmap -layout ara
+	else
+		setxkbmap -layout us
+	fi
+}
