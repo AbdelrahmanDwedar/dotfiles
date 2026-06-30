@@ -31,3 +31,6 @@
 	default = current
 [pull]
 	rebase = true
+[user]
+	name = AbdelrahmanDwedar
+	email = dedou2005@gmail.com
