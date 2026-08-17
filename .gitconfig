@@ -4,6 +4,7 @@
 	sts = status -sb
 	ci = commit
 	cim = commit -m
+	extend = commit --amend --no-edit
 	co = checkout
 	cob = checkout -b
 	brd = branch -d
